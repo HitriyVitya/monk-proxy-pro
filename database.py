@@ -175,4 +175,62 @@ def get_history(user_id, days=None):
     c.execute(query, params)
     rows = c.fetchall()
     conn.close()
+
+    return rows
+    # --- ПРОКСИ-ХАБ ТАБЛИЦЫ ---
+def init_proxy_pro_db():
+    conn = get_connection()
+    c = conn.cursor()
+    # url - сама ссылка (уникальный ключ)
+    # fails - сколько раз подряд не прошел проверку
+    # is_ai - 1 если пускает в Google AI Studio
+    c.execute('''CREATE TABLE IF NOT EXISTS proxy_warehouse
+                 (url TEXT PRIMARY KEY, 
+                  type TEXT, 
+                  is_ai INTEGER DEFAULT 0, 
+                  latency INTEGER DEFAULT 0,
+                  fails INTEGER DEFAULT 0,
+                  last_check TIMESTAMP)''')
+    conn.commit()
+    conn.close()
+
+def add_to_warehouse(links):
+    """Сыпем всё найденное в склад. Если уже есть - игнорим."""
+    conn = get_connection()
+    c = conn.cursor()
+    for l in links:
+        try:
+            p_type = l.split('://')[0]
+            c.execute("INSERT OR IGNORE INTO proxy_warehouse (url, type) VALUES (?, ?)", (l, p_type))
+        except: pass
+    conn.commit()
+    conn.close()
+
+def get_next_proxies_to_check(limit=20):
+    """Берем старые или еще не проверенные серваки"""
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute("SELECT url FROM proxy_warehouse WHERE fails < 10 ORDER BY last_check ASC LIMIT ?", (limit,))
+    rows = c.fetchall()
+    conn.close()
+    return [r[0] for r in rows]
+
+def update_proxy_status(url, is_live, latency=0, is_ai=0):
+    conn = get_connection()
+    c = conn.cursor()
+    if is_live:
+        c.execute("UPDATE proxy_warehouse SET fails = 0, latency = ?, is_ai = ?, last_check = CURRENT_TIMESTAMP WHERE url = ?", 
+                  (latency, is_ai, url))
+    else:
+        c.execute("UPDATE proxy_warehouse SET fails = fails + 1, last_check = CURRENT_TIMESTAMP WHERE url = ?", (url,))
+    conn.commit()
+    conn.close()
+
+def get_best_for_clash():
+    """Только элита для подписки"""
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute("SELECT url, is_ai, latency FROM proxy_warehouse WHERE last_check > datetime('now', '-2 days') AND fails = 0 ORDER BY is_ai DESC, latency ASC LIMIT 500")
+    rows = c.fetchall()
+    conn.close()
     return rows
