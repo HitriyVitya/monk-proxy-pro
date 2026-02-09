@@ -5,8 +5,9 @@ import base64
 import json
 import time
 import logging
-from urllib.parse import urlparse, unquote, quote
-import database as db
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+import database_vpn as db
 
 # --- СПИСКИ ИСТОЧНИКОВ ---
 TG_CHANNELS = [
@@ -21,11 +22,15 @@ EXTERNAL_SUBS = [
     "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/mix",
     "https://raw.githubusercontent.com/vfarid/v2ray-share/main/all_v2ray_configs.txt",
     "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub1.txt",
+    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
     "https://raw.githubusercontent.com/LonUp/NodeList/main/NodeList.txt",
-    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt"
+    "https://raw.githubusercontent.com/officialputuid/V2Ray-Config/main/Splitted-v2ray-config/all"
 ]
 
-# --- ФУНКЦИИ СБОРА ---
+# Настройки пылесоса
+MAX_PAGES_TG = 1000  # Сколько страниц истории листать назад (глубокий поиск)
+MAX_LINKS_CHECK = 200 # Сколько проверять за один цикл (чтобы не забить память)
+
 def safe_decode(s):
     try:
         s = re.sub(r'[^a-zA-Z0-9+/=]', '', s)
@@ -34,41 +39,61 @@ def safe_decode(s):
         return base64.b64decode(s).decode('utf-8', errors='ignore')
     except: return ""
 
-def scrape_everything():
-    """Собирает ссылки отовсюду"""
-    logging.info("🧹 Vacuum: Начинаю сбор ссылок...")
+def scrape_sync():
+    """Синхронная часть сбора (чтобы не вешать бота, запустим в треде)"""
     links = set()
     regex = re.compile(r'(?:vless|vmess|ss|ssr|trojan|hy2|hysteria|hysteria2|tuic|socks5)://[^\s<"\'\)]+')
     headers = {'User-Agent': 'Mozilla/5.0'}
 
-    # 1. ТЕЛЕГРАМ (Последние 20 постов, без глубокого листания, чтобы не грузить)
-    for ch in TG_CHANNELS:
-        try:
-            r = requests.get(f"https://t.me/s/{ch}", headers=headers, timeout=5)
-            found = regex.findall(r.text)
-            for l in found:
-                clean = l.strip().split('<')[0].split('"')[0]
-                links.add(clean)
-        except: pass
-
-    # 2. ГИТХАБ
+    logging.info("🧹 Vacuum: Начинаю сбор с Гитхаба...")
     for url in EXTERNAL_SUBS:
         try:
-            r = requests.get(url, headers=headers, timeout=10)
+            r = requests.get(url, headers=headers, timeout=15)
             text = r.text
             # Пробуем декодировать
-            decoded = safe_decode(text)
-            if len(decoded) > 100: text = decoded
+            if len(text) > 10 and not "://" in text[:50]:
+                decoded = safe_decode(text)
+                if decoded: text = decoded
             
             found = regex.findall(text)
-            for l in found:
-                clean = l.strip()
-                links.add(clean)
+            for l in found: links.add(l.strip())
+        except: pass
+
+    logging.info(f"🧹 Vacuum: Гитхаб дал {len(links)}. Иду в Телеграм (Глубокий поиск)...")
+    
+    for ch in TG_CHANNELS:
+        url = f"https://t.me/s/{ch}"
+        pages = 0
+        try:
+            while pages < MAX_PAGES_TG:
+                r = requests.get(url, headers=headers, timeout=10)
+                soup = BeautifulSoup(r.text, 'html.parser')
+                msgs = soup.find_all('div', class_='tgme_widget_message_text')
+                
+                if not msgs: break
+                
+                # Собираем со страницы
+                found_on_page = 0
+                for m in msgs:
+                    found = regex.findall(m.get_text())
+                    for l in found:
+                        clean = l.strip().split('<')[0].split('"')[0]
+                        links.add(clean)
+                        found_on_page += 1
+                
+                # Ищем кнопку "More" (старые посты)
+                more = soup.find('a', class_='tme_messages_more')
+                if more and 'href' in more.attrs:
+                    url = "https://t.me" + more['href']
+                    pages += 1
+                    # Небольшая пауза, чтобы ТГ не забанил
+                    time.sleep(0.5)
+                else:
+                    break
         except: pass
     
     return list(links)
 
-# --- ФУНКЦИИ ПРОВЕРКИ ---
 def extract_ip_port(link):
     try:
         if link.startswith("vmess://"):
@@ -83,63 +108,57 @@ def extract_ip_port(link):
     except: pass
     return None, None
 
-async def check_connectivity(ip, port):
-    """
-    Легкая проверка TCP.
-    Если порт открыт и отвечает быстро - считаем сервер живым.
-    Для бесплатного сервера это оптимально.
-    """
+async def check_tcp(ip, port):
     try:
-        start = time.time()
+        st = time.time()
         conn = asyncio.open_connection(ip, port)
-        _, writer = await asyncio.wait_for(conn, timeout=1.5) # Тайм-аут 1.5 сек
-        latency = int((time.time() - start) * 1000)
-        writer.close()
-        await writer.wait_closed()
-        
-        # Отсекаем фейки < 5мс
-        if latency < 5: return None
-        return latency
-    except:
-        return None
+        _, w = await asyncio.wait_for(conn, timeout=1.5)
+        lat = int((time.time() - st) * 1000)
+        w.close()
+        await w.wait_closed()
+        return lat
+    except: return None
 
-def get_geo_info(ip):
-    # Упрощенный GeoIP (одиночный запрос, чтобы не банили батчами)
-    # Можно закэшировать или использовать базу, но пока так
-    return "🏳️" # Пока заглушка для скорости
-
-# --- ГЛАВНЫЙ ЦИКЛ ---
-async def start_vacuum():
+async def vacuum_job():
+    """Фоновый процесс"""
     while True:
         try:
-            # 1. Сбор
-            all_links = scrape_everything()
+            # 1. Сбор (в отдельном потоке, чтобы не тормозить бота)
+            # Это может занять время, так как листает ТГ
+            logging.info("🧹 Vacuum: Запускаю сканер...")
+            all_links = await asyncio.to_thread(scrape_sync)
+            
+            # Сохраняем в базу (она сама отсеет дубликаты)
             added = db.save_proxy_batch(all_links)
-            logging.info(f"🧹 Vacuum: Добавлено {added} новых. Всего найдено {len(all_links)}")
+            logging.info(f"🧹 Vacuum: Сбор окончен. Новых: {added}. Всего в базе: {len(all_links)}")
             
-            # 2. Проверка (Берем из базы пачку непроверенных)
-            candidates = db.get_proxies_to_check(limit=100) # Проверяем по 100 штук за раз
-            logging.info(f"🧪 Vacuum: Проверяю {len(candidates)} кандидатов...")
+            # 2. Проверка (берем пачку старых или новых непроверенных)
+            # Проверяем порциями, чтобы не перегрузить сеть
+            candidates = db.get_proxies_to_check(limit=MAX_LINKS_CHECK)
             
-            tasks = []
-            for link in candidates:
-                ip, port = extract_ip_port(link)
-                if ip and port:
-                    tasks.append((link, ip, port))
-                else:
-                    db.update_proxy_status(link, None, 0, "") # Невалид
-            
-            for link, ip, port in tasks:
-                lat = await check_connectivity(ip, port)
-                # Тут можно добавить проверку на AI (пока рандом или заглушка)
-                is_ai = 1 if lat and lat < 200 else 0 # Пример: быстрые считаем AI
-                country = "" 
+            if candidates:
+                logging.info(f"🧪 Vacuum: Проверяю {len(candidates)} серверов на живучесть...")
+                sem = asyncio.Semaphore(50) # 50 одновременных проверок
                 
-                db.update_proxy_status(link, lat, is_ai, country)
-                
-            logging.info("💤 Vacuum: Сплю 10 минут...")
-            await asyncio.sleep(600) # Пауза 10 мин
+                async def verify(url):
+                    async with sem:
+                        ip, port = extract_ip_port(url)
+                        if ip and port:
+                            lat = await check_tcp(ip, port)
+                            # Определяем AI (пока простая эвристика)
+                            is_ai = 1 if lat and (lat < 150 or "reality" in url.lower()) else 0
+                            db.update_proxy_status(url, lat, is_ai, "")
+                        else:
+                            db.update_proxy_status(url, None, 0, "") # Невалид
+
+                await asyncio.gather(*(verify(u) for u in candidates))
+                logging.info(f"✅ Vacuum: Пачка проверена.")
+            
+            # Спим час перед следующим сбором
+            # Но проверку можно запускать чаще, если нужно
+            logging.info("💤 Vacuum: Сплю 1 час...")
+            await asyncio.sleep(3600)
             
         except Exception as e:
-            logging.error(f"Vacuum Error: {e}")
+            logging.error(f"❌ Vacuum Error: {e}")
             await asyncio.sleep(60)
