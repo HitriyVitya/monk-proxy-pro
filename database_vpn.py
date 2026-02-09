@@ -3,7 +3,6 @@ import sqlite3
 DB_NAME = "vpn_storage.db"
 
 def get_connection():
-    # Добавили таймаут ожидания, если база занята
     conn = sqlite3.connect(DB_NAME, timeout=20)
     # ВКЛЮЧАЕМ РЕЖИМ WAL (Чтение не блокирует запись)
     conn.execute("PRAGMA journal_mode=WAL;")
@@ -51,9 +50,10 @@ def update_proxy_status(url, latency, is_ai, country):
 
 def get_best_proxies_for_sub():
     conn = get_connection(); c = conn.cursor()
-    # Берем топ-300, чтобы не перегружать телефон
-    c.execute("""SELECT url FROM vpn_proxies 
+    # Берем топ-300 живых и быстрых
+    c.execute("""SELECT url, latency, is_ai, country FROM vpn_proxies 
                  WHERE fails < 2 AND latency < 2500 
                  ORDER BY is_ai DESC, latency ASC LIMIT 300""")
-    rows = [r[0] for r in c.fetchall()]
-    conn.close(); return rows
+    rows = c.fetchall()
+    conn.close()
+    return rows
