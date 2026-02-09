@@ -7,14 +7,14 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
-# Добавили FSInputFile для отправки бэкапа
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, BotCommand, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, BufferedInputFile, FSInputFile
 
 # --- НАШИ МОДУЛИ ---
 import database as db
 import plots      # Рисовалка
 import analysis   # Мозги
-import keep_alive # Сервер для Render
+import keep_alive # Сервер для Render/Koyeb + Подписка
+import proxy_vacuum # <-- НОВЫЙ МОДУЛЬ (ПЫЛЕСОС)
 
 # -----------------------------------------------------------
 # НАСТРОЙКИ
@@ -103,11 +103,11 @@ async def cmd_start(message: types.Message, state: FSMContext):
     await bot.set_my_commands([
         BotCommand(command="start", description="🏠 Меню"),
         BotCommand(command="stats", description="📊 Отчет"),
-        BotCommand(command="export", description="💾 Бэкап базы") # Добавили команду в меню
+        BotCommand(command="export", description="💾 Бэкап базы")
     ])
     await message.answer(
-        "💪 <b>Монах V5.5 (Server Edition)</b>.\n"
-        "Я теперь умею жить в облаке и считать аналитику за всё время.", 
+        "💪 <b>Монах V6.0 (Hybrid Core)</b>.\n"
+        "Я качаю мышцы и качаю интернет в фоне.", 
         parse_mode="HTML", 
         reply_markup=get_main_keyboard()
     )
@@ -126,7 +126,7 @@ async def export_db(message: types.Message):
     except Exception as e:
         await message.answer(f"Ошибка: {e}")
 
-# --- 🧠 АНАЛИЗ (НОВОЕ МЕНЮ) ---
+# --- 🧠 АНАЛИЗ ---
 @dp.message(F.text == "🧠 Анализ")
 async def analysis_menu(message: types.Message):
     await message.answer("За какой период поднять архивы?", reply_markup=get_analysis_keyboard())
@@ -134,25 +134,26 @@ async def analysis_menu(message: types.Message):
 @dp.callback_query(F.data.startswith("anal_"))
 async def process_analysis(callback: CallbackQuery):
     code = callback.data.split("_")[1]
-    days = None # По дефолту "Всё время"
-    
+    days = None 
     if code == "7": days = 7
     elif code == "30": days = 30
     
-    # Показываем, что думаем
-    try:
-        await callback.message.edit_text("⏳ Считаю математику...")
-    except: pass # Если вдруг сообщение не успело измениться
+    try: await callback.message.edit_text("⏳ Считаю математику...")
+    except: pass
     
-    report = analysis.analyze_period(callback.from_user.id, days)
-    await callback.message.edit_text(report, parse_mode="HTML")
+    # Если analysis.py на месте - сработает
+    try:
+        report = analysis.analyze_period(callback.from_user.id, days)
+        await callback.message.edit_text(report, parse_mode="HTML")
+    except Exception as e:
+        await callback.message.edit_text(f"Ошибка анализа: {e}")
     await callback.answer()
 
 # --- 📈 ГРАФИКИ ---
 @dp.message(F.text == "📈 Графики")
 async def show_charts(message: types.Message):
     wait_msg = await message.answer("🎨 Рисую...")
-    data = db.get_history(message.from_user.id, 30) # График всегда за 30 дней, чтобы не мельчить
+    data = db.get_history(message.from_user.id, 30)
     
     if not data:
         await wait_msg.edit_text("Данных нет, брат.")
@@ -355,16 +356,36 @@ async def back_handler(message: types.Message, state: FSMContext):
     await state.clear()
     await message.answer("Главное меню", reply_markup=get_main_keyboard())
 
+# --- ИМПОРТ БАЗЫ (ВОССТАНОВЛЕНИЕ) ---
+@dp.message(F.document)
+async def import_db(message: types.Message):
+    if message.document.file_name == "iron_monk.db":
+        await message.answer("📥 Вижу базу. Загружаю...")
+        try:
+            file_id = message.document.file_id
+            file = await bot.get_file(file_id)
+            await bot.download_file(file.file_path, "iron_monk.db")
+            await message.answer("✅ <b>База восстановлена!</b>", parse_mode="HTML")
+        except Exception as e:
+            await message.answer(f"Ошибка: {e}")
+
 # -----------------------------------------------------------
-# ЗАПУСК НА СЕРВЕРЕ
+# ЗАПУСК НА СЕРВЕРЕ (С ПЫЛЕСОСОМ И САЙТОМ)
 # -----------------------------------------------------------
 async def main():
-    print("🚀 Бот запускается...")
+    print("🚀 Инициализация БД...")
     db.init_db()
+    # Если ты уже обновил database.py, раскомментируй это:
+    db.init_proxy_db() 
     
-    # !!! ВАЖНО: Запускаем веб-сервер для Render !!!
-    await keep_alive.start_server()
+    print("🚀 Запуск Веб-сервера (Порт 8080)...")
+    # Веб-сервер теперь не только для жизни, но и для подписки
+    asyncio.create_task(keep_alive.start_server())
     
+    print("🚀 Запуск ВПН-Пылесоса (Фон)...")
+    asyncio.create_task(proxy_vacuum.vacuum_job())
+    
+    print("🚀 Запуск Бота...")
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
