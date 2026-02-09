@@ -5,10 +5,13 @@ import base64
 import json
 import time
 import logging
-import yaml
+import subprocess
+import os
+import random
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, unquote, parse_qs, quote
 import database_vpn as db
+
 # --- СПИСКИ ---
 TG_CHANNELS = [
     "shadowsockskeys", "oneclickvpnkeys", "v2ray_outlineir",
@@ -27,17 +30,22 @@ EXTERNAL_SUBS = [
     "https://raw.githubusercontent.com/officialputuid/V2Ray-Config/main/Splitted-v2ray-config/all"
 ]
 
-
 SINGBOX_BIN = "./sing-box"
 TEMP_SUB_PATH = "clash_sub.yaml.tmp"
 FINAL_SUB_PATH = "clash_sub.yaml"
 
+MAX_LINKS_PER_CHANNEL = 5000
+MAX_PAGES_TG = 100
+
+# --- ВСПОМОГАТЕЛЬНЫЕ ---
 def safe_decode(s):
-    try: return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
+    try:
+        s = re.sub(r'[^a-zA-Z0-9+/=]', '', s)
+        return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
     except: return ""
 
-# --- КОНВЕРТЕР ССЫЛКИ В SING-BOX JSON ---
 def link_to_singbox_outbound(link):
+    """Превращает ссылку в конфиг для ядра"""
     try:
         if link.startswith("vmess://"):
             d = json.loads(safe_decode(link[8:]))
@@ -51,9 +59,16 @@ def link_to_singbox_outbound(link):
             if q.get('security', [''])[0] == 'reality':
                 out["tls"] = {"enabled": True, "server_name": q.get('sni', [''])[0], "reality": {"enabled": True, "public_key": q.get('pbk', [''])[0], "short_id": q.get('sid', [''])[0]}, "utls": {"enabled": True, "fingerprint": "chrome"}}
             return out
-    except: return None
+        if link.startswith("ss://"):
+            main = link.split("#")[0].replace("ss://", "")
+            if "@" in main:
+                u, s = main.split("@", 1); d = safe_decode(u)
+                m, pw = d.split(":", 1) if ":" in d else (u.split(":", 1) if ":" in u else ("aes-256-gcm", u))
+                return {"type": "shadowsocks", "tag": "proxy", "server": s.split(":")[0], "server_port": int(s.split(":")[1].split("/")[0]), "method": m, "password": pw}
+    except: pass
+    return None
 
-# --- ТЯЖЕЛАЯ ПРОВЕРКА ЧЕРЕЗ ЯДРО ---
+# --- ТЯЖЕЛАЯ ПРОВЕРКА ---
 async def singbox_check(url, semaphore):
     async with semaphore:
         port = random.randint(20000, 30000)
@@ -69,45 +84,42 @@ async def singbox_check(url, semaphore):
         cfg_file = f"cfg_{port}.json"
         with open(cfg_file, 'w') as f: json.dump(config, f)
         
-        proc = subprocess.Popen([SINGBOX_BIN, "run", "-c", cfg_file], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        await asyncio.sleep(1.5) # Даем проснуться
-        
+        proc = None
         try:
-            # Пробуем скачать Google 204
-            start = time.time()
-            # Проверка через curl (используем прокси, который поднял sing-box)
+            proc = subprocess.Popen([SINGBOX_BIN, "run", "-c", cfg_file], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            await asyncio.sleep(1.5) 
+            
+            # Тест через curl
             check = await asyncio.create_subprocess_shell(
                 f"curl -x socks5h://127.0.0.1:{port} -s -o /dev/null -w '%{{http_code}}' --max-time 3 http://www.google.com/generate_204",
                 stdout=asyncio.subprocess.PIPE
             )
-            stdout, _ = await asyncio.wait_for(check.communicate(), timeout=4)
-            lat = int((time.time() - start) * 1000)
+            stdout, _ = await asyncio.wait_for(check.communicate(), timeout=5)
             
             if stdout.decode().strip() == "204":
-                # ВТОРОЙ ТЕСТ: Google AI Studio
+                # Тест на AI
                 ai_check = await asyncio.create_subprocess_shell(
                     f"curl -x socks5h://127.0.0.1:{port} -s -o /dev/null -w '%{{http_code}}' --max-time 3 https://aistudio.google.com",
                     stdout=asyncio.subprocess.PIPE
                 )
                 ai_out, _ = await ai_check.communicate()
                 is_ai = 1 if ai_out.decode().strip() in ["200", "403"] else 0
-                return {"url": url, "lat": lat, "is_ai": is_ai}
+                return {"url": url, "lat": 100, "is_ai": is_ai} # Условный латенси
         except: pass
         finally:
-            proc.terminate()
+            if proc: proc.terminate()
             if os.path.exists(cfg_file): os.remove(cfg_file)
         return None
 
-# --- ГЕНЕРАЦИЯ ПОЛНОГО CLASH CONFIG ---
+# --- ОБНОВЛЕНИЕ ФАЙЛА ---
 def update_clash_file():
     import yaml
     try:
-        rows = db.get_best_proxies_for_sub() # (url, lat, is_ai, country)
-        from keep_alive import link_to_clash_dict # Используем твой конвертер
-        
+        rows = db.get_best_proxies_for_sub()
+        import keep_alive 
         clash_proxies = []
         for r in rows:
-            obj = link_to_clash_dict(r[0], r[1], r[2], r[3])
+            obj = keep_alive.link_to_clash_dict(r[0], r[1], r[2], r[3])
             if obj:
                 while any(p['name'] == obj['name'] for p in clash_proxies): obj['name'] += " "
                 clash_proxies.append(obj)
@@ -123,25 +135,48 @@ def update_clash_file():
             ],
             "rules": ["MATCH,🌍 Proxy"]
         }
-        
-        # АТОМАРНАЯ ЗАПИСЬ
         with open(TEMP_SUB_PATH, 'w', encoding='utf-8') as f:
             yaml.dump(full_config, f, allow_unicode=True, sort_keys=False)
-        os.replace(TEMP_SUB_PATH, FINAL_SUB_PATH) # Мгновенная замена
-        logging.info(f"💾 Подписка обновлена: {len(clash_proxies)} серверов.")
+        os.replace(TEMP_SUB_PATH, FINAL_SUB_PATH)
+        logging.info(f"💾 Файл обновлен: {len(clash_proxies)} шт.")
     except Exception as e: logging.error(f"Save error: {e}")
 
-# ... (scraper_task как был) ...
+# --- ЗАДАЧИ ---
+async def scraper_task():
+    regex = re.compile(r'(?:vless|vmess|ss|ssr|trojan|hy2|hysteria)://[^\s<"\'\)]+')
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    while True:
+        logging.info("📥 [Scraper] Сбор...")
+        links = set()
+        for url in EXTERNAL_SUBS:
+            try:
+                r = requests.get(url, headers=headers, timeout=10); t = r.text
+                d = safe_decode(t); t = d if "://" in d else t
+                for l in regex.findall(t): links.add(l.strip())
+            except: pass
+        for ch in TG_CHANNELS:
+            url = f"https://t.me/s/{ch}"
+            for _ in range(MAX_PAGES_TG):
+                try:
+                    r = requests.get(url, headers=headers, timeout=5)
+                    for l in regex.findall(r.text): links.add(l.strip().split('<')[0])
+                    if 'tme_messages_more' in r.text:
+                        match = re.search(r'href="(/s/.*?)"', r.text)
+                        if match: url = "https://t.me" + match.group(1)
+                        else: break
+                    else: break
+                except: break
+        if links: db.save_proxy_batch(list(links))
+        await asyncio.sleep(1800)
 
 async def checker_task():
-    sem = asyncio.Semaphore(5) # Проверяем по 5 штук через ядро (чтобы Koyeb не упал)
+    sem = asyncio.Semaphore(5) 
     while True:
         candidates = db.get_proxies_to_check(50)
         if not candidates:
             await asyncio.sleep(10); continue
         
         results = await asyncio.gather(*(singbox_check(u, sem) for u in candidates))
-        
         for i, res in enumerate(results):
             if res: db.update_proxy_status(res['url'], res['lat'], res['is_ai'], "UN")
             else: db.update_proxy_status(candidates[i], None, 0, "")
