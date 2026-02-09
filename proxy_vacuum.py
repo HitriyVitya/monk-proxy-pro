@@ -22,61 +22,42 @@ EXTERNAL_SUBS = [
 ]
 
 
-
 FINAL_SUB_PATH = "clash_sub.yaml"
 
 def safe_decode(s):
     try: return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
     except: return ""
 
-async def get_geo_info_batch(ips):
-    if not ips: return {}
-    res_map = {}
-    try:
-        unique_ips = list(set(ips))
-        r = await asyncio.to_thread(requests.post, "http://ip-api.com/batch?fields=query,countryCode,isp", json=[{"query": i} for i in unique_ips], timeout=15)
-        for item in r.json():
-            isp = item.get('isp', '').lower()
-            # Жесткий список дата-центров
-            is_dc = any(h in isp for h in ['amazon','google','oracle','azure','digitalocean','hetzner','m247','ovh','cloudflare','akamai','vultr','linode','leaseweb'])
-            res_map[item['query']] = {'cc': item.get('countryCode', 'UN'), 'is_dc': is_dc}
-    except: pass
-    return res_map
-
 async def scraper_task():
     regex = re.compile(r'(?:vless|vmess|ss|ssr|trojan|hy2|hysteria)://[^\s<"\'\)]+')
     headers = {'User-Agent': 'Mozilla/5.0'}
     while True:
-        logging.info("📥 [Scraper] Глубокий сбор...")
         links = set()
-        # Гитхаб
         for url in EXTERNAL_SUBS:
             try:
                 r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=10)
                 t = r.text if "://" in r.text[:50] else safe_decode(r.text)
                 for l in regex.findall(t): links.add(l.strip())
             except: pass
-        # ТГ - листаем до 30 страниц, чтобы набить 1000 серверов
         for ch in TG_CHANNELS:
             url = f"https://t.me/s/{ch}"
-            for _ in range(30):
+            for _ in range(40): # Листаем глубоко
                 try:
                     r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=5)
                     found = regex.findall(r.text)
                     if found: db.save_proxy_batch([l.strip().split('<')[0] for l in found])
                     if 'tme_messages_more' not in r.text: break
-                    m = re.search(r'href="(/s/.*?)"', r.text)
-                    if m: url = "https://t.me" + m.group(1)
+                    match = re.search(r'href="(/s/.*?)"', r.text)
+                    if match: url = "https://t.me" + match.group(1)
                     else: break
                 except: break
-        await asyncio.sleep(1200) # Раз в 20 мин
+        await asyncio.sleep(1200)
 
 async def checker_task():
-    sem = asyncio.Semaphore(60)
+    sem = asyncio.Semaphore(100) # Жарим на все деньги
     while True:
-        candidates = db.get_proxies_to_check(150)
+        candidates = db.get_proxies_to_check(200)
         if candidates:
-            results = []
             async def verify(url):
                 async with sem:
                     try:
@@ -87,18 +68,12 @@ async def checker_task():
                         _, w = await asyncio.wait_for(asyncio.open_connection(host, port), timeout=2.0)
                         lat = int((time.time() - st) * 1000)
                         w.close(); await w.wait_closed()
-                        results.append({'url': url, 'lat': lat, 'ip': host})
+                        # ЛОГИКА: если пинг < 400мс - лепим AI (как ты хотел)
+                        is_ai = 1 if lat < 400 else 0
+                        db.update_proxy_status(url, lat, is_ai, "UN")
                     except: db.update_proxy_status(url, None, 0, "UN")
-            
             await asyncio.gather(*(verify(u) for u in candidates))
-            if results:
-                geo_map = await get_geo_info_batch([r['ip'] for r in results])
-                for r in results:
-                    info = geo_map.get(r['ip'], {'cc': 'UN', 'is_dc': True})
-                    # AI если: < 150мс И не дата-центр И не в бане И НЕ Shadowsocks
-                    is_ai = 1 if r['lat'] < 150 and not info['is_dc'] and info['cc'] not in ['RU','CN','IR','BY'] and not r['url'].startswith('ss://') else 0
-                    db.update_proxy_status(r['url'], r['lat'], is_ai, info['cc'])
-                update_static_file()
+            update_static_file()
         await asyncio.sleep(2)
 
 def update_static_file():
@@ -110,9 +85,7 @@ def update_static_file():
         for idx, r in enumerate(rows):
             obj = link_to_clash_dict(r[0], r[1], r[2], r[3])
             if obj:
-                # Имя: флаг + (AI) + пинг + кусок URL для уникальности
-                unique_tail = "".join(random.choices("abcdef", k=3))
-                obj['name'] = f"{obj['name']} ({unique_tail}-{idx})"
+                obj['name'] = f"{obj['name']} ({idx})"
                 clash_proxies.append(obj)
         if clash_proxies:
             full_config = {
