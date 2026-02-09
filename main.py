@@ -9,30 +9,26 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, BotCommand, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, BufferedInputFile, FSInputFile
 
-# --- НАШИ МОДУЛИ ---
-import database as db
-import plots      # Рисовалка
-import analysis   # Мозги
-import keep_alive # Сервер для Render/Koyeb + Подписка
-import proxy_vacuum # <-- НОВЫЙ МОДУЛЬ (ПЫЛЕСОС)
+# --- МОДУЛИ ---
+import database as db          # База качалки
+import database_vpn as vpn_db  # База прокси
+import plots                   # Графики
+import analysis                # Анализ веса
+import keep_alive              # Веб-сервер + Подписка
+import proxy_vacuum            # Пылесос
 
-# -----------------------------------------------------------
-# НАСТРОЙКИ
-# -----------------------------------------------------------
+# --- НАСТРОЙКИ ---
 TOKEN = "8349554668:AAHX4Fk76PFTVHrlxPTl7TTvcWds-kb6tEs"
-USER_TIMEZONE = 3  # Москва
+USER_TIMEZONE = 3
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 
-# -----------------------------------------------------------
-# ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
-# -----------------------------------------------------------
+# --- ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ---
 def get_today_str():
     offset = timezone(timedelta(hours=USER_TIMEZONE))
-    now = datetime.now(offset)
-    return now.strftime("%Y-%m-%d")
+    return datetime.now(offset).strftime("%Y-%m-%d")
 
 def format_date_user(date_str):
     d = datetime.strptime(date_str, "%Y-%m-%d")
@@ -42,9 +38,7 @@ async def get_working_date(state: FSMContext):
     data = await state.get_data()
     return data.get("selected_date", get_today_str())
 
-# -----------------------------------------------------------
-# МАШИНА СОСТОЯНИЙ
-# -----------------------------------------------------------
+# --- FSM ---
 class Form(StatesGroup):
     waiting_for_food = State()
     waiting_for_weight = State()
@@ -55,9 +49,7 @@ class Form(StatesGroup):
     waiting_for_deficit_day = State()
     waiting_for_fix_burn = State()
 
-# -----------------------------------------------------------
-# КЛАВИАТУРЫ
-# -----------------------------------------------------------
+# --- КЛАВИАТУРЫ ---
 def get_main_keyboard():
     kb = [
         [KeyboardButton(text="🍔 Внести еду"), KeyboardButton(text="⚖️ Внести вес")],
@@ -92,9 +84,7 @@ def get_analysis_keyboard():
     ]
     return InlineKeyboardMarkup(inline_keyboard=kb)
 
-# -----------------------------------------------------------
-# ЛОГИКА БОТА
-# -----------------------------------------------------------
+# --- ХЭНДЛЕРЫ ---
 
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message, state: FSMContext):
@@ -103,33 +93,45 @@ async def cmd_start(message: types.Message, state: FSMContext):
     await bot.set_my_commands([
         BotCommand(command="start", description="🏠 Меню"),
         BotCommand(command="stats", description="📊 Отчет"),
-        BotCommand(command="export", description="💾 Бэкап базы")
+        BotCommand(command="export", description="💾 Бэкап")
     ])
     await message.answer(
-        "💪 <b>Монах V6.0 (Hybrid Core)</b>.\n"
-        "Я качаю мышцы и качаю интернет в фоне.", 
+        "💪 <b>Монах V7.0 (Ultimate)</b>.\n"
+        "Слежу за фигурой и держу ВПН в тонусе.", 
         parse_mode="HTML", 
         reply_markup=get_main_keyboard()
     )
 
-# --- 💾 БЭКАП (СОХРАНЕНИЕ БАЗЫ) ---
+# --- ЭКСПОРТ (ДВЕ БАЗЫ) ---
 @dp.message(Command("export"))
 async def export_db(message: types.Message):
-    await message.answer("📦 Пакую твои данные...")
+    await message.answer("📦 Пакую базы...")
     try:
-        db_file = FSInputFile("iron_monk.db")
-        await message.reply_document(
-            document=db_file,
-            caption=f"💾 <b>Бэкап от {get_today_str()}</b>.\nСохрани в Избранное.",
-            parse_mode="HTML"
-        )
+        await message.reply_document(FSInputFile("iron_monk.db"), caption="💾 Данные Качалки")
+        await message.reply_document(FSInputFile("vpn_storage.db"), caption="🌐 База Прокси")
     except Exception as e:
-        await message.answer(f"Ошибка: {e}")
+        await message.answer(f"Ошибка экспорта (возможно база пустая): {e}")
 
-# --- 🧠 АНАЛИЗ ---
+# --- ИМПОРТ (ВОССТАНОВЛЕНИЕ) ---
+@dp.message(F.document)
+async def import_db(message: types.Message):
+    fname = message.document.file_name
+    if fname in ["iron_monk.db", "vpn_storage.db"]:
+        await message.answer(f"📥 Загружаю {fname}...")
+        try:
+            file_id = message.document.file_id
+            file = await bot.get_file(file_id)
+            await bot.download_file(file.file_path, fname)
+            await message.answer("✅ База обновлена!", parse_mode="HTML")
+        except Exception as e:
+            await message.answer(f"Ошибка: {e}")
+    else:
+        await message.answer("Кидай файл 'iron_monk.db' или 'vpn_storage.db'")
+
+# --- АНАЛИЗ ---
 @dp.message(F.text == "🧠 Анализ")
 async def analysis_menu(message: types.Message):
-    await message.answer("За какой период поднять архивы?", reply_markup=get_analysis_keyboard())
+    await message.answer("Выбери период:", reply_markup=get_analysis_keyboard())
 
 @dp.callback_query(F.data.startswith("anal_"))
 async def process_analysis(callback: CallbackQuery):
@@ -138,10 +140,9 @@ async def process_analysis(callback: CallbackQuery):
     if code == "7": days = 7
     elif code == "30": days = 30
     
-    try: await callback.message.edit_text("⏳ Считаю математику...")
+    try: await callback.message.edit_text("⏳ Считаю...")
     except: pass
     
-    # Если analysis.py на месте - сработает
     try:
         report = analysis.analyze_period(callback.from_user.id, days)
         await callback.message.edit_text(report, parse_mode="HTML")
@@ -149,16 +150,14 @@ async def process_analysis(callback: CallbackQuery):
         await callback.message.edit_text(f"Ошибка анализа: {e}")
     await callback.answer()
 
-# --- 📈 ГРАФИКИ ---
+# --- ГРАФИКИ ---
 @dp.message(F.text == "📈 Графики")
 async def show_charts(message: types.Message):
     wait_msg = await message.answer("🎨 Рисую...")
     data = db.get_history(message.from_user.id, 30)
-    
     if not data:
-        await wait_msg.edit_text("Данных нет, брат.")
+        await wait_msg.edit_text("Нет данных.")
         return
-
     photo_file = plots.create_progress_chart(data)
     if photo_file:
         await message.reply_photo(photo=BufferedInputFile(photo_file.read(), filename="chart.png"))
@@ -166,7 +165,7 @@ async def show_charts(message: types.Message):
     else:
         await wait_msg.edit_text("Ошибка рисования.")
 
-# --- 🍔 ЕДА ---
+# --- ЕДА ---
 @dp.message(F.text == "🍔 Внести еду")
 async def food_start(message: types.Message, state: FSMContext):
     date = await get_working_date(state)
@@ -184,7 +183,7 @@ async def food_process(message: types.Message, state: FSMContext):
         await state.set_state(None)
     else: await message.answer("Цифрами.")
 
-# --- ⚖️ ВЕС ---
+# --- ВЕС ---
 @dp.message(F.text == "⚖️ Внести вес")
 async def weight_start(message: types.Message, state: FSMContext):
     date = await get_working_date(state)
@@ -199,15 +198,15 @@ async def weight_process(message: types.Message, state: FSMContext):
         db.update_weight(message.from_user.id, val, date)
         await message.answer(f"✅ Вес <b>{val}</b>.", parse_mode="HTML", reply_markup=get_main_keyboard())
         await state.set_state(None)
-    except: await message.answer("Числом пиши.")
+    except: await message.answer("Числом.")
 
-# --- 👣 УМНЫЕ ШАГИ ---
+# --- ШАГИ ---
 @dp.message(F.text == "👣 Внести шаги")
 async def steps_start(message: types.Message, state: FSMContext):
     date = await get_working_date(state)
     stats = db.get_stats(message.from_user.id, date)
-    current = stats['steps'] if stats['steps'] else 0
-    await message.answer(f"Сейчас записано: <b>{current}</b>\nВведи ИТОГ на часах:", parse_mode="HTML", reply_markup=types.ReplyKeyboardRemove())
+    cur = stats['steps'] if stats['steps'] else 0
+    await message.answer(f"Сейчас: <b>{cur}</b>\nВведи ИТОГ:", parse_mode="HTML", reply_markup=types.ReplyKeyboardRemove())
     await state.set_state(Form.waiting_for_steps)
 
 @dp.message(Form.waiting_for_steps)
@@ -215,18 +214,16 @@ async def steps_process(message: types.Message, state: FSMContext):
     if message.text.isdigit():
         new_total = int(message.text)
         date = await get_working_date(state)
-        added_kcal = db.update_steps(message.from_user.id, new_total, date)
-        msg = f"👣 Шаги: <b>{new_total}</b>."
-        if added_kcal >= 0: msg += f" (+{added_kcal} ккал)"
-        else: msg += f" ({added_kcal} ккал)"
+        added = db.update_steps(message.from_user.id, new_total, date)
+        msg = f"👣 Шаги: <b>{new_total}</b> ({added:+} ккал)."
         await message.answer(msg, parse_mode="HTML", reply_markup=get_main_keyboard())
         await state.set_state(None)
     else: await message.answer("Цифрами.")
 
-# --- 🏋️‍♂️ ТРЕНЯ ---
+# --- ТРЕНЯ ---
 @dp.message(F.text == "🏋️‍♂️ Внести треню")
 async def gym_start(message: types.Message, state: FSMContext):
-    await message.answer("Ккал за треню:", reply_markup=types.ReplyKeyboardRemove())
+    await message.answer("Ккал:", reply_markup=types.ReplyKeyboardRemove())
     await state.set_state(Form.waiting_for_gym)
 
 @dp.message(Form.waiting_for_gym)
@@ -238,7 +235,7 @@ async def gym_process(message: types.Message, state: FSMContext):
         await message.answer(f"🔥 Треня +{val}.", reply_markup=get_main_keyboard())
         await state.set_state(None)
 
-# --- ✏️ РЕДАКТИРОВАНИЕ ---
+# --- РЕДАКТИРОВАНИЕ ---
 @dp.message(F.text == "✏️ Редактировать")
 async def edit_start(message: types.Message):
     await message.answer("Меню правок:", reply_markup=get_edit_menu())
@@ -250,8 +247,8 @@ async def delete_food_start(message: types.Message, state: FSMContext):
     if not logs:
         await message.answer("Записей нет.", reply_markup=get_main_keyboard())
         return
-    buttons = [[InlineKeyboardButton(text=f"❌ {log[1]} ккал", callback_data=f"del_food_{log[0]}")] for log in logs]
-    await message.answer(f"История за {format_date_user(date)}:", reply_markup=InlineKeyboardMarkup(inline_keyboard=buttons))
+    buttons = [[InlineKeyboardButton(text=f"❌ {l[1]} ккал", callback_data=f"del_food_{l[0]}")] for l in logs]
+    await message.answer(f"История {format_date_user(date)}:", reply_markup=InlineKeyboardMarkup(inline_keyboard=buttons))
 
 @dp.callback_query(F.data.startswith("del_food_"))
 async def process_food_delete(callback: CallbackQuery):
@@ -274,8 +271,9 @@ async def fix_burn_process(message: types.Message, state: FSMContext):
         db.set_burn_absolute(message.from_user.id, val, date)
         await message.answer("✅ Исправлено.", reply_markup=get_main_keyboard())
         await state.set_state(None)
+    else: await message.answer("Цифрами.")
 
-# --- ⚙️ ДЕФИЦИТ ---
+# --- ДЕФИЦИТ ---
 @dp.message(F.text == "⚙️ Дефицит")
 async def deficit_menu_start(message: types.Message):
     await message.answer("Настройки:", reply_markup=get_deficit_menu())
@@ -307,18 +305,16 @@ async def deficit_day_process(message: types.Message, state: FSMContext):
         await message.answer(f"✅ Для {format_date_user(date)}: -{message.text}", reply_markup=get_main_keyboard())
         await state.set_state(None)
 
-# --- 📊 СТАТИСТИКА ---
+# --- СТАТИСТИКА ---
 @dp.message(F.text == "📊 Статистика")
 async def stats_view(message: types.Message, state: FSMContext):
     date = await get_working_date(state)
     stats = db.get_stats(message.from_user.id, date)
     eff_deficit = db.get_effective_deficit(message.from_user.id, date)
-    
     bmr = 1950
     total_burn = bmr + stats['out']
     allowed = total_burn - eff_deficit
     rem = allowed - stats['in']
-    
     emoji = "🟢" if rem >= 0 else "🔴"
     label = f"{format_date_user(date)}"
     if date == get_today_str(): label += " (Сегодня)"
@@ -334,10 +330,10 @@ async def stats_view(message: types.Message, state: FSMContext):
     )
     await message.answer(text, parse_mode="HTML", reply_markup=get_main_keyboard())
 
-# --- ДРУГАЯ ДАТА / НАЗАД ---
+# --- ДРУГАЯ ДАТА ---
 @dp.message(F.text == "📅 Другая дата")
 async def change_date_start(message: types.Message, state: FSMContext):
-    await message.answer("Введи дату (ДД.ММ):", reply_markup=types.ReplyKeyboardRemove())
+    await message.answer("Дата (ДД.ММ):", reply_markup=types.ReplyKeyboardRemove())
     await state.set_state(Form.waiting_for_date)
 
 @dp.message(Form.waiting_for_date)
@@ -356,33 +352,20 @@ async def back_handler(message: types.Message, state: FSMContext):
     await state.clear()
     await message.answer("Главное меню", reply_markup=get_main_keyboard())
 
-# --- ИМПОРТ БАЗЫ (ВОССТАНОВЛЕНИЕ) ---
-@dp.message(F.document)
-async def import_db(message: types.Message):
-    if message.document.file_name == "iron_monk.db":
-        await message.answer("📥 Вижу базу. Загружаю...")
-        try:
-            file_id = message.document.file_id
-            file = await bot.get_file(file_id)
-            await bot.download_file(file.file_path, "iron_monk.db")
-            await message.answer("✅ <b>База восстановлена!</b>", parse_mode="HTML")
-        except Exception as e:
-            await message.answer(f"Ошибка: {e}")
-
 # -----------------------------------------------------------
-# ЗАПУСК НА СЕРВЕРЕ (С ПЫЛЕСОСОМ И САЙТОМ)
+# ЗАПУСК ВСЕГО
 # -----------------------------------------------------------
 async def main():
-    print("🚀 Инициализация БД...")
+    print("🚀 Инициализация Качалки...")
     db.init_db()
-    # Если ты уже обновил database.py, раскомментируй это:
-    db.init_proxy_db() 
     
-    print("🚀 Запуск Веб-сервера (Порт 8080)...")
-    # Веб-сервер теперь не только для жизни, но и для подписки
+    print("🚀 Инициализация Прокси-Базы...")
+    vpn_db.init_proxy_db()
+    
+    print("🚀 Запуск Веб-сервера (Подписка + AntiSleep)...")
     asyncio.create_task(keep_alive.start_server())
     
-    print("🚀 Запуск ВПН-Пылесоса (Фон)...")
+    print("🚀 Запуск ВПН-Пылесоса (Фоновый режим)...")
     asyncio.create_task(proxy_vacuum.vacuum_job())
     
     print("🚀 Запуск Бота...")
