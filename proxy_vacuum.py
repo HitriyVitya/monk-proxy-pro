@@ -6,10 +6,12 @@ import base64
 import json
 import time
 import logging
+import os
+import random
+import yaml
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, unquote, parse_qs, quote
 import database_vpn as db
-
 
 
 # --- СПИСКИ ---
@@ -34,117 +36,190 @@ EXTERNAL_SUBS = [
 
 
 FINAL_SUB_PATH = "clash_sub.yaml"
+MAX_PAGES_TG = 50      # Глубина поиска в ТГ
+MAX_LINKS_CHECK = 100  # Сколько проверять за один проход чекера
+TIMEOUT = 2          # Таймаут на ответ сервера
 
+# --- ВСПОМОГАТЕЛЬНЫЕ ---
 def safe_decode(s):
     try:
         s = re.sub(r'[^a-zA-Z0-9+/=]', '', s)
         return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
     except: return ""
 
-# --- ЛЕГКАЯ НО ГЛУБОКАЯ ПРОВЕРКА ---
-async def smart_ping(url, semaphore):
-    """
-    Проверяет сервер без запуска тяжелого ядра. 
-    Имитирует начало обмена данными.
-    """
-    async with semaphore:
-        try:
-            if "vmess://" in url:
-                d = json.loads(safe_decode(url[8:])); host, port = d['add'], int(d['port'])
-            else:
-                p = urlparse(url); host, port = p.hostname, p.port
-            
-            if not host or not port: return None
+def extract_ip_port(link):
+    """Вытаскивает хост и порт из любого типа ссылки"""
+    try:
+        if link.startswith("vmess://"):
+            d = json.loads(safe_decode(link[8:]))
+            return d.get('add'), int(d.get('port'))
+        p = urlparse(link)
+        if link.startswith("ss://") and "@" in link:
+            part = link.split("@")[-1].split("#")[0]
+            if ":" in part: 
+                return part.split(":")[0].replace("[","").replace("]",""), int(part.split(":")[1])
+        if p.hostname and p.port:
+            return p.hostname, p.port
+    except: pass
+    return None, None
 
-            start = time.time()
-            # Пытаемся открыть сокет
-            reader, writer = await asyncio.wait_for(asyncio.open_connection(host, port), timeout=2.0)
-            
-            # Имитируем отправку данных (просто пустой пинг на уровне сокета)
-            latency = int((time.time() - start) * 1000)
-            
-            writer.close()
-            await writer.wait_closed()
+async def check_tcp(ip, port):
+    """Честный TCP пинг"""
+    try:
+        st = time.time()
+        conn = asyncio.open_connection(ip, port)
+        _, w = await asyncio.wait_for(conn, timeout=TIMEOUT)
+        lat = int((time.time() - st) * 1000)
+        w.close()
+        await w.wait_closed()
+        if lat < 10: return None # Отсекаем мгновенные ошибки
+        return lat
+    except: return None
 
-            if latency < 10: return None # Фейки
-            
-            # Помечаем AI если Reality (они живучие)
-            is_ai = 1 if "reality" in url.lower() or "pbk=" in url.lower() else 0
-            
-            return {"url": url, "lat": latency, "is_ai": is_ai}
-        except:
-            return None
+async def get_countries_batch(ips):
+    """Узнает страны для пачки IP (лимит API - 100)"""
+    if not ips: return {}
+    res_map = {}
+    try:
+        unique_ips = list(set(ips))
+        # Используем асинхронный запуск для requests
+        r = await asyncio.to_thread(
+            requests.post, 
+            "http://ip-api.com/batch?fields=query,countryCode", 
+            json=[{"query": i} for i in unique_ips], 
+            timeout=10
+        )
+        for item in r.json():
+            res_map[item['query']] = item.get('countryCode', 'UN')
+    except Exception as e:
+        logging.error(f"GeoIP Error: {e}")
+    return res_map
 
-# --- ГЕНЕРАТОР ---
-def update_clash_file():
-    import yaml
+# --- ГЕНЕРАТОР ФАЙЛА ---
+def update_static_file():
+    """Собирает YAML из базы и пишет на диск атомарно"""
     try:
         from keep_alive import link_to_clash_dict
-        rows = db.get_best_proxies_for_sub()
+        rows = db.get_best_proxies_for_sub() # (url, lat, is_ai, country)
         clash_proxies = []
         for idx, r in enumerate(rows):
             obj = link_to_clash_dict(r[0], r[1], r[2], r[3])
             if obj:
+                # ГАРАНТИРУЕМ УНИКАЛЬНОСТЬ ИМЕНИ ЧЕРЕЗ ИНДЕКС
                 obj['name'] = f"{obj['name']} ({idx})"
                 clash_proxies.append(obj)
         
         if not clash_proxies:
-            # Если совсем глухо, сделаем пустой, но валидный конфиг
-            full_config = {"proxies": [], "proxy-groups": [{"name": "🌍 GLOBAL", "type": "select", "proxies": ["DIRECT"]}], "rules": ["MATCH,DIRECT"]}
-        else:
-            full_config = {
-                "proxies": clash_proxies,
-                "proxy-groups": [{"name": "🚀 Auto Select", "type": "url-test", "url": "http://1.1.1.1/generate_204", "interval": 300, "proxies": [p['name'] for p in clash_proxies]}],
-                "rules": ["MATCH,🚀 Auto Select"]
-            }
-        
-        with open(FINAL_SUB_PATH, 'w', encoding='utf-8') as f:
-            yaml.dump(full_config, f, allow_unicode=True, sort_keys=False)
-        logging.info(f"💾 Файл обновлен: {len(clash_proxies)} шт.")
-    except Exception as e:
-        logging.error(f"Save error: {e}")
+            logging.warning("⚠️ Нет живых прокси для сохранения.")
+            return
 
-# --- ФОНОВЫЙ ПАРСИНГ ---
+        full_config = {
+            "proxies": clash_proxies,
+            "proxy-groups": [
+                {
+                    "name": "🚀 Auto Select", 
+                    "type": "url-test", 
+                    "url": "http://www.gstatic.com/generate_204", 
+                    "interval": 300, 
+                    "proxies": [p['name'] for p in clash_proxies]
+                }
+            ],
+            "rules": ["MATCH,🚀 Auto Select"]
+        }
+        
+        # Запись во временный файл, потом замена (чтобы не было пустых чтений)
+        tmp_path = FINAL_SUB_PATH + ".tmp"
+        with open(tmp_path, 'w', encoding='utf-8') as f:
+            yaml.dump(full_config, f, allow_unicode=True, sort_keys=False)
+        os.replace(tmp_path, FINAL_SUB_PATH)
+        logging.info(f"💾 Подписка обновлена: {len(clash_proxies)} серверов.")
+    except Exception as e:
+        logging.error(f"Update file error: {e}")
+
+# --- ЗАДАЧИ ---
+
 async def scraper_task():
+    """Собирает новые ссылки и кладет в базу"""
     regex = re.compile(r'(?:vless|vmess|ss|ssr|trojan|hy2|hysteria)://[^\s<"\'\)]+')
     headers = {'User-Agent': 'Mozilla/5.0'}
     while True:
-        logging.info("📥 [Scraper] Начинаю обход...")
-        # Собираем ссылки (упрощенно для скорости)
+        logging.info("📥 [Scraper] Запуск цикла сбора...")
+        
+        # 1. Гитхаб
         for url in EXTERNAL_SUBS:
             try:
                 r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=10)
-                found = regex.findall(r.text if "://" in r.text[:50] else safe_decode(r.text))
-                if found: db.save_proxy_batch([l.strip() for l in found])
+                t = r.text if "://" in r.text[:50] else safe_decode(r.text)
+                found = regex.findall(t)
+                if found:
+                    db.save_proxy_batch([l.strip() for l in found])
             except: pass
-        
+
+        # 2. Телеграм
         for ch in TG_CHANNELS:
-            try:
-                r = await asyncio.to_thread(requests.get, f"https://t.me/s/{ch}", headers=headers, timeout=5)
-                found = regex.findall(r.text)
-                if found: db.save_proxy_batch([l.strip().split('<')[0] for l in found])
-            except: pass
+            base_url = f"https://t.me/s/{ch}"
+            for _ in range(MAX_PAGES_TG):
+                try:
+                    r = await asyncio.to_thread(requests.get, base_url, headers=headers, timeout=5)
+                    found = regex.findall(r.text)
+                    if found:
+                        db.save_proxy_batch([l.strip().split('<')[0] for l in found])
+                    
+                    if 'tme_messages_more' not in r.text: break
+                    match = re.search(r'href="(/s/.*?)"', r.text)
+                    if match: base_url = "https://t.me" + match.group(1)
+                    else: break
+                    await asyncio.sleep(0.5)
+                except: break
         
+        logging.info("💤 [Scraper] Сплю 30 минут.")
         await asyncio.sleep(1800)
 
 async def checker_task():
-    sem = asyncio.Semaphore(40) # Теперь можно больше, т.к. нет sing-box
+    """Берет пачку из базы, проверяет пинг + страну и обновляет базу"""
+    sem = asyncio.Semaphore(40)
     while True:
-        candidates = db.get_proxies_to_check(100)
-        if candidates:
-            logging.info(f"🧪 [Checker] Проверяю {len(candidates)} шт...")
-            results = await asyncio.gather(*(smart_ping(u, sem) for u in candidates))
+        candidates = db.get_proxies_to_check(limit=MAX_LINKS_CHECK)
+        if not candidates:
+            await asyncio.sleep(10)
+            continue
             
-            for i, res in enumerate(results):
-                if res: 
-                    db.update_proxy_status(res['url'], res['lat'], res['is_ai'], "UN")
-                else: 
-                    db.update_proxy_status(candidates[i], None, 0, "")
+        logging.info(f"🧪 [Checker] Проверяю {len(candidates)} шт...")
+        
+        check_results = []
+
+        async def verify(url):
+            async with sem:
+                ip, port = extract_ip_port(url)
+                if ip and port:
+                    lat = await check_tcp(ip, port)
+                    if lat:
+                        check_results.append({'url': url, 'ip': ip, 'lat': lat})
+                    else:
+                        db.update_proxy_status(url, None, 0, "")
+                else:
+                    db.update_proxy_status(url, None, 0, "")
+
+        await asyncio.gather(*(verify(u) for u in candidates))
+        
+        # Если есть живые - узнаем их страны пачкой
+        if check_results:
+            ips = [res['ip'] for res in check_results]
+            geo_map = await get_countries_batch(ips)
             
-            update_clash_file()
-        await asyncio.sleep(5)
+            for res in check_results:
+                country = geo_map.get(res['ip'], "UN")
+                # Умный флаг AI для Reality
+                is_ai = 1 if "reality" in res['url'].lower() or "pbk=" in res['url'].lower() or res['lat'] < 150 else 0
+                db.update_proxy_status(res['url'], res['lat'], is_ai, country)
+        
+        # Обновляем файл сразу после проверки пачки
+        update_static_file()
+        await asyncio.sleep(2)
 
 async def vacuum_job():
+    """Точка входа для main.py"""
     asyncio.create_task(scraper_task())
     asyncio.create_task(checker_task())
-    while True: await asyncio.sleep(3600)
+    while True:
+        await asyncio.sleep(3600)
