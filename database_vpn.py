@@ -4,6 +4,7 @@ DB_NAME = "vpn_storage.db"
 
 def get_connection():
     conn = sqlite3.connect(DB_NAME, timeout=30)
+    # WAL позволяет читать базу, пока в неё пишет пылесос
     conn.execute("PRAGMA journal_mode=WAL;") 
     return conn
 
@@ -24,10 +25,9 @@ def save_proxy_batch(proxies_list):
         except: pass
     conn.commit(); conn.close()
 
-def get_proxies_to_check(limit=200):
+def get_proxies_to_check(limit=100):
     conn = get_connection(); c = conn.cursor()
-    # Не трогаем тех, кто упал больше 15 раз
-    c.execute("SELECT url FROM vpn_proxies WHERE fails < 15 ORDER BY last_check ASC LIMIT ?", (limit,))
+    c.execute("SELECT url FROM vpn_proxies WHERE fails < 10 ORDER BY last_check ASC LIMIT ?", (limit,))
     rows = [r[0] for r in c.fetchall()]
     conn.close(); return rows
 
@@ -41,9 +41,9 @@ def update_proxy_status(url, latency, is_ai, country):
 
 def get_best_proxies_for_sub():
     conn = get_connection(); c = conn.cursor()
-    # Берем 1000 серверов. Сначала быстрые.
+    # Отдаем ТОП-1000 самых быстрых
     c.execute("""SELECT url, latency, is_ai, country FROM vpn_proxies 
-                 WHERE fails < 5 AND latency < 3500 
+                 WHERE fails < 3 AND latency < 3000 
                  ORDER BY latency ASC LIMIT 1000""")
     rows = c.fetchall()
     conn.close(); return rows
