@@ -1,6 +1,5 @@
-import os
+import os, base64, json
 from aiohttp import web
-import base64, json
 from urllib.parse import urlparse, unquote, parse_qs
 
 FINAL_SUB_PATH = "clash_sub.yaml"
@@ -9,15 +8,17 @@ def safe_decode(s):
     try: return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
     except: return ""
 
+def get_flag(code):
+    """Превращает 'DE' в флаг Германии"""
+    if not code or code == "UN" or len(code) != 2: return "🇺🇳"
+    return "".join(chr(ord(c) + 127397) for c in code.upper())
+
 def link_to_clash_dict(url, latency, is_ai, country):
     try:
-        # Упрощенная логика: все что быстро - AI
-        flag = "🇺🇳"
-        if country and len(country) == 2:
-            flag = "".join(chr(ord(c) + 127397) for c in country.upper())
-        
+        flag = get_flag(country)
         ai_tag = " ✨ AI" if is_ai else ""
-        srv = url.split('@')[-1].split(':')[0].split('.')[-1]
+        try: srv = url.split('@')[-1].split(':')[0].split('.')[-1]
+        except: srv = "srv"
         name = f"{flag}{ai_tag} {latency}ms | {srv}"
 
         if url.startswith("vmess://"):
@@ -41,22 +42,15 @@ def link_to_clash_dict(url, latency, is_ai, country):
 
 async def handle_sub(request):
     if os.path.exists(FINAL_SUB_PATH):
-        # Читаем файл, чтобы узнать его точный размер
+        # Читаем файл целиком, чтобы закрыть его быстро
         with open(FINAL_SUB_PATH, 'rb') as f:
-            content = f.read()
-        
-        headers = {
-            'Content-Type': 'text/yaml; charset=utf-8',
-            'Content-Length': str(len(content)), # КЛЮЧЕВОЙ МОМЕНТ
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Content-Disposition': 'inline; filename="proxies.yaml"'
-        }
-        return web.Response(body=content, headers=headers)
+            data = f.read()
+        return web.Response(body=data, headers={'Content-Type': 'text/yaml; charset=utf-8', 'Content-Disposition': 'inline; filename="proxies.yaml"'})
     return web.Response(text="proxies: []", content_type='text/yaml')
 
 async def start_server():
     app = web.Application()
-    app.router.add_get('/', lambda r: web.Response(text="Monk Hub Online"))
+    app.router.add_get('/', lambda r: web.Response(text="Monk Hub Alive"))
     app.router.add_get('/sub', handle_sub)
     runner = web.AppRunner(app)
     await runner.setup()
