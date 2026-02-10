@@ -10887,14 +10887,66 @@ proxies:
   network: ws
   ws-opts:
     path: linkvws
-- name: 🇪🇸 ✨ AI 162ms | 201 (986)
+- name: 🇨🇦 ✨ AI 161ms | vmess (986)
+  type: vmess
+  server: 172.66.40.99
+  port: 443
+  uuid: 25-telegram-id---vpnf22
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2,telegram-v2boxv2
+- name: 🇫🇷 ✨ AI 161ms | vmess (987)
+  type: vmess
+  server: 91.134.8.92
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: linkvws
+- name: 🇵🇱 ✨ AI 161ms | vmess (988)
+  type: vmess
+  server: 146.59.70.146
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: linkvws
+- name: 🇫🇷 ✨ AI 161ms | vmess (989)
+  type: vmess
+  server: 91.134.8.101
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: linkvws
+- name: 🇪🇸 ✨ AI 162ms | 201 (990)
   type: ss
   server: 5.188.181.201
   port: 9030
   cipher: aes-256-cfb
   password: GeregetR8cvQHzYr
   udp: true
-- name: 🇨🇾 ✨ AI 162ms | vmess (987)
+- name: 🇨🇾 ✨ AI 162ms | vmess (991)
   type: vmess
   server: 154.92.9.56
   port: 80
@@ -10907,7 +10959,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🇨🇾 ✨ AI 162ms | vmess (988)
+- name: 🇨🇾 ✨ AI 162ms | vmess (992)
   type: vmess
   server: 154.92.9.51
   port: 80
@@ -10920,7 +10972,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🇨🇾 ✨ AI 162ms | vmess (989)
+- name: 🇨🇾 ✨ AI 162ms | vmess (993)
   type: vmess
   server: 154.92.9.29
   port: 443
@@ -10933,7 +10985,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🇨🇾 ✨ AI 162ms | vmess (990)
+- name: 🇨🇾 ✨ AI 162ms | vmess (994)
   type: vmess
   server: 154.92.9.241
   port: 80
@@ -10946,7 +10998,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🇨🇾 ✨ AI 162ms | vmess (991)
+- name: 🇨🇾 ✨ AI 162ms | vmess (995)
   type: vmess
   server: 154.92.9.212
   port: 80
@@ -10959,7 +11011,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🇨🇾 ✨ AI 162ms | vmess (992)
+- name: 🇨🇾 ✨ AI 162ms | vmess (996)
   type: vmess
   server: 154.92.9.212
   port: 80
@@ -10972,7 +11024,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🇩🇪 ✨ AI 162ms | 1 (993)
+- name: 🇩🇪 ✨ AI 162ms | 1 (997)
   type: vless
   server: 57.129.49.1
   port: 23576
@@ -10982,14 +11034,14 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇵🇷 ✨ AI 162ms | 22 (994)
+- name: 🇵🇷 ✨ AI 162ms | 22 (998)
   type: ss
   server: 185.47.255.22
   port: 989
   cipher: aes-256-cfb
   password: f8f7aCzcPKbsF8p3
   udp: true
-- name: 🇨🇦 ✨ AI 162ms | vmess (995)
+- name: 🇨🇦 ✨ AI 162ms | vmess (999)
   type: vmess
   server: 15.235.41.200
   port: 80
@@ -11002,40 +11054,6 @@ proxies:
   network: ws
   ws-opts:
     path: /IOebhLMhl1CTbFHbL95myfRX2
-- name: 🇵🇱 ✨ AI 162ms | 19 (996)
-  type: ss
-  server: 45.15.126.19
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 6Ts2ZDTQAf3hkFoB8AFufDwsGrlF4e2t
-  udp: true
-- name: 🇬🇧 ✨ AI 162ms | 185 (997)
-  type: ss
-  server: 89.185.84.185
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: FXjMQIem0uShGvRzOpfyib
-  udp: true
-- name: 🇵🇱 ✨ AI 162ms | 18 (998)
-  type: ss
-  server: 217.30.10.18
-  port: 9079
-  cipher: aes-256-cfb
-  password: TPqX8edgbAURcAMb
-  udp: true
-- name: 🇫🇮 ✨ AI 163ms | vmess (999)
-  type: vmess
-  server: 65.109.134.191
-  port: 80
-  uuid: 91698747-92b3-4a07-b5da-22694edbea82
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /graphql
 proxy-groups:
 - name: 🚀 Auto Select
   type: url-test
@@ -12010,19 +12028,19 @@ proxy-groups:
   - 🇳🇱 ✨ AI 161ms | vmess (983)
   - 🇩🇪 ✨ AI 161ms | vmess (984)
   - 🇨🇦 ✨ AI 161ms | vmess (985)
-  - 🇪🇸 ✨ AI 162ms | 201 (986)
-  - 🇨🇾 ✨ AI 162ms | vmess (987)
-  - 🇨🇾 ✨ AI 162ms | vmess (988)
-  - 🇨🇾 ✨ AI 162ms | vmess (989)
-  - 🇨🇾 ✨ AI 162ms | vmess (990)
+  - 🇨🇦 ✨ AI 161ms | vmess (986)
+  - 🇫🇷 ✨ AI 161ms | vmess (987)
+  - 🇵🇱 ✨ AI 161ms | vmess (988)
+  - 🇫🇷 ✨ AI 161ms | vmess (989)
+  - 🇪🇸 ✨ AI 162ms | 201 (990)
   - 🇨🇾 ✨ AI 162ms | vmess (991)
   - 🇨🇾 ✨ AI 162ms | vmess (992)
-  - 🇩🇪 ✨ AI 162ms | 1 (993)
-  - 🇵🇷 ✨ AI 162ms | 22 (994)
-  - 🇨🇦 ✨ AI 162ms | vmess (995)
-  - 🇵🇱 ✨ AI 162ms | 19 (996)
-  - 🇬🇧 ✨ AI 162ms | 185 (997)
-  - 🇵🇱 ✨ AI 162ms | 18 (998)
-  - 🇫🇮 ✨ AI 163ms | vmess (999)
+  - 🇨🇾 ✨ AI 162ms | vmess (993)
+  - 🇨🇾 ✨ AI 162ms | vmess (994)
+  - 🇨🇾 ✨ AI 162ms | vmess (995)
+  - 🇨🇾 ✨ AI 162ms | vmess (996)
+  - 🇩🇪 ✨ AI 162ms | 1 (997)
+  - 🇵🇷 ✨ AI 162ms | 22 (998)
+  - 🇨🇦 ✨ AI 162ms | vmess (999)
 rules:
 - MATCH,🚀 Auto Select
