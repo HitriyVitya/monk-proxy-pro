@@ -225,20 +225,7 @@ proxies:
   network: ws
   ws-opts:
     path: /bb
-- name: 🇨🇦 ✨ AI 34ms | vmess (21)
-  type: vmess
-  server: 188.114.97.111
-  port: 443
-  uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /chcara
-- name: 🇨🇦 ✨ AI 38ms | vmess (22)
+- name: 🇨🇦 ✨ AI 38ms | vmess (21)
   type: vmess
   server: 104.16.23.3
   port: 443
@@ -251,7 +238,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 63ms | 117 (23)
+- name: 🇨🇦 ✨ AI 63ms | 117 (22)
   type: vless
   server: 104.17.135.117
   port: 2095
@@ -261,7 +248,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇺🇸 ✨ AI 63ms | 0 (24)
+- name: 🇺🇸 ✨ AI 63ms | 0 (23)
   type: vless
   server: 8.47.69.0
   port: 2095
@@ -271,7 +258,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 64ms | 224 (25)
+- name: 🇨🇦 ✨ AI 64ms | 224 (24)
   type: vless
   server: 188.114.98.224
   port: 2087
@@ -281,7 +268,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 64ms | 224 (26)
+- name: 🇨🇦 ✨ AI 64ms | 224 (25)
   type: vless
   server: 188.114.98.224
   port: 8443
@@ -291,6 +278,19 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
+- name: 🇨🇦 ✨ AI 75ms | vmess (26)
+  type: vmess
+  server: 188.114.97.111
+  port: 443
+  uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /chcara
 - name: 🇺🇸 ✨ AI 77ms | vmess (27)
   type: vmess
   server: 66.81.247.133
@@ -11197,12 +11197,12 @@ proxy-groups:
   - 🇨🇦 ✨ AI 22ms | 23 (18)
   - 🇨🇦 ✨ AI 28ms | vmess (19)
   - 🇨🇦 ✨ AI 33ms | vmess (20)
-  - 🇨🇦 ✨ AI 34ms | vmess (21)
-  - 🇨🇦 ✨ AI 38ms | vmess (22)
-  - 🇨🇦 ✨ AI 63ms | 117 (23)
-  - 🇺🇸 ✨ AI 63ms | 0 (24)
+  - 🇨🇦 ✨ AI 38ms | vmess (21)
+  - 🇨🇦 ✨ AI 63ms | 117 (22)
+  - 🇺🇸 ✨ AI 63ms | 0 (23)
+  - 🇨🇦 ✨ AI 64ms | 224 (24)
   - 🇨🇦 ✨ AI 64ms | 224 (25)
-  - 🇨🇦 ✨ AI 64ms | 224 (26)
+  - 🇨🇦 ✨ AI 75ms | vmess (26)
   - 🇺🇸 ✨ AI 77ms | vmess (27)
   - 🇨🇦 ✨ AI 77ms | 199 (28)
   - 🇨🇦 ✨ AI 77ms | 111 (29)
