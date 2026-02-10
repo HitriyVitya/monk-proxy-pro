@@ -11948,7 +11948,14 @@ proxies:
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 🇺🇸 ✨ AI 224ms | 169 (993)
+- name: 🇻🇳 ✨ AI 224ms | 149 (993)
+  type: ss
+  server: 103.186.155.149
+  port: 38388
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 🇺🇸 ✨ AI 224ms | 169 (994)
   type: vless
   server: 137.184.218.169
   port: 36925
@@ -11958,7 +11965,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇩🇪 ✨ AI 224ms | 184 (994)
+- name: 🇩🇪 ✨ AI 224ms | 184 (995)
   type: vless
   server: 159.69.162.184
   port: 43233
@@ -11968,7 +11975,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇺🇸 ✨ AI 225ms | vmess (995)
+- name: 🇺🇸 ✨ AI 225ms | vmess (996)
   type: vmess
   server: 147.135.112.248
   port: 80
@@ -11981,30 +11988,23 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇻🇳 ✨ AI 225ms | 143 (996)
+- name: 🇻🇳 ✨ AI 225ms | 143 (997)
   type: ss
   server: 103.186.154.143
   port: 38388
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 🇺🇳 ✨ AI 225ms | 176 (997)
+- name: 🇺🇳 ✨ AI 225ms | 176 (998)
   type: ss
   server: 103.186.154.176
   port: 38388
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 🇺🇳 ✨ AI 225ms | 61 (998)
+- name: 🇺🇳 ✨ AI 225ms | 61 (999)
   type: ss
   server: 103.186.154.61
-  port: 38388
-  cipher: aes-256-cfb
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  udp: true
-- name: 🇻🇳 ✨ AI 225ms | 168 (999)
-  type: ss
-  server: 103.186.154.168
   port: 38388
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
@@ -13009,12 +13009,12 @@ proxy-groups:
   - 🇻🇳 ✨ AI 224ms | 205 (990)
   - 🇺🇳 ✨ AI 224ms | 229 (991)
   - 🇻🇳 ✨ AI 224ms | 214 (992)
-  - 🇺🇸 ✨ AI 224ms | 169 (993)
-  - 🇩🇪 ✨ AI 224ms | 184 (994)
-  - 🇺🇸 ✨ AI 225ms | vmess (995)
-  - 🇻🇳 ✨ AI 225ms | 143 (996)
-  - 🇺🇳 ✨ AI 225ms | 176 (997)
-  - 🇺🇳 ✨ AI 225ms | 61 (998)
-  - 🇻🇳 ✨ AI 225ms | 168 (999)
+  - 🇻🇳 ✨ AI 224ms | 149 (993)
+  - 🇺🇸 ✨ AI 224ms | 169 (994)
+  - 🇩🇪 ✨ AI 224ms | 184 (995)
+  - 🇺🇸 ✨ AI 225ms | vmess (996)
+  - 🇻🇳 ✨ AI 225ms | 143 (997)
+  - 🇺🇳 ✨ AI 225ms | 176 (998)
+  - 🇺🇳 ✨ AI 225ms | 61 (999)
 rules:
 - MATCH,🚀 Auto Select
