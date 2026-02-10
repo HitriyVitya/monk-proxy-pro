@@ -1,4 +1,4 @@
-import os, base64, json
+import os, base64, json, random
 from aiohttp import web
 from urllib.parse import urlparse, unquote, parse_qs
 
@@ -9,19 +9,20 @@ def safe_decode(s):
     except: return ""
 
 def get_flag(code):
-    if not code or code == "UN" or len(code) != 2: return "🇺🇳"
-    return "".join(chr(ord(c) + 127397) for c in code.upper())
+    if not code or code in ["UN", "??", ""] or len(code) != 2: return "🌐"
+    try:
+        return "".join(chr(ord(c) + 127397) for c in code.upper())
+    except: return "🌐"
 
 def link_to_clash_dict(url, latency, tier, country):
     try:
         flag = get_flag(country)
-        # МЕДАЛИ ПО ТИРАМ
         tier_icon = "🥇" if tier == 1 else "🥈" if tier == 2 else "🥉"
+        proto = url.split("://")[0].upper()
         
-        try: srv = url.split('@')[-1].split(':')[0].split('.')[-1]
-        except: srv = "srv"
-        
-        name = f"{tier_icon} {flag} {latency}ms | {srv}"
+        # Добавляем соль для уникальности
+        salt = "".join(random.choices("0123456789", k=2))
+        name = f"{tier_icon} {flag} {latency}ms | {proto} ({country}-{salt})"
 
         if url.startswith("vmess://"):
             d = json.loads(safe_decode(url[8:]))
