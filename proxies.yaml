@@ -8986,7 +8986,17 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: a586ae8d773f250f
   udp: true
-- name: 🇨🇦 ✨ AI 126ms | 224 (797)
+- name: 🇸🇪 ✨ AI 125ms | 39 (797)
+  type: vless
+  server: 185.146.173.39
+  port: 2095
+  uuid: 16c6ef25-48d6-4ec4-9b47-f1e5a79926eb
+  password: 16c6ef25-48d6-4ec4-9b47-f1e5a79926eb
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 224 (798)
   type: vless
   server: 188.114.98.224
   port: 8443
@@ -8996,7 +9006,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 126ms | 47 (798)
+- name: 🇨🇦 ✨ AI 126ms | 47 (799)
   type: vless
   server: 104.18.32.47
   port: 2053
@@ -9006,7 +9016,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇳🇱 ✨ AI 126ms | 103 (799)
+- name: 🇳🇱 ✨ AI 126ms | 103 (800)
   type: vless
   server: 51.158.206.103
   port: 23576
@@ -9016,7 +9026,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇳🇱 ✨ AI 126ms | 79 (800)
+- name: 🇳🇱 ✨ AI 126ms | 79 (801)
   type: vless
   server: 146.103.113.79
   port: 4443
@@ -9026,7 +9036,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇳🇱 ✨ AI 126ms | 225 (801)
+- name: 🇳🇱 ✨ AI 126ms | 225 (802)
   type: vless
   server: 62.84.100.225
   port: 4443
@@ -9036,7 +9046,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇨🇦 ✨ AI 126ms | 224 (802)
+- name: 🇨🇦 ✨ AI 126ms | 224 (803)
   type: vless
   server: 188.114.98.224
   port: 2087
@@ -9046,7 +9056,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 126ms | 4 (803)
+- name: 🇨🇦 ✨ AI 126ms | 4 (804)
   type: vless
   server: 162.159.152.4
   port: 2083
@@ -9056,7 +9066,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇳🇱 ✨ AI 126ms | 130 (804)
+- name: 🇳🇱 ✨ AI 126ms | 130 (805)
   type: vless
   server: 91.84.109.130
   port: 443
@@ -9066,7 +9076,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇳🇱 ✨ AI 126ms | 15 (805)
+- name: 🇳🇱 ✨ AI 126ms | 15 (806)
   type: vless
   server: 212.34.153.15
   port: 443
@@ -9076,7 +9086,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇦🇱 ✨ AI 126ms | 57 (806)
+- name: 🇦🇱 ✨ AI 126ms | 57 (807)
   type: vless
   server: 185.177.238.57
   port: 443
@@ -9086,7 +9096,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇳🇱 ✨ AI 126ms | 160 (807)
+- name: 🇳🇱 ✨ AI 126ms | 160 (808)
   type: vless
   server: 194.87.31.160
   port: 8443
@@ -9096,7 +9106,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇫🇮 ✨ AI 126ms | 114 (808)
+- name: 🇫🇮 ✨ AI 126ms | 114 (809)
   type: vless
   server: 196.244.194.114
   port: 443
@@ -9106,14 +9116,124 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇵🇱 ✨ AI 126ms | 18 (809)
+- name: 🇵🇱 ✨ AI 126ms | 18 (810)
   type: ss
   server: 217.30.10.18
   port: 9098
   cipher: aes-256-cfb
   password: aLpQtfEZe445QyHk
   udp: true
-- name: 🇷🇺 ✨ AI 127ms | 104 (810)
+- name: 🇨🇦 ✨ AI 126ms | 219 (811)
+  type: vless
+  server: 151.101.66.219
+  port: 80
+  uuid: 4eae9397-f431-537d-8f2f-ffccfec8d141
+  password: 4eae9397-f431-537d-8f2f-ffccfec8d141
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 2 (812)
+  type: vless
+  server: 198.41.209.2
+  port: 443
+  uuid: ff017253-3592-4591-9bd1-e55476cf8a64
+  password: ff017253-3592-4591-9bd1-e55476cf8a64
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 2 (813)
+  type: vless
+  server: 198.41.209.2
+  port: 8443
+  uuid: ff017253-3592-4591-9bd1-e55476cf8a64
+  password: ff017253-3592-4591-9bd1-e55476cf8a64
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 187 (814)
+  type: vless
+  server: 151.101.66.187
+  port: 80
+  uuid: 2d8497b5-23dd-46de-b654-717452302700
+  password: 2d8497b5-23dd-46de-b654-717452302700
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 187 (815)
+  type: vless
+  server: 151.101.2.187
+  port: 80
+  uuid: 2d8497b5-23dd-46de-b654-717452302700
+  password: 2d8497b5-23dd-46de-b654-717452302700
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 133 (816)
+  type: vless
+  server: 151.101.194.133
+  port: 443
+  uuid: TELEGRAM-NUFiLTER
+  password: TELEGRAM-NUFiLTER
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 2 (817)
+  type: vless
+  server: 198.41.209.2
+  port: 443
+  uuid: 2c0404de-6bef-4617-a594-84280f0a70b2
+  password: 2c0404de-6bef-4617-a594-84280f0a70b2
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇺🇸 ✨ AI 126ms | 123 (818)
+  type: vless
+  server: 199.232.8.123
+  port: 80
+  uuid: d578322a-266b-479d-9eda-f1b41324e721
+  password: d578322a-266b-479d-9eda-f1b41324e721
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 8 (819)
+  type: vless
+  server: 151.101.3.8
+  port: 80
+  uuid: 9d876130-d138-4f06-af3a-4b40a0b6e279
+  password: 9d876130-d138-4f06-af3a-4b40a0b6e279
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇨🇦 ✨ AI 126ms | 133 (820)
+  type: vless
+  server: 151.101.194.133
+  port: 443
+  uuid: 9935d582-2630-4901-bcd3-90dd0235e530
+  password: 9935d582-2630-4901-bcd3-90dd0235e530
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇸🇪 ✨ AI 126ms | 58 (821)
+  type: vless
+  server: 185.146.173.58
+  port: 80
+  uuid: f151bde4-6981-4ad9-bd01-dd34ad792a3e
+  password: f151bde4-6981-4ad9-bd01-dd34ad792a3e
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇷🇺 ✨ AI 127ms | 104 (822)
   type: vless
   server: 212.60.21.104
   port: 4443
@@ -9123,7 +9243,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇺🇳 ✨ AI 127ms | website (811)
+- name: 🇺🇳 ✨ AI 127ms | website (823)
   type: vless
   server: cf.mahdi383ir.website
   port: 2052
@@ -9133,21 +9253,81 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇹🇷 ✨ AI 128ms | shadowsockskeys (812)
+- name: 🇺🇳 ✨ AI 127ms | net (824)
+  type: vless
+  server: speedtest.net
+  port: 80
+  uuid: b0d53a55-9e8e-4f93-8fbf-926731b8d2ff
+  password: b0d53a55-9e8e-4f93-8fbf-926731b8d2ff
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇺🇳 ✨ AI 127ms | edu (825)
+  type: vless
+  server: fishlab.ucdavis.edu
+  port: 443
+  uuid: 6cfbe033-fe28-42bb-943e-9053c928d8cd
+  password: 6cfbe033-fe28-42bb-943e-9053c928d8cd
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇺🇳 ✨ AI 127ms | Edu (826)
+  type: vless
+  server: zmaoz.faculty.ucdavis.edu
+  port: 443
+  uuid: TELEGRAM-NUFiLTER
+  password: TELEGRAM-NUFiLTER
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇺🇳 ✨ AI 127ms | edu (827)
+  type: vless
+  server: fishlab.ucdavis.edu
+  port: 80
+  uuid: TELEGRAM-vpnx1x
+  password: TELEGRAM-vpnx1x
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇺🇳 ✨ AI 127ms | edu (828)
+  type: vless
+  server: fishlab.ucdavis.edu
+  port: 80
+  uuid: de3cde5c-edae-4158-a773-ca53fb52909f
+  password: de3cde5c-edae-4158-a773-ca53fb52909f
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇺🇳 ✨ AI 127ms | edu (829)
+  type: vless
+  server: hajlab.ucdavis.edu
+  port: 80
+  uuid: ab51af2e-2819-480e-afaf-b682c82dc63f
+  password: ab51af2e-2819-480e-afaf-b682c82dc63f
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🇹🇷 ✨ AI 128ms | shadowsockskeys (830)
   type: ss
   server: 62.133.63.169
   port: 37096
   cipher: chacha20-ietf-poly1305
   password: Ul0rGyAAed5HRDpvFqr2C0
   udp: true
-- name: 🇵🇱 ✨ AI 128ms | 18 (813)
+- name: 🇵🇱 ✨ AI 128ms | 18 (831)
   type: ss
   server: 217.30.10.18
   port: 9032
   cipher: aes-256-cfb
   password: UWZQeLRWnkqgkseq
   udp: true
-- name: 🇺🇳 ✨ AI 128ms | com (814)
+- name: 🇺🇳 ✨ AI 128ms | com (832)
   type: vless
   server: fastaly.dollardoon.com
   port: 80
@@ -9157,14 +9337,14 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 129ms | 204 (815)
+- name: 🇱🇻 ✨ AI 129ms | 204 (833)
   type: ss
   server: 46.183.217.204
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇨🇦 ✨ AI 129ms | oneclickvpnkeys (816)
+- name: 🇨🇦 ✨ AI 129ms | oneclickvpnkeys (834)
   type: trojan
   server: 172.64.152.23
   port: 443
@@ -9173,7 +9353,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 129ms | 14 (817)
+- name: 🇱🇻 ✨ AI 129ms | 14 (835)
   type: vless
   server: 193.43.146.14
   port: 8443
@@ -9183,7 +9363,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 129ms | 31 (818)
+- name: 🇱🇻 ✨ AI 129ms | 31 (836)
   type: vless
   server: 193.43.146.31
   port: 8443
@@ -9193,7 +9373,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 129ms | 56 (819)
+- name: 🇱🇻 ✨ AI 129ms | 56 (837)
   type: vless
   server: 176.120.67.56
   port: 8443
@@ -9203,14 +9383,14 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇵🇱 ✨ AI 129ms | 18 (820)
+- name: 🇵🇱 ✨ AI 129ms | 18 (838)
   type: ss
   server: 217.30.10.18
   port: 9018
   cipher: aes-256-cfb
   password: fG2artUmHfNT2cX7
   udp: true
-- name: 🇺🇳 ✨ AI 130ms | vmess (821)
+- name: 🇺🇳 ✨ AI 130ms | vmess (839)
   type: vmess
   server: CCCVFffF.191288.Xyz
   port: 80
@@ -9223,7 +9403,7 @@ proxies:
   network: ws
   ws-opts:
     path: /TaBvkrUbsyvsvinsGGg
-- name: 🇨🇦 ✨ AI 130ms | vmess (822)
+- name: 🇨🇦 ✨ AI 130ms | vmess (840)
   type: vmess
   server: 23.227.38.38
   port: 443
@@ -9236,7 +9416,7 @@ proxies:
   network: ws
   ws-opts:
     path: /ECTCJ0DF
-- name: 🇨🇦 ✨ AI 130ms | vmess (823)
+- name: 🇨🇦 ✨ AI 130ms | vmess (841)
   type: vmess
   server: 198.41.208.172
   port: 443
@@ -9249,7 +9429,7 @@ proxies:
   network: ws
   ws-opts:
     path: /shirker
-- name: 🇺🇸 ✨ AI 130ms | vmess (824)
+- name: 🇺🇸 ✨ AI 130ms | vmess (842)
   type: vmess
   server: 141.193.213.20
   port: 443
@@ -9262,7 +9442,7 @@ proxies:
   network: ws
   ws-opts:
     path: /IYKLD53M
-- name: 🇺🇳 ✨ AI 130ms | vmess (825)
+- name: 🇺🇳 ✨ AI 130ms | vmess (843)
   type: vmess
   server: 527hk1.fans8.xyz
   port: 80
@@ -9275,7 +9455,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇫🇷 ✨ AI 130ms | 101 (826)
+- name: 🇫🇷 ✨ AI 130ms | 101 (844)
   type: vless
   server: 216.106.189.101
   port: 443
@@ -9285,7 +9465,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇫🇷 ✨ AI 130ms | 94 (827)
+- name: 🇫🇷 ✨ AI 130ms | 94 (845)
   type: vless
   server: 162.19.10.94
   port: 443
@@ -9295,7 +9475,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇺🇸 ✨ AI 130ms | 110 (828)
+- name: 🇺🇸 ✨ AI 130ms | 110 (846)
   type: trojan
   server: 208.103.161.110
   port: 443
@@ -9304,7 +9484,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇱🇻 ✨ AI 130ms | 111 (829)
+- name: 🇱🇻 ✨ AI 130ms | 111 (847)
   type: vless
   server: 176.120.67.111
   port: 8443
@@ -9314,7 +9494,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 130ms | 101 (830)
+- name: 🇱🇻 ✨ AI 130ms | 101 (848)
   type: vless
   server: 103.231.73.101
   port: 8443
@@ -9324,7 +9504,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 130ms | 166 (831)
+- name: 🇱🇻 ✨ AI 130ms | 166 (849)
   type: vless
   server: 103.231.73.166
   port: 8443
@@ -9334,7 +9514,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 130ms | 77 (832)
+- name: 🇱🇻 ✨ AI 130ms | 77 (850)
   type: vless
   server: 176.120.67.77
   port: 8443
@@ -9344,7 +9524,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇱🇻 ✨ AI 130ms | 95 (833)
+- name: 🇱🇻 ✨ AI 130ms | 95 (851)
   type: vless
   server: 176.120.67.95
   port: 8443
@@ -9354,14 +9534,14 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇵🇱 ✨ AI 130ms | 18 (834)
+- name: 🇵🇱 ✨ AI 130ms | 18 (852)
   type: ss
   server: 217.30.10.18
   port: 9040
   cipher: aes-256-cfb
   password: p9z5BVADH2YFs3MN
   udp: true
-- name: 🇺🇸 ✨ AI 131ms | vmess (835)
+- name: 🇺🇸 ✨ AI 131ms | vmess (853)
   type: vmess
   server: 141.101.114.32
   port: 443
@@ -9374,7 +9554,7 @@ proxies:
   network: ws
   ws-opts:
     path: /A2DJOPFT
-- name: 🇺🇸 ✨ AI 131ms | vmess (836)
+- name: 🇺🇸 ✨ AI 131ms | vmess (854)
   type: vmess
   server: 188.114.99.9
   port: 443
@@ -9387,7 +9567,7 @@ proxies:
   network: ws
   ws-opts:
     path: /ECTCJ0DF
-- name: 🇺🇸 ✨ AI 131ms | vmess (837)
+- name: 🇺🇸 ✨ AI 131ms | vmess (855)
   type: vmess
   server: 141.193.213.10
   port: 443
@@ -9400,7 +9580,7 @@ proxies:
   network: ws
   ws-opts:
     path: /shirker
-- name: 🇺🇸 ✨ AI 131ms | vmess (838)
+- name: 🇺🇸 ✨ AI 131ms | vmess (856)
   type: vmess
   server: 141.101.115.30
   port: 443
@@ -9413,7 +9593,7 @@ proxies:
   network: ws
   ws-opts:
     path: /ECTCJ0DF
-- name: 🇺🇸 ✨ AI 131ms | vmess (839)
+- name: 🇺🇸 ✨ AI 131ms | vmess (857)
   type: vmess
   server: 66.235.200.21
   port: 443
@@ -9426,7 +9606,7 @@ proxies:
   network: ws
   ws-opts:
     path: /5QNROSRV
-- name: 🇩🇪 ✨ AI 131ms | vmess (840)
+- name: 🇩🇪 ✨ AI 131ms | vmess (858)
   type: vmess
   server: 45.80.111.169
   port: 8880
@@ -9439,28 +9619,28 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇬🇧 ✨ AI 131ms | 11 (841)
+- name: 🇬🇧 ✨ AI 131ms | 11 (859)
   type: ss
   server: 78.129.140.11
   port: 443
   cipher: chacha20-ietf-poly1305
   password: y3SowqUkrt1cbm487g74Ac
   udp: true
-- name: 🇵🇱 ✨ AI 132ms | 176 (842)
+- name: 🇵🇱 ✨ AI 132ms | 176 (860)
   type: ss
   server: 89.223.93.176
   port: 41348
   cipher: chacha20-ietf-poly1305
   password: Vmsf06YTMqtAYdhwMqdSuGqgdVkm0yddi4kYaAEVQWYj9iHA
   udp: true
-- name: 🇧🇬 ✨ AI 132ms | 135 (843)
+- name: 🇧🇬 ✨ AI 132ms | 135 (861)
   type: ss
   server: 193.135.174.135
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇺🇳 ✨ AI 132ms | vmess (844)
+- name: 🇺🇳 ✨ AI 132ms | vmess (862)
   type: vmess
   server: mmmki.890634.xYZ
   port: 80
@@ -9473,7 +9653,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AwUJyGh9Ym6vVzg35A6ueyyZnWd
-- name: 🇭🇺 ✨ AI 132ms | 148 (845)
+- name: 🇭🇺 ✨ AI 132ms | 148 (863)
   type: vless
   server: 217.13.104.148
   port: 443
@@ -9483,7 +9663,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇩🇪 ✨ AI 132ms | oneclickvpnkeys (846)
+- name: 🇩🇪 ✨ AI 132ms | oneclickvpnkeys (864)
   type: vless
   server: 64.188.67.193
   port: 443
@@ -9493,14 +9673,14 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇫🇮 ✨ AI 132ms | 89 (847)
+- name: 🇫🇮 ✨ AI 132ms | 89 (865)
   type: ss
   server: 217.60.61.89
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: fkxXhS9VUmWmoC9N9xu2WBjVoEGV7UZT
   udp: true
-- name: 🇳🇱 ✨ AI 133ms | 249 (848)
+- name: 🇳🇱 ✨ AI 133ms | 249 (866)
   type: vless
   server: 89.23.103.249
   port: 8443
@@ -9510,7 +9690,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇨🇦 ✨ AI 134ms | vmess (849)
+- name: 🇨🇦 ✨ AI 134ms | vmess (867)
   type: vmess
   server: 172.67.169.131
   port: 443
@@ -9523,7 +9703,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🇨🇦 ✨ AI 134ms | vmess (850)
+- name: 🇨🇦 ✨ AI 134ms | vmess (868)
   type: vmess
   server: 173.245.49.23
   port: 8443
@@ -9536,7 +9716,7 @@ proxies:
   network: ws
   ws-opts:
     path: /8cda48b3
-- name: 🇬🇧 ✨ AI 134ms | vmess (851)
+- name: 🇬🇧 ✨ AI 134ms | vmess (869)
   type: vmess
   server: 185.162.228.110
   port: 443
@@ -9549,7 +9729,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🇨🇦 ✨ AI 134ms | vmess (852)
+- name: 🇨🇦 ✨ AI 134ms | vmess (870)
   type: vmess
   server: 172.67.185.133
   port: 443
@@ -9562,7 +9742,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 134ms | vmess (853)
+- name: 🇨🇦 ✨ AI 134ms | vmess (871)
   type: vmess
   server: 172.67.178.127
   port: 443
@@ -9575,7 +9755,7 @@ proxies:
   network: ws
   ws-opts:
     path: /123
-- name: 🇳🇱 ✨ AI 134ms | 130 (854)
+- name: 🇳🇱 ✨ AI 134ms | 130 (872)
   type: vless
   server: 91.84.109.130
   port: 443
@@ -9585,7 +9765,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇪🇸 ✨ AI 134ms | 252 (855)
+- name: 🇪🇸 ✨ AI 134ms | 252 (873)
   type: vless
   server: 185.18.250.252
   port: 443
@@ -9595,7 +9775,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 134ms | 187 (856)
+- name: 🇨🇦 ✨ AI 134ms | 187 (874)
   type: vless
   server: 172.67.194.187
   port: 443
@@ -9605,7 +9785,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 134ms | 3 (857)
+- name: 🇨🇦 ✨ AI 134ms | 3 (875)
   type: vless
   server: 188.114.96.3
   port: 443
@@ -9615,7 +9795,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 134ms | 3 (858)
+- name: 🇨🇦 ✨ AI 134ms | 3 (876)
   type: vless
   server: 188.114.96.3
   port: 2053
@@ -9625,49 +9805,49 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇦🇹 ✨ AI 135ms | 76 (859)
+- name: 🇦🇹 ✨ AI 135ms | 76 (877)
   type: ss
   server: 212.113.106.76
   port: 29149
   cipher: chacha20-ietf-poly1305
   password: F1OHZ2faTA8JStousCem89
   udp: true
-- name: 🇺🇸 ✨ AI 135ms | 168 (860)
+- name: 🇺🇸 ✨ AI 135ms | 168 (878)
   type: ss
   server: 156.146.38.168
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: 🇩🇰 ✨ AI 135ms | 228 (861)
+- name: 🇩🇰 ✨ AI 135ms | 228 (879)
   type: ss
   server: 95.164.10.228
   port: 443
   cipher: chacha20-ietf-poly1305
   password: SDaFISr3Gfm6YkBSSrFIEwwWjEEU7Xbo
   udp: true
-- name: 🇩🇰 ✨ AI 135ms | 228 (862)
+- name: 🇩🇰 ✨ AI 135ms | 228 (880)
   type: ss
   server: 95.164.10.228
   port: 443
   cipher: chacha20-ietf-poly1305
   password: SDaFISr3Gfm6YkBSSrFIEwwWjEEU7Xbo
   udp: true
-- name: 🇪🇸 ✨ AI 135ms | 189 (863)
+- name: 🇪🇸 ✨ AI 135ms | 189 (881)
   type: ss
   server: 194.87.45.189
   port: 443
   cipher: chacha20-ietf-poly1305
   password: 2jmKlUhNDQ3mUf7uaOLJYb
   udp: true
-- name: 🇲🇽 ✨ AI 135ms | 102 (864)
+- name: 🇲🇽 ✨ AI 135ms | 102 (882)
   type: ss
   server: 138.186.140.102
   port: 8443
   cipher: chacha20-ietf-poly1305
   password: TUmKKAffXUUXAGqtqRC0V9
   udp: true
-- name: 🇨🇦 ✨ AI 135ms | 224 (865)
+- name: 🇨🇦 ✨ AI 135ms | 224 (883)
   type: vless
   server: 188.114.98.224
   port: 2087
@@ -9677,7 +9857,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇩🇪 ✨ AI 135ms | vmess (866)
+- name: 🇩🇪 ✨ AI 135ms | vmess (884)
   type: vmess
   server: 78.47.154.76
   port: 80
@@ -9690,7 +9870,7 @@ proxies:
   network: ws
   ws-opts:
     path: /telegram-id-@privatevpns
-- name: 🇬🇧 ✨ AI 135ms | vmess (867)
+- name: 🇬🇧 ✨ AI 135ms | vmess (885)
   type: vmess
   server: 178.128.162.92
   port: 80
@@ -9703,7 +9883,7 @@ proxies:
   network: ws
   ws-opts:
     path: /telegram-id-@privatevpns
-- name: 🇳🇱 ✨ AI 135ms | vmess (868)
+- name: 🇳🇱 ✨ AI 135ms | vmess (886)
   type: vmess
   server: 104.248.80.208
   port: 80
@@ -9716,7 +9896,7 @@ proxies:
   network: ws
   ws-opts:
     path: /graphql
-- name: 🇩🇪 ✨ AI 135ms | vmess (869)
+- name: 🇩🇪 ✨ AI 135ms | vmess (887)
   type: vmess
   server: 5.75.134.200
   port: 80
@@ -9729,7 +9909,7 @@ proxies:
   network: ws
   ws-opts:
     path: /telegram-id-@privatevpns
-- name: 🇩🇪 ✨ AI 135ms | vmess (870)
+- name: 🇩🇪 ✨ AI 135ms | vmess (888)
   type: vmess
   server: 78.47.154.76
   port: 80
@@ -9742,7 +9922,7 @@ proxies:
   network: ws
   ws-opts:
     path: /telegram-id-@privatevpns
-- name: 🇪🇸 ✨ AI 135ms | vmess (871)
+- name: 🇪🇸 ✨ AI 135ms | vmess (889)
   type: vmess
   server: 65.20.99.147
   port: 80
@@ -9755,7 +9935,7 @@ proxies:
   network: ws
   ws-opts:
     path: /telegram-id-@privatevpns
-- name: 🇮🇷 ✨ AI 135ms | vmess (872)
+- name: 🇮🇷 ✨ AI 135ms | vmess (890)
   type: vmess
   server: 185.143.234.120
   port: 80
@@ -9768,7 +9948,7 @@ proxies:
   network: ws
   ws-opts:
     path: /graphql
-- name: 🇬🇧 ✨ AI 135ms | vmess (873)
+- name: 🇬🇧 ✨ AI 135ms | vmess (891)
   type: vmess
   server: 109.237.26.24
   port: 80
@@ -9781,7 +9961,7 @@ proxies:
   network: ws
   ws-opts:
     path: /graphql
-- name: 🇩🇪 ✨ AI 135ms | vmess (874)
+- name: 🇩🇪 ✨ AI 135ms | vmess (892)
   type: vmess
   server: 167.235.73.135
   port: 80
@@ -9794,7 +9974,7 @@ proxies:
   network: ws
   ws-opts:
     path: /telegram-id-@privatevpns
-- name: 🇩🇪 ✨ AI 135ms | vmess (875)
+- name: 🇩🇪 ✨ AI 135ms | vmess (893)
   type: vmess
   server: 167.235.199.215
   port: 80
@@ -9807,14 +9987,14 @@ proxies:
   network: ws
   ws-opts:
     path: /telegram-id-@privatevpns
-- name: 🇧🇷 ✨ AI 136ms | shadowsockskeys (876)
+- name: 🇧🇷 ✨ AI 136ms | shadowsockskeys (894)
   type: ss
   server: 157.185.173.60
   port: 46727
   cipher: chacha20-ietf-poly1305
   password: 29acd960ab8e3408
   udp: true
-- name: 🇫🇮 ✨ AI 136ms | 254 (877)
+- name: 🇫🇮 ✨ AI 136ms | 254 (895)
   type: vless
   server: 93.152.207.254
   port: 45884
@@ -9824,7 +10004,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇨🇦 ✨ AI 136ms | vmess (878)
+- name: 🇨🇦 ✨ AI 136ms | vmess (896)
   type: vmess
   server: 173.245.49.190
   port: 8443
@@ -9837,7 +10017,7 @@ proxies:
   network: ws
   ws-opts:
     path: /8cda48b3
-- name: 🇨🇦 ✨ AI 136ms | 166 (879)
+- name: 🇨🇦 ✨ AI 136ms | 166 (897)
   type: vless
   server: 108.162.193.166
   port: 2053
@@ -9847,7 +10027,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇺🇸 ✨ AI 136ms | 130 (880)
+- name: 🇺🇸 ✨ AI 136ms | 130 (898)
   type: vless
   server: 162.159.246.130
   port: 2053
@@ -9857,7 +10037,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇨🇦 ✨ AI 136ms | 6 (881)
+- name: 🇨🇦 ✨ AI 136ms | 6 (899)
   type: vless
   server: 104.25.78.6
   port: 443
@@ -9867,7 +10047,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇬🇧 ✨ AI 136ms | 214 (882)
+- name: 🇬🇧 ✨ AI 136ms | 214 (900)
   type: vless
   server: 141.101.120.214
   port: 443
@@ -9877,7 +10057,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇮🇷 ✨ AI 136ms | vmess (883)
+- name: 🇮🇷 ✨ AI 136ms | vmess (901)
   type: vmess
   server: 185.143.233.101
   port: 80
@@ -9890,7 +10070,7 @@ proxies:
   network: ws
   ws-opts:
     path: /ray
-- name: 🇨🇦 ✨ AI 136ms | 31 (884)
+- name: 🇨🇦 ✨ AI 136ms | 31 (902)
   type: vless
   server: 104.27.3.31
   port: 443
@@ -9900,7 +10080,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇬🇧 ✨ AI 137ms | vmess (885)
+- name: 🇬🇧 ✨ AI 137ms | vmess (903)
   type: vmess
   server: 45.85.119.230
   port: 2053
@@ -9913,7 +10093,7 @@ proxies:
   network: ws
   ws-opts:
     path: /jjjjjjjjjjjjjjjjjjjjjjjjjjkkopkk
-- name: 🇬🇧 ✨ AI 137ms | vmess (886)
+- name: 🇬🇧 ✨ AI 137ms | vmess (904)
   type: vmess
   server: 45.85.119.231
   port: 2053
@@ -9926,7 +10106,7 @@ proxies:
   network: ws
   ws-opts:
     path: /jjjjjjjjjjjjjjjjjjjjjjjjjjkkopkk
-- name: 🇬🇧 ✨ AI 137ms | vmess (887)
+- name: 🇬🇧 ✨ AI 137ms | vmess (905)
   type: vmess
   server: 45.85.119.254
   port: 2053
@@ -9939,7 +10119,7 @@ proxies:
   network: ws
   ws-opts:
     path: /jjjjjjjjjjjjjjjjjjjjjjjjjjkkopkk
-- name: 🇬🇧 ✨ AI 137ms | 249 (888)
+- name: 🇬🇧 ✨ AI 137ms | 249 (906)
   type: vless
   server: 45.85.119.249
   port: 443
@@ -9949,7 +10129,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇬🇧 ✨ AI 137ms | vmess (889)
+- name: 🇬🇧 ✨ AI 137ms | vmess (907)
   type: vmess
   server: 45.85.119.249
   port: 2053
@@ -9962,7 +10142,7 @@ proxies:
   network: ws
   ws-opts:
     path: /jjjjjjjjjjjjjjjjjjjjjjjjjjkkopkk
-- name: 🇬🇧 ✨ AI 137ms | 231 (890)
+- name: 🇬🇧 ✨ AI 137ms | 231 (908)
   type: vless
   server: 45.85.119.231
   port: 443
@@ -9972,7 +10152,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇬🇧 ✨ AI 137ms | 230 (891)
+- name: 🇬🇧 ✨ AI 137ms | 230 (909)
   type: vless
   server: 45.85.119.230
   port: 443
@@ -9982,7 +10162,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇩🇪 ✨ AI 137ms | vmess (892)
+- name: 🇩🇪 ✨ AI 137ms | vmess (910)
   type: vmess
   server: 5.75.195.225
   port: 443
@@ -9994,7 +10174,7 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🇩🇪 ✨ AI 137ms | vmess (893)
+- name: 🇩🇪 ✨ AI 137ms | vmess (911)
   type: vmess
   server: 195.201.220.12
   port: 443
@@ -10006,7 +10186,7 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🇩🇪 ✨ AI 137ms | vmess (894)
+- name: 🇩🇪 ✨ AI 137ms | vmess (912)
   type: vmess
   server: 5.75.189.241
   port: 443
@@ -10018,7 +10198,7 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🇩🇪 ✨ AI 137ms | vmess (895)
+- name: 🇩🇪 ✨ AI 137ms | vmess (913)
   type: vmess
   server: 168.119.246.88
   port: 443
@@ -10030,7 +10210,7 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🇩🇪 ✨ AI 137ms | vmess (896)
+- name: 🇩🇪 ✨ AI 137ms | vmess (914)
   type: vmess
   server: 116.203.144.206
   port: 443
@@ -10042,7 +10222,7 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🇩🇪 ✨ AI 137ms | vmess (897)
+- name: 🇩🇪 ✨ AI 137ms | vmess (915)
   type: vmess
   server: 195.201.227.90
   port: 443
@@ -10054,42 +10234,42 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🇨🇱 ✨ AI 138ms | 59 (898)
+- name: 🇨🇱 ✨ AI 138ms | 59 (916)
   type: ss
   server: 38.54.20.59
   port: 8881
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
   udp: true
-- name: 🇺🇸 ✨ AI 138ms | 52 (899)
+- name: 🇺🇸 ✨ AI 138ms | 52 (917)
   type: ss
   server: 142.202.48.52
   port: 8080
   cipher: aes-256-gcm
   password: KixLvKzwjekG00rm
   udp: true
-- name: 🇬🇧 ✨ AI 138ms | 149 (900)
+- name: 🇬🇧 ✨ AI 138ms | 149 (918)
   type: ss
   server: 172.99.190.149
   port: 8080
   cipher: aes-256-gcm
   password: KixLvKzwjekG00rm
   udp: true
-- name: 🇹🇷 ✨ AI 138ms | shadowsockskeys (901)
+- name: 🇹🇷 ✨ AI 138ms | shadowsockskeys (919)
   type: ss
   server: 62.133.63.21
   port: 65262
   cipher: chacha20-ietf-poly1305
   password: jILPT8n8p9YVVl0oJzyuc7
   udp: true
-- name: 🇲🇩 ✨ AI 139ms | 253 (902)
+- name: 🇲🇩 ✨ AI 139ms | 253 (920)
   type: ss
   server: 176.123.5.253
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇺🇳 ✨ AI 139ms | vmess (903)
+- name: 🇺🇳 ✨ AI 139ms | vmess (921)
   type: vmess
   server: mmk.890601.xyz
   port: 80
@@ -10102,7 +10282,7 @@ proxies:
   network: ws
   ws-opts:
     path: /boWUVaU0sxrNtFSdOPjqSc7fzeJr
-- name: 🇺🇳 ✨ AI 139ms | vmess (904)
+- name: 🇺🇳 ✨ AI 139ms | vmess (922)
   type: vmess
   server: vVVbNHj.191288.xYz
   port: 80
@@ -10115,7 +10295,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AwUJyGh9Ym6vVzg35A6ueyyZnWd
-- name: 🇺🇸 ✨ AI 139ms | 111 (905)
+- name: 🇺🇸 ✨ AI 139ms | 111 (923)
   type: vless
   server: 31.59.102.111
   port: 443
@@ -10125,7 +10305,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: grpc
-- name: 🇱🇻 ✨ AI 141ms | 46 (906)
+- name: 🇱🇻 ✨ AI 141ms | 46 (924)
   type: vless
   server: 169.40.0.46
   port: 443
@@ -10135,7 +10315,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇨🇦 ✨ AI 141ms | oneclickvpnkeys (907)
+- name: 🇨🇦 ✨ AI 141ms | oneclickvpnkeys (925)
   type: trojan
   server: 104.18.32.47
   port: 443
@@ -10144,7 +10324,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇺🇸 ✨ AI 141ms | 190 (908)
+- name: 🇺🇸 ✨ AI 141ms | 190 (926)
   type: vless
   server: 80.209.241.190
   port: 443
@@ -10154,7 +10334,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇨🇦 ✨ AI 141ms | vmess (909)
+- name: 🇨🇦 ✨ AI 141ms | vmess (927)
   type: vmess
   server: 172.67.204.84
   port: 8080
@@ -10167,7 +10347,7 @@ proxies:
   network: ws
   ws-opts:
     path: /nasnet/cdn
-- name: 🇨🇦 ✨ AI 141ms | vmess (910)
+- name: 🇨🇦 ✨ AI 141ms | vmess (928)
   type: vmess
   server: 104.21.69.44
   port: 8080
@@ -10180,7 +10360,7 @@ proxies:
   network: ws
   ws-opts:
     path: /nasnet/cdn
-- name: 🇨🇦 ✨ AI 141ms | 23 (911)
+- name: 🇨🇦 ✨ AI 141ms | 23 (929)
   type: vless
   server: 172.64.152.23
   port: 443
@@ -10190,21 +10370,21 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇲🇩 ✨ AI 142ms | 175 (912)
+- name: 🇲🇩 ✨ AI 142ms | 175 (930)
   type: ss
   server: 176.123.1.175
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇺🇸 ✨ AI 142ms | 68 (913)
+- name: 🇺🇸 ✨ AI 142ms | 68 (931)
   type: ss
   server: 167.88.62.68
   port: 8080
   cipher: aes-256-gcm
   password: KixLvKzwjekG00rm
   udp: true
-- name: 🇫🇮 ✨ AI 142ms | 151 (914)
+- name: 🇫🇮 ✨ AI 142ms | 151 (932)
   type: vless
   server: 65.108.108.151
   port: 443
@@ -10214,7 +10394,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇺🇸 ✨ AI 142ms | oneclickvpnkeys (915)
+- name: 🇺🇸 ✨ AI 142ms | oneclickvpnkeys (933)
   type: vless
   server: 47.251.25.74
   port: 443
@@ -10224,7 +10404,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇩🇪 ✨ AI 142ms | 129 (916)
+- name: 🇩🇪 ✨ AI 142ms | 129 (934)
   type: trojan
   server: 3.77.68.129
   port: 22222
@@ -10233,21 +10413,21 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🇳🇱 ✨ AI 143ms | 71 (917)
+- name: 🇳🇱 ✨ AI 143ms | 71 (935)
   type: ss
   server: 172.99.188.71
   port: 443
   cipher: aes-256-gcm
   password: pKEW8JPByTVTLtM
   udp: true
-- name: 🇫🇷 ✨ AI 143ms | 139 (918)
+- name: 🇫🇷 ✨ AI 143ms | 139 (936)
   type: ss
   server: 161.97.68.139
   port: 443
   cipher: chacha20-ietf-poly1305
   password: 94dvoW0TdKRq
   udp: true
-- name: 🇺🇳 ✨ AI 143ms | oneclickvpnkeys (919)
+- name: 🇺🇳 ✨ AI 143ms | oneclickvpnkeys (937)
   type: vless
   server: cdn.zoom.us
   port: 443
@@ -10257,7 +10437,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇹🇷 ✨ AI 144ms | 176 (920)
+- name: 🇹🇷 ✨ AI 144ms | 176 (938)
   type: vless
   server: 5.180.45.176
   port: 4443
@@ -10267,7 +10447,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇪🇪 ✨ AI 144ms | 31 (921)
+- name: 🇪🇪 ✨ AI 144ms | 31 (939)
   type: vless
   server: 87.121.86.31
   port: 57516
@@ -10277,7 +10457,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇺🇳 ✨ AI 146ms | vmess (922)
+- name: 🇺🇳 ✨ AI 146ms | vmess (940)
   type: vmess
   server: op.857657.xyz
   port: 80
@@ -10290,7 +10470,7 @@ proxies:
   network: ws
   ws-opts:
     path: /boWUVaU0sxrNtFSdOPjqSc7fzeJr
-- name: 🇺🇳 ✨ AI 146ms | vmess (923)
+- name: 🇺🇳 ✨ AI 146ms | vmess (941)
   type: vmess
   server: namer-us-sea-01-edgecast.qdns.live
   port: 2053
@@ -10303,7 +10483,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇪 ✨ AI 146ms | 74 (924)
+- name: 🇸🇪 ✨ AI 146ms | 74 (942)
   type: vless
   server: 46.246.98.74
   port: 443
@@ -10313,21 +10493,21 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇪🇸 ✨ AI 147ms | 201 (925)
+- name: 🇪🇸 ✨ AI 147ms | 201 (943)
   type: ss
   server: 5.188.181.201
   port: 9037
   cipher: aes-256-cfb
   password: TN2YqghxeFDKZfLU
   udp: true
-- name: 🇪🇸 ✨ AI 147ms | 201 (926)
+- name: 🇪🇸 ✨ AI 147ms | 201 (944)
   type: ss
   server: 5.188.181.201
   port: 9031
   cipher: aes-256-cfb
   password: BwcAUZk8hUFAkDGN
   udp: true
-- name: 🇨🇦 ✨ AI 147ms | vmess (927)
+- name: 🇨🇦 ✨ AI 147ms | vmess (945)
   type: vmess
   server: 172.67.183.5
   port: 443
@@ -10340,7 +10520,7 @@ proxies:
   network: ws
   ws-opts:
     path: /wss13889
-- name: 🇨🇦 ✨ AI 147ms | vmess (928)
+- name: 🇨🇦 ✨ AI 147ms | vmess (946)
   type: vmess
   server: 172.67.160.99
   port: 443
@@ -10353,7 +10533,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vmessws
-- name: 🇨🇦 ✨ AI 147ms | vmess (929)
+- name: 🇨🇦 ✨ AI 147ms | vmess (947)
   type: vmess
   server: 172.67.158.147
   port: 2095
@@ -10366,7 +10546,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🇨🇦 ✨ AI 147ms | vmess (930)
+- name: 🇨🇦 ✨ AI 147ms | vmess (948)
   type: vmess
   server: 172.67.151.115
   port: 2095
@@ -10379,7 +10559,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🇨🇦 ✨ AI 147ms | vmess (931)
+- name: 🇨🇦 ✨ AI 147ms | vmess (949)
   type: vmess
   server: 172.67.150.82
   port: 443
@@ -10392,7 +10572,7 @@ proxies:
   network: ws
   ws-opts:
     path: /pNV7izRFLO8rGCkIH66kMFPa
-- name: 🇨🇦 ✨ AI 147ms | vmess (932)
+- name: 🇨🇦 ✨ AI 147ms | vmess (950)
   type: vmess
   server: 172.67.147.162
   port: 2095
@@ -10405,7 +10585,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🇨🇦 ✨ AI 147ms | vmess (933)
+- name: 🇨🇦 ✨ AI 147ms | vmess (951)
   type: vmess
   server: 172.67.143.129
   port: 80
@@ -10418,7 +10598,7 @@ proxies:
   network: ws
   ws-opts:
     path: 4a47e680
-- name: 🇨🇦 ✨ AI 147ms | vmess (934)
+- name: 🇨🇦 ✨ AI 147ms | vmess (952)
   type: vmess
   server: 172.67.136.19
   port: 2095
@@ -10431,7 +10611,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🇨🇦 ✨ AI 147ms | vmess (935)
+- name: 🇨🇦 ✨ AI 147ms | vmess (953)
   type: vmess
   server: 172.67.135.195
   port: 443
@@ -10444,7 +10624,7 @@ proxies:
   network: ws
   ws-opts:
     path: /wss51068
-- name: 🇨🇦 ✨ AI 147ms | vmess (936)
+- name: 🇨🇦 ✨ AI 147ms | vmess (954)
   type: vmess
   server: 172.67.132.15
   port: 443
@@ -10457,7 +10637,7 @@ proxies:
   network: ws
   ws-opts:
     path: /ray
-- name: 🇨🇦 ✨ AI 147ms | vmess (937)
+- name: 🇨🇦 ✨ AI 147ms | vmess (955)
   type: vmess
   server: 172.67.131.245
   port: 80
@@ -10470,7 +10650,7 @@ proxies:
   network: ws
   ws-opts:
     path: /dT9s3HqgZeD3eApzDAfhOHq
-- name: 🇨🇦 ✨ AI 148ms | vmess (938)
+- name: 🇨🇦 ✨ AI 148ms | vmess (956)
   type: vmess
   server: 172.67.184.53
   port: 8443
@@ -10483,21 +10663,21 @@ proxies:
   network: ws
   ws-opts:
     path: /cloudconeaaa
-- name: 🇨🇾 ✨ AI 148ms | 49 (939)
+- name: 🇨🇾 ✨ AI 148ms | 49 (957)
   type: ss
   server: 134.255.210.49
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇫🇮 ✨ AI 148ms | 111 (940)
+- name: 🇫🇮 ✨ AI 148ms | 111 (958)
   type: ss
   server: 185.5.38.111
   port: 55988
   cipher: chacha20-ietf-poly1305
   password: YLpDMwoLZi9Dvkr7Q6PCfkwCKJt23MkhD1LHDjnKVjS1R9Z4dD9vY5FffuYCtDVcSzHJLdicZbm4Dh6p8Nsd5d88gzAWYrQY
   udp: true
-- name: 🇺🇳 ✨ AI 149ms | vmess (941)
+- name: 🇺🇳 ✨ AI 149ms | vmess (959)
   type: vmess
   server: us-2.0rd.net
   port: 443
@@ -10510,7 +10690,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇺🇳 ✨ AI 152ms | net (942)
+- name: 🇺🇳 ✨ AI 152ms | net (960)
   type: trojan
   server: tr-full.privateip.net
   port: 443
@@ -10519,21 +10699,21 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🇩🇪 ✨ AI 152ms | 81 (943)
+- name: 🇩🇪 ✨ AI 152ms | 81 (961)
   type: ss
   server: 93.123.46.81
   port: 8443
   cipher: chacha20-ietf-poly1305
   password: zR5lT9pw8nqwjTkLtgqhbh
   udp: true
-- name: 🇩🇪 ✨ AI 152ms | 45 (944)
+- name: 🇩🇪 ✨ AI 152ms | 45 (962)
   type: ss
   server: 81.19.141.45
   port: 443
   cipher: chacha20-ietf-poly1305
   password: 1ppuGMLjhpnZXFGBPFzvCH
   udp: true
-- name: 🇨🇦 ✨ AI 152ms | 3 (945)
+- name: 🇨🇦 ✨ AI 152ms | 3 (963)
   type: trojan
   server: 188.114.96.3
   port: 443
@@ -10542,7 +10722,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇺🇸 ✨ AI 152ms | 169 (946)
+- name: 🇺🇸 ✨ AI 152ms | 169 (964)
   type: vless
   server: 137.184.218.169
   port: 36925
@@ -10552,7 +10732,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇨🇦 ✨ AI 153ms | 22 (947)
+- name: 🇨🇦 ✨ AI 153ms | 22 (965)
   type: vless
   server: 104.17.147.22
   port: 2096
@@ -10562,7 +10742,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: ws
-- name: 🇨🇦 ✨ AI 153ms | vmess (948)
+- name: 🇨🇦 ✨ AI 153ms | vmess (966)
   type: vmess
   server: 104.31.16.58
   port: 2053
@@ -10575,7 +10755,7 @@ proxies:
   network: ws
   ws-opts:
     path: /?ed=2048
-- name: 🇨🇦 ✨ AI 153ms | vmess (949)
+- name: 🇨🇦 ✨ AI 153ms | vmess (967)
   type: vmess
   server: 104.18.225.233
   port: 2082
@@ -10588,7 +10768,7 @@ proxies:
   network: ws
   ws-opts:
     path: /asdas
-- name: 🇨🇦 ✨ AI 153ms | vmess (950)
+- name: 🇨🇦 ✨ AI 153ms | vmess (968)
   type: vmess
   server: 104.18.225.233
   port: 2086
@@ -10601,7 +10781,7 @@ proxies:
   network: ws
   ws-opts:
     path: /asdas
-- name: 🇨🇦 ✨ AI 153ms | 177 (951)
+- name: 🇨🇦 ✨ AI 153ms | 177 (969)
   type: vless
   server: 104.16.106.177
   port: 443
@@ -10611,7 +10791,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🇫🇮 ✨ AI 153ms | vmess (952)
+- name: 🇫🇮 ✨ AI 153ms | vmess (970)
   type: vmess
   server: 65.109.1.16
   port: 443
@@ -10623,7 +10803,7 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🇨🇦 ✨ AI 154ms | vmess (953)
+- name: 🇨🇦 ✨ AI 154ms | vmess (971)
   type: vmess
   server: 172.67.131.17
   port: 443
@@ -10636,7 +10816,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (954)
+- name: 🇨🇦 ✨ AI 154ms | vmess (972)
   type: vmess
   server: 104.18.222.139
   port: 443
@@ -10649,7 +10829,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws?@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1?ed=2560/linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (955)
+- name: 🇨🇦 ✨ AI 154ms | vmess (973)
   type: vmess
   server: 104.21.31.62
   port: 443
@@ -10662,7 +10842,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (956)
+- name: 🇨🇦 ✨ AI 154ms | vmess (974)
   type: vmess
   server: 172.67.71.217
   port: 443
@@ -10675,7 +10855,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 154ms | vmess (957)
+- name: 🇨🇦 ✨ AI 154ms | vmess (975)
   type: vmess
   server: 104.21.94.168
   port: 443
@@ -10688,7 +10868,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (958)
+- name: 🇨🇦 ✨ AI 154ms | vmess (976)
   type: vmess
   server: 104.21.15.36
   port: 443
@@ -10701,7 +10881,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (959)
+- name: 🇨🇦 ✨ AI 154ms | vmess (977)
   type: vmess
   server: 188.114.97.6
   port: 443
@@ -10714,7 +10894,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇺🇸 ✨ AI 154ms | vmess (960)
+- name: 🇺🇸 ✨ AI 154ms | vmess (978)
   type: vmess
   server: 188.114.99.205
   port: 443
@@ -10727,7 +10907,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (961)
+- name: 🇨🇦 ✨ AI 154ms | vmess (979)
   type: vmess
   server: 172.67.179.199
   port: 443
@@ -10740,7 +10920,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇺🇸 ✨ AI 154ms | vmess (962)
+- name: 🇺🇸 ✨ AI 154ms | vmess (980)
   type: vmess
   server: 188.114.99.183
   port: 443
@@ -10753,7 +10933,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇺🇸 ✨ AI 154ms | vmess (963)
+- name: 🇺🇸 ✨ AI 154ms | vmess (981)
   type: vmess
   server: 188.114.99.134
   port: 443
@@ -10766,7 +10946,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (964)
+- name: 🇨🇦 ✨ AI 154ms | vmess (982)
   type: vmess
   server: 188.114.96.5
   port: 443
@@ -10779,7 +10959,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (965)
+- name: 🇨🇦 ✨ AI 154ms | vmess (983)
   type: vmess
   server: 172.67.170.11
   port: 443
@@ -10792,7 +10972,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (966)
+- name: 🇨🇦 ✨ AI 154ms | vmess (984)
   type: vmess
   server: 188.114.97.79
   port: 443
@@ -10805,7 +10985,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (967)
+- name: 🇨🇦 ✨ AI 154ms | vmess (985)
   type: vmess
   server: 172.67.161.77
   port: 443
@@ -10818,7 +10998,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (968)
+- name: 🇨🇦 ✨ AI 154ms | vmess (986)
   type: vmess
   server: 188.114.97.210
   port: 443
@@ -10831,7 +11011,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (969)
+- name: 🇨🇦 ✨ AI 154ms | vmess (987)
   type: vmess
   server: 172.67.220.10
   port: 443
@@ -10844,7 +11024,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (970)
+- name: 🇨🇦 ✨ AI 154ms | vmess (988)
   type: vmess
   server: 104.21.94.64
   port: 443
@@ -10857,7 +11037,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (971)
+- name: 🇨🇦 ✨ AI 154ms | vmess (989)
   type: vmess
   server: 162.159.138.179
   port: 443
@@ -10870,7 +11050,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws?@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1@AZARBAYJB1?ed=2560/linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (972)
+- name: 🇨🇦 ✨ AI 154ms | vmess (990)
   type: vmess
   server: 172.67.220.83
   port: 443
@@ -10883,7 +11063,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (973)
+- name: 🇨🇦 ✨ AI 154ms | vmess (991)
   type: vmess
   server: 162.159.152.2
   port: 443
@@ -10896,7 +11076,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 154ms | vmess (974)
+- name: 🇨🇦 ✨ AI 154ms | vmess (992)
   type: vmess
   server: 172.67.181.241
   port: 443
@@ -10909,7 +11089,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 154ms | vmess (975)
+- name: 🇨🇦 ✨ AI 154ms | vmess (993)
   type: vmess
   server: 188.114.97.21
   port: 443
@@ -10922,7 +11102,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 154ms | vmess (976)
+- name: 🇨🇦 ✨ AI 154ms | vmess (994)
   type: vmess
   server: 104.21.83.208
   port: 443
@@ -10935,7 +11115,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (977)
+- name: 🇨🇦 ✨ AI 154ms | vmess (995)
   type: vmess
   server: 104.16.60.8
   port: 2052
@@ -10948,7 +11128,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 154ms | vmess (978)
+- name: 🇨🇦 ✨ AI 154ms | vmess (996)
   type: vmess
   server: 172.67.175.56
   port: 443
@@ -10961,7 +11141,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (979)
+- name: 🇨🇦 ✨ AI 154ms | vmess (997)
   type: vmess
   server: 104.21.9.236
   port: 443
@@ -10974,7 +11154,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkws
-- name: 🇨🇦 ✨ AI 154ms | vmess (980)
+- name: 🇨🇦 ✨ AI 154ms | vmess (998)
   type: vmess
   server: 188.114.97.4
   port: 443
@@ -10987,7 +11167,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇨🇦 ✨ AI 154ms | vmess (981)
+- name: 🇨🇦 ✨ AI 154ms | vmess (999)
   type: vmess
   server: 188.114.97.8
   port: 2087
@@ -10999,236 +11179,6 @@ proxies:
   skip-cert-verify: true
   network: grpc
   ws-opts: null
-- name: 🇺🇳 ✨ AI 154ms | com (982)
-  type: trojan
-  server: www.multiplydose.com
-  port: 443
-  password: humanity
-  udp: true
-  skip-cert-verify: true
-  tls: false
-  network: ws
-- name: 🇨🇦 ✨ AI 155ms | vmess (983)
-  type: vmess
-  server: 172.67.136.233
-  port: 443
-  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇧🇬 ✨ AI 155ms | vmess (984)
-  type: vmess
-  server: 45.142.120.190
-  port: 2082
-  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇨🇦 ✨ AI 155ms | vmess (985)
-  type: vmess
-  server: 104.21.42.243
-  port: 443
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇨🇦 ✨ AI 155ms | vmess (986)
-  type: vmess
-  server: 172.67.213.110
-  port: 443
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /rbqqvws
-- name: 🇨🇦 ✨ AI 155ms | vmess (987)
-  type: vmess
-  server: 172.67.135.62
-  port: 443
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /rbqqvws
-- name: 🇨🇦 ✨ AI 155ms | vmess (988)
-  type: vmess
-  server: 104.21.6.201
-  port: 443
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /rbqqvws
-- name: 🇨🇦 ✨ AI 155ms | vmess (989)
-  type: vmess
-  server: 172.67.138.69
-  port: 443
-  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /linkws
-- name: 🇨🇦 ✨ AI 155ms | vmess (990)
-  type: vmess
-  server: 162.159.8.120
-  port: 443
-  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇳🇱 ✨ AI 155ms | vmess (991)
-  type: vmess
-  server: 45.149.12.56
-  port: 443
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇳🇱 ✨ AI 155ms | vmess (992)
-  type: vmess
-  server: 45.149.12.53
-  port: 443
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇳🇱 ✨ AI 155ms | vmess (993)
-  type: vmess
-  server: 45.149.12.79
-  port: 443
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇨🇦 ✨ AI 155ms | vmess (994)
-  type: vmess
-  server: 104.26.0.95
-  port: 443
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /linkws
-- name: 🇳🇱 ✨ AI 155ms | vmess (995)
-  type: vmess
-  server: 45.149.12.75
-  port: 443
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇨🇦 ✨ AI 155ms | vmess (996)
-  type: vmess
-  server: 172.67.71.160
-  port: 443
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /linkws
-- name: 🇨🇦 ✨ AI 155ms | vmess (997)
-  type: vmess
-  server: 172.67.198.187
-  port: 443
-  uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇨🇦 ✨ AI 155ms | vmess (998)
-  type: vmess
-  server: 104.17.213.57
-  port: 443
-  uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /linkws
-- name: 🇩🇪 ✨ AI 155ms | vmess (999)
-  type: vmess
-  server: 185.135.9.19
-  port: 2095
-  uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
 proxy-groups:
 - name: 🚀 Auto Select
   type: url-test
@@ -12032,180 +11982,180 @@ proxy-groups:
   - 🇱🇻 ✨ AI 125ms | 188 (794)
   - 🇱🇹 ✨ AI 125ms | 42 (795)
   - 🇺🇸 ✨ AI 125ms | 68 (796)
-  - 🇨🇦 ✨ AI 126ms | 224 (797)
-  - 🇨🇦 ✨ AI 126ms | 47 (798)
-  - 🇳🇱 ✨ AI 126ms | 103 (799)
-  - 🇳🇱 ✨ AI 126ms | 79 (800)
-  - 🇳🇱 ✨ AI 126ms | 225 (801)
-  - 🇨🇦 ✨ AI 126ms | 224 (802)
-  - 🇨🇦 ✨ AI 126ms | 4 (803)
-  - 🇳🇱 ✨ AI 126ms | 130 (804)
-  - 🇳🇱 ✨ AI 126ms | 15 (805)
-  - 🇦🇱 ✨ AI 126ms | 57 (806)
-  - 🇳🇱 ✨ AI 126ms | 160 (807)
-  - 🇫🇮 ✨ AI 126ms | 114 (808)
-  - 🇵🇱 ✨ AI 126ms | 18 (809)
-  - 🇷🇺 ✨ AI 127ms | 104 (810)
-  - 🇺🇳 ✨ AI 127ms | website (811)
-  - 🇹🇷 ✨ AI 128ms | shadowsockskeys (812)
-  - 🇵🇱 ✨ AI 128ms | 18 (813)
-  - 🇺🇳 ✨ AI 128ms | com (814)
-  - 🇱🇻 ✨ AI 129ms | 204 (815)
-  - 🇨🇦 ✨ AI 129ms | oneclickvpnkeys (816)
-  - 🇱🇻 ✨ AI 129ms | 14 (817)
-  - 🇱🇻 ✨ AI 129ms | 31 (818)
-  - 🇱🇻 ✨ AI 129ms | 56 (819)
-  - 🇵🇱 ✨ AI 129ms | 18 (820)
-  - 🇺🇳 ✨ AI 130ms | vmess (821)
-  - 🇨🇦 ✨ AI 130ms | vmess (822)
-  - 🇨🇦 ✨ AI 130ms | vmess (823)
-  - 🇺🇸 ✨ AI 130ms | vmess (824)
-  - 🇺🇳 ✨ AI 130ms | vmess (825)
-  - 🇫🇷 ✨ AI 130ms | 101 (826)
-  - 🇫🇷 ✨ AI 130ms | 94 (827)
-  - 🇺🇸 ✨ AI 130ms | 110 (828)
-  - 🇱🇻 ✨ AI 130ms | 111 (829)
-  - 🇱🇻 ✨ AI 130ms | 101 (830)
-  - 🇱🇻 ✨ AI 130ms | 166 (831)
-  - 🇱🇻 ✨ AI 130ms | 77 (832)
-  - 🇱🇻 ✨ AI 130ms | 95 (833)
-  - 🇵🇱 ✨ AI 130ms | 18 (834)
-  - 🇺🇸 ✨ AI 131ms | vmess (835)
-  - 🇺🇸 ✨ AI 131ms | vmess (836)
-  - 🇺🇸 ✨ AI 131ms | vmess (837)
-  - 🇺🇸 ✨ AI 131ms | vmess (838)
-  - 🇺🇸 ✨ AI 131ms | vmess (839)
-  - 🇩🇪 ✨ AI 131ms | vmess (840)
-  - 🇬🇧 ✨ AI 131ms | 11 (841)
-  - 🇵🇱 ✨ AI 132ms | 176 (842)
-  - 🇧🇬 ✨ AI 132ms | 135 (843)
-  - 🇺🇳 ✨ AI 132ms | vmess (844)
-  - 🇭🇺 ✨ AI 132ms | 148 (845)
-  - 🇩🇪 ✨ AI 132ms | oneclickvpnkeys (846)
-  - 🇫🇮 ✨ AI 132ms | 89 (847)
-  - 🇳🇱 ✨ AI 133ms | 249 (848)
-  - 🇨🇦 ✨ AI 134ms | vmess (849)
-  - 🇨🇦 ✨ AI 134ms | vmess (850)
-  - 🇬🇧 ✨ AI 134ms | vmess (851)
-  - 🇨🇦 ✨ AI 134ms | vmess (852)
-  - 🇨🇦 ✨ AI 134ms | vmess (853)
-  - 🇳🇱 ✨ AI 134ms | 130 (854)
-  - 🇪🇸 ✨ AI 134ms | 252 (855)
-  - 🇨🇦 ✨ AI 134ms | 187 (856)
-  - 🇨🇦 ✨ AI 134ms | 3 (857)
-  - 🇨🇦 ✨ AI 134ms | 3 (858)
-  - 🇦🇹 ✨ AI 135ms | 76 (859)
-  - 🇺🇸 ✨ AI 135ms | 168 (860)
-  - 🇩🇰 ✨ AI 135ms | 228 (861)
-  - 🇩🇰 ✨ AI 135ms | 228 (862)
-  - 🇪🇸 ✨ AI 135ms | 189 (863)
-  - 🇲🇽 ✨ AI 135ms | 102 (864)
-  - 🇨🇦 ✨ AI 135ms | 224 (865)
-  - 🇩🇪 ✨ AI 135ms | vmess (866)
-  - 🇬🇧 ✨ AI 135ms | vmess (867)
-  - 🇳🇱 ✨ AI 135ms | vmess (868)
-  - 🇩🇪 ✨ AI 135ms | vmess (869)
-  - 🇩🇪 ✨ AI 135ms | vmess (870)
-  - 🇪🇸 ✨ AI 135ms | vmess (871)
-  - 🇮🇷 ✨ AI 135ms | vmess (872)
-  - 🇬🇧 ✨ AI 135ms | vmess (873)
-  - 🇩🇪 ✨ AI 135ms | vmess (874)
-  - 🇩🇪 ✨ AI 135ms | vmess (875)
-  - 🇧🇷 ✨ AI 136ms | shadowsockskeys (876)
-  - 🇫🇮 ✨ AI 136ms | 254 (877)
-  - 🇨🇦 ✨ AI 136ms | vmess (878)
-  - 🇨🇦 ✨ AI 136ms | 166 (879)
-  - 🇺🇸 ✨ AI 136ms | 130 (880)
-  - 🇨🇦 ✨ AI 136ms | 6 (881)
-  - 🇬🇧 ✨ AI 136ms | 214 (882)
-  - 🇮🇷 ✨ AI 136ms | vmess (883)
-  - 🇨🇦 ✨ AI 136ms | 31 (884)
-  - 🇬🇧 ✨ AI 137ms | vmess (885)
-  - 🇬🇧 ✨ AI 137ms | vmess (886)
-  - 🇬🇧 ✨ AI 137ms | vmess (887)
-  - 🇬🇧 ✨ AI 137ms | 249 (888)
-  - 🇬🇧 ✨ AI 137ms | vmess (889)
-  - 🇬🇧 ✨ AI 137ms | 231 (890)
-  - 🇬🇧 ✨ AI 137ms | 230 (891)
-  - 🇩🇪 ✨ AI 137ms | vmess (892)
-  - 🇩🇪 ✨ AI 137ms | vmess (893)
-  - 🇩🇪 ✨ AI 137ms | vmess (894)
-  - 🇩🇪 ✨ AI 137ms | vmess (895)
-  - 🇩🇪 ✨ AI 137ms | vmess (896)
-  - 🇩🇪 ✨ AI 137ms | vmess (897)
-  - 🇨🇱 ✨ AI 138ms | 59 (898)
-  - 🇺🇸 ✨ AI 138ms | 52 (899)
-  - 🇬🇧 ✨ AI 138ms | 149 (900)
-  - 🇹🇷 ✨ AI 138ms | shadowsockskeys (901)
-  - 🇲🇩 ✨ AI 139ms | 253 (902)
-  - 🇺🇳 ✨ AI 139ms | vmess (903)
-  - 🇺🇳 ✨ AI 139ms | vmess (904)
-  - 🇺🇸 ✨ AI 139ms | 111 (905)
-  - 🇱🇻 ✨ AI 141ms | 46 (906)
-  - 🇨🇦 ✨ AI 141ms | oneclickvpnkeys (907)
-  - 🇺🇸 ✨ AI 141ms | 190 (908)
-  - 🇨🇦 ✨ AI 141ms | vmess (909)
-  - 🇨🇦 ✨ AI 141ms | vmess (910)
-  - 🇨🇦 ✨ AI 141ms | 23 (911)
-  - 🇲🇩 ✨ AI 142ms | 175 (912)
-  - 🇺🇸 ✨ AI 142ms | 68 (913)
-  - 🇫🇮 ✨ AI 142ms | 151 (914)
-  - 🇺🇸 ✨ AI 142ms | oneclickvpnkeys (915)
-  - 🇩🇪 ✨ AI 142ms | 129 (916)
-  - 🇳🇱 ✨ AI 143ms | 71 (917)
-  - 🇫🇷 ✨ AI 143ms | 139 (918)
-  - 🇺🇳 ✨ AI 143ms | oneclickvpnkeys (919)
-  - 🇹🇷 ✨ AI 144ms | 176 (920)
-  - 🇪🇪 ✨ AI 144ms | 31 (921)
-  - 🇺🇳 ✨ AI 146ms | vmess (922)
-  - 🇺🇳 ✨ AI 146ms | vmess (923)
-  - 🇸🇪 ✨ AI 146ms | 74 (924)
-  - 🇪🇸 ✨ AI 147ms | 201 (925)
-  - 🇪🇸 ✨ AI 147ms | 201 (926)
-  - 🇨🇦 ✨ AI 147ms | vmess (927)
-  - 🇨🇦 ✨ AI 147ms | vmess (928)
-  - 🇨🇦 ✨ AI 147ms | vmess (929)
-  - 🇨🇦 ✨ AI 147ms | vmess (930)
-  - 🇨🇦 ✨ AI 147ms | vmess (931)
-  - 🇨🇦 ✨ AI 147ms | vmess (932)
-  - 🇨🇦 ✨ AI 147ms | vmess (933)
-  - 🇨🇦 ✨ AI 147ms | vmess (934)
-  - 🇨🇦 ✨ AI 147ms | vmess (935)
-  - 🇨🇦 ✨ AI 147ms | vmess (936)
-  - 🇨🇦 ✨ AI 147ms | vmess (937)
-  - 🇨🇦 ✨ AI 148ms | vmess (938)
-  - 🇨🇾 ✨ AI 148ms | 49 (939)
-  - 🇫🇮 ✨ AI 148ms | 111 (940)
-  - 🇺🇳 ✨ AI 149ms | vmess (941)
-  - 🇺🇳 ✨ AI 152ms | net (942)
-  - 🇩🇪 ✨ AI 152ms | 81 (943)
-  - 🇩🇪 ✨ AI 152ms | 45 (944)
-  - 🇨🇦 ✨ AI 152ms | 3 (945)
-  - 🇺🇸 ✨ AI 152ms | 169 (946)
-  - 🇨🇦 ✨ AI 153ms | 22 (947)
-  - 🇨🇦 ✨ AI 153ms | vmess (948)
-  - 🇨🇦 ✨ AI 153ms | vmess (949)
-  - 🇨🇦 ✨ AI 153ms | vmess (950)
-  - 🇨🇦 ✨ AI 153ms | 177 (951)
-  - 🇫🇮 ✨ AI 153ms | vmess (952)
-  - 🇨🇦 ✨ AI 154ms | vmess (953)
-  - 🇨🇦 ✨ AI 154ms | vmess (954)
-  - 🇨🇦 ✨ AI 154ms | vmess (955)
-  - 🇨🇦 ✨ AI 154ms | vmess (956)
-  - 🇨🇦 ✨ AI 154ms | vmess (957)
-  - 🇨🇦 ✨ AI 154ms | vmess (958)
-  - 🇨🇦 ✨ AI 154ms | vmess (959)
-  - 🇺🇸 ✨ AI 154ms | vmess (960)
-  - 🇨🇦 ✨ AI 154ms | vmess (961)
-  - 🇺🇸 ✨ AI 154ms | vmess (962)
-  - 🇺🇸 ✨ AI 154ms | vmess (963)
-  - 🇨🇦 ✨ AI 154ms | vmess (964)
-  - 🇨🇦 ✨ AI 154ms | vmess (965)
-  - 🇨🇦 ✨ AI 154ms | vmess (966)
-  - 🇨🇦 ✨ AI 154ms | vmess (967)
-  - 🇨🇦 ✨ AI 154ms | vmess (968)
-  - 🇨🇦 ✨ AI 154ms | vmess (969)
-  - 🇨🇦 ✨ AI 154ms | vmess (970)
+  - 🇸🇪 ✨ AI 125ms | 39 (797)
+  - 🇨🇦 ✨ AI 126ms | 224 (798)
+  - 🇨🇦 ✨ AI 126ms | 47 (799)
+  - 🇳🇱 ✨ AI 126ms | 103 (800)
+  - 🇳🇱 ✨ AI 126ms | 79 (801)
+  - 🇳🇱 ✨ AI 126ms | 225 (802)
+  - 🇨🇦 ✨ AI 126ms | 224 (803)
+  - 🇨🇦 ✨ AI 126ms | 4 (804)
+  - 🇳🇱 ✨ AI 126ms | 130 (805)
+  - 🇳🇱 ✨ AI 126ms | 15 (806)
+  - 🇦🇱 ✨ AI 126ms | 57 (807)
+  - 🇳🇱 ✨ AI 126ms | 160 (808)
+  - 🇫🇮 ✨ AI 126ms | 114 (809)
+  - 🇵🇱 ✨ AI 126ms | 18 (810)
+  - 🇨🇦 ✨ AI 126ms | 219 (811)
+  - 🇨🇦 ✨ AI 126ms | 2 (812)
+  - 🇨🇦 ✨ AI 126ms | 2 (813)
+  - 🇨🇦 ✨ AI 126ms | 187 (814)
+  - 🇨🇦 ✨ AI 126ms | 187 (815)
+  - 🇨🇦 ✨ AI 126ms | 133 (816)
+  - 🇨🇦 ✨ AI 126ms | 2 (817)
+  - 🇺🇸 ✨ AI 126ms | 123 (818)
+  - 🇨🇦 ✨ AI 126ms | 8 (819)
+  - 🇨🇦 ✨ AI 126ms | 133 (820)
+  - 🇸🇪 ✨ AI 126ms | 58 (821)
+  - 🇷🇺 ✨ AI 127ms | 104 (822)
+  - 🇺🇳 ✨ AI 127ms | website (823)
+  - 🇺🇳 ✨ AI 127ms | net (824)
+  - 🇺🇳 ✨ AI 127ms | edu (825)
+  - 🇺🇳 ✨ AI 127ms | Edu (826)
+  - 🇺🇳 ✨ AI 127ms | edu (827)
+  - 🇺🇳 ✨ AI 127ms | edu (828)
+  - 🇺🇳 ✨ AI 127ms | edu (829)
+  - 🇹🇷 ✨ AI 128ms | shadowsockskeys (830)
+  - 🇵🇱 ✨ AI 128ms | 18 (831)
+  - 🇺🇳 ✨ AI 128ms | com (832)
+  - 🇱🇻 ✨ AI 129ms | 204 (833)
+  - 🇨🇦 ✨ AI 129ms | oneclickvpnkeys (834)
+  - 🇱🇻 ✨ AI 129ms | 14 (835)
+  - 🇱🇻 ✨ AI 129ms | 31 (836)
+  - 🇱🇻 ✨ AI 129ms | 56 (837)
+  - 🇵🇱 ✨ AI 129ms | 18 (838)
+  - 🇺🇳 ✨ AI 130ms | vmess (839)
+  - 🇨🇦 ✨ AI 130ms | vmess (840)
+  - 🇨🇦 ✨ AI 130ms | vmess (841)
+  - 🇺🇸 ✨ AI 130ms | vmess (842)
+  - 🇺🇳 ✨ AI 130ms | vmess (843)
+  - 🇫🇷 ✨ AI 130ms | 101 (844)
+  - 🇫🇷 ✨ AI 130ms | 94 (845)
+  - 🇺🇸 ✨ AI 130ms | 110 (846)
+  - 🇱🇻 ✨ AI 130ms | 111 (847)
+  - 🇱🇻 ✨ AI 130ms | 101 (848)
+  - 🇱🇻 ✨ AI 130ms | 166 (849)
+  - 🇱🇻 ✨ AI 130ms | 77 (850)
+  - 🇱🇻 ✨ AI 130ms | 95 (851)
+  - 🇵🇱 ✨ AI 130ms | 18 (852)
+  - 🇺🇸 ✨ AI 131ms | vmess (853)
+  - 🇺🇸 ✨ AI 131ms | vmess (854)
+  - 🇺🇸 ✨ AI 131ms | vmess (855)
+  - 🇺🇸 ✨ AI 131ms | vmess (856)
+  - 🇺🇸 ✨ AI 131ms | vmess (857)
+  - 🇩🇪 ✨ AI 131ms | vmess (858)
+  - 🇬🇧 ✨ AI 131ms | 11 (859)
+  - 🇵🇱 ✨ AI 132ms | 176 (860)
+  - 🇧🇬 ✨ AI 132ms | 135 (861)
+  - 🇺🇳 ✨ AI 132ms | vmess (862)
+  - 🇭🇺 ✨ AI 132ms | 148 (863)
+  - 🇩🇪 ✨ AI 132ms | oneclickvpnkeys (864)
+  - 🇫🇮 ✨ AI 132ms | 89 (865)
+  - 🇳🇱 ✨ AI 133ms | 249 (866)
+  - 🇨🇦 ✨ AI 134ms | vmess (867)
+  - 🇨🇦 ✨ AI 134ms | vmess (868)
+  - 🇬🇧 ✨ AI 134ms | vmess (869)
+  - 🇨🇦 ✨ AI 134ms | vmess (870)
+  - 🇨🇦 ✨ AI 134ms | vmess (871)
+  - 🇳🇱 ✨ AI 134ms | 130 (872)
+  - 🇪🇸 ✨ AI 134ms | 252 (873)
+  - 🇨🇦 ✨ AI 134ms | 187 (874)
+  - 🇨🇦 ✨ AI 134ms | 3 (875)
+  - 🇨🇦 ✨ AI 134ms | 3 (876)
+  - 🇦🇹 ✨ AI 135ms | 76 (877)
+  - 🇺🇸 ✨ AI 135ms | 168 (878)
+  - 🇩🇰 ✨ AI 135ms | 228 (879)
+  - 🇩🇰 ✨ AI 135ms | 228 (880)
+  - 🇪🇸 ✨ AI 135ms | 189 (881)
+  - 🇲🇽 ✨ AI 135ms | 102 (882)
+  - 🇨🇦 ✨ AI 135ms | 224 (883)
+  - 🇩🇪 ✨ AI 135ms | vmess (884)
+  - 🇬🇧 ✨ AI 135ms | vmess (885)
+  - 🇳🇱 ✨ AI 135ms | vmess (886)
+  - 🇩🇪 ✨ AI 135ms | vmess (887)
+  - 🇩🇪 ✨ AI 135ms | vmess (888)
+  - 🇪🇸 ✨ AI 135ms | vmess (889)
+  - 🇮🇷 ✨ AI 135ms | vmess (890)
+  - 🇬🇧 ✨ AI 135ms | vmess (891)
+  - 🇩🇪 ✨ AI 135ms | vmess (892)
+  - 🇩🇪 ✨ AI 135ms | vmess (893)
+  - 🇧🇷 ✨ AI 136ms | shadowsockskeys (894)
+  - 🇫🇮 ✨ AI 136ms | 254 (895)
+  - 🇨🇦 ✨ AI 136ms | vmess (896)
+  - 🇨🇦 ✨ AI 136ms | 166 (897)
+  - 🇺🇸 ✨ AI 136ms | 130 (898)
+  - 🇨🇦 ✨ AI 136ms | 6 (899)
+  - 🇬🇧 ✨ AI 136ms | 214 (900)
+  - 🇮🇷 ✨ AI 136ms | vmess (901)
+  - 🇨🇦 ✨ AI 136ms | 31 (902)
+  - 🇬🇧 ✨ AI 137ms | vmess (903)
+  - 🇬🇧 ✨ AI 137ms | vmess (904)
+  - 🇬🇧 ✨ AI 137ms | vmess (905)
+  - 🇬🇧 ✨ AI 137ms | 249 (906)
+  - 🇬🇧 ✨ AI 137ms | vmess (907)
+  - 🇬🇧 ✨ AI 137ms | 231 (908)
+  - 🇬🇧 ✨ AI 137ms | 230 (909)
+  - 🇩🇪 ✨ AI 137ms | vmess (910)
+  - 🇩🇪 ✨ AI 137ms | vmess (911)
+  - 🇩🇪 ✨ AI 137ms | vmess (912)
+  - 🇩🇪 ✨ AI 137ms | vmess (913)
+  - 🇩🇪 ✨ AI 137ms | vmess (914)
+  - 🇩🇪 ✨ AI 137ms | vmess (915)
+  - 🇨🇱 ✨ AI 138ms | 59 (916)
+  - 🇺🇸 ✨ AI 138ms | 52 (917)
+  - 🇬🇧 ✨ AI 138ms | 149 (918)
+  - 🇹🇷 ✨ AI 138ms | shadowsockskeys (919)
+  - 🇲🇩 ✨ AI 139ms | 253 (920)
+  - 🇺🇳 ✨ AI 139ms | vmess (921)
+  - 🇺🇳 ✨ AI 139ms | vmess (922)
+  - 🇺🇸 ✨ AI 139ms | 111 (923)
+  - 🇱🇻 ✨ AI 141ms | 46 (924)
+  - 🇨🇦 ✨ AI 141ms | oneclickvpnkeys (925)
+  - 🇺🇸 ✨ AI 141ms | 190 (926)
+  - 🇨🇦 ✨ AI 141ms | vmess (927)
+  - 🇨🇦 ✨ AI 141ms | vmess (928)
+  - 🇨🇦 ✨ AI 141ms | 23 (929)
+  - 🇲🇩 ✨ AI 142ms | 175 (930)
+  - 🇺🇸 ✨ AI 142ms | 68 (931)
+  - 🇫🇮 ✨ AI 142ms | 151 (932)
+  - 🇺🇸 ✨ AI 142ms | oneclickvpnkeys (933)
+  - 🇩🇪 ✨ AI 142ms | 129 (934)
+  - 🇳🇱 ✨ AI 143ms | 71 (935)
+  - 🇫🇷 ✨ AI 143ms | 139 (936)
+  - 🇺🇳 ✨ AI 143ms | oneclickvpnkeys (937)
+  - 🇹🇷 ✨ AI 144ms | 176 (938)
+  - 🇪🇪 ✨ AI 144ms | 31 (939)
+  - 🇺🇳 ✨ AI 146ms | vmess (940)
+  - 🇺🇳 ✨ AI 146ms | vmess (941)
+  - 🇸🇪 ✨ AI 146ms | 74 (942)
+  - 🇪🇸 ✨ AI 147ms | 201 (943)
+  - 🇪🇸 ✨ AI 147ms | 201 (944)
+  - 🇨🇦 ✨ AI 147ms | vmess (945)
+  - 🇨🇦 ✨ AI 147ms | vmess (946)
+  - 🇨🇦 ✨ AI 147ms | vmess (947)
+  - 🇨🇦 ✨ AI 147ms | vmess (948)
+  - 🇨🇦 ✨ AI 147ms | vmess (949)
+  - 🇨🇦 ✨ AI 147ms | vmess (950)
+  - 🇨🇦 ✨ AI 147ms | vmess (951)
+  - 🇨🇦 ✨ AI 147ms | vmess (952)
+  - 🇨🇦 ✨ AI 147ms | vmess (953)
+  - 🇨🇦 ✨ AI 147ms | vmess (954)
+  - 🇨🇦 ✨ AI 147ms | vmess (955)
+  - 🇨🇦 ✨ AI 148ms | vmess (956)
+  - 🇨🇾 ✨ AI 148ms | 49 (957)
+  - 🇫🇮 ✨ AI 148ms | 111 (958)
+  - 🇺🇳 ✨ AI 149ms | vmess (959)
+  - 🇺🇳 ✨ AI 152ms | net (960)
+  - 🇩🇪 ✨ AI 152ms | 81 (961)
+  - 🇩🇪 ✨ AI 152ms | 45 (962)
+  - 🇨🇦 ✨ AI 152ms | 3 (963)
+  - 🇺🇸 ✨ AI 152ms | 169 (964)
+  - 🇨🇦 ✨ AI 153ms | 22 (965)
+  - 🇨🇦 ✨ AI 153ms | vmess (966)
+  - 🇨🇦 ✨ AI 153ms | vmess (967)
+  - 🇨🇦 ✨ AI 153ms | vmess (968)
+  - 🇨🇦 ✨ AI 153ms | 177 (969)
+  - 🇫🇮 ✨ AI 153ms | vmess (970)
   - 🇨🇦 ✨ AI 154ms | vmess (971)
   - 🇨🇦 ✨ AI 154ms | vmess (972)
   - 🇨🇦 ✨ AI 154ms | vmess (973)
@@ -12213,27 +12163,27 @@ proxy-groups:
   - 🇨🇦 ✨ AI 154ms | vmess (975)
   - 🇨🇦 ✨ AI 154ms | vmess (976)
   - 🇨🇦 ✨ AI 154ms | vmess (977)
-  - 🇨🇦 ✨ AI 154ms | vmess (978)
+  - 🇺🇸 ✨ AI 154ms | vmess (978)
   - 🇨🇦 ✨ AI 154ms | vmess (979)
-  - 🇨🇦 ✨ AI 154ms | vmess (980)
-  - 🇨🇦 ✨ AI 154ms | vmess (981)
-  - 🇺🇳 ✨ AI 154ms | com (982)
-  - 🇨🇦 ✨ AI 155ms | vmess (983)
-  - 🇧🇬 ✨ AI 155ms | vmess (984)
-  - 🇨🇦 ✨ AI 155ms | vmess (985)
-  - 🇨🇦 ✨ AI 155ms | vmess (986)
-  - 🇨🇦 ✨ AI 155ms | vmess (987)
-  - 🇨🇦 ✨ AI 155ms | vmess (988)
-  - 🇨🇦 ✨ AI 155ms | vmess (989)
-  - 🇨🇦 ✨ AI 155ms | vmess (990)
-  - 🇳🇱 ✨ AI 155ms | vmess (991)
-  - 🇳🇱 ✨ AI 155ms | vmess (992)
-  - 🇳🇱 ✨ AI 155ms | vmess (993)
-  - 🇨🇦 ✨ AI 155ms | vmess (994)
-  - 🇳🇱 ✨ AI 155ms | vmess (995)
-  - 🇨🇦 ✨ AI 155ms | vmess (996)
-  - 🇨🇦 ✨ AI 155ms | vmess (997)
-  - 🇨🇦 ✨ AI 155ms | vmess (998)
-  - 🇩🇪 ✨ AI 155ms | vmess (999)
+  - 🇺🇸 ✨ AI 154ms | vmess (980)
+  - 🇺🇸 ✨ AI 154ms | vmess (981)
+  - 🇨🇦 ✨ AI 154ms | vmess (982)
+  - 🇨🇦 ✨ AI 154ms | vmess (983)
+  - 🇨🇦 ✨ AI 154ms | vmess (984)
+  - 🇨🇦 ✨ AI 154ms | vmess (985)
+  - 🇨🇦 ✨ AI 154ms | vmess (986)
+  - 🇨🇦 ✨ AI 154ms | vmess (987)
+  - 🇨🇦 ✨ AI 154ms | vmess (988)
+  - 🇨🇦 ✨ AI 154ms | vmess (989)
+  - 🇨🇦 ✨ AI 154ms | vmess (990)
+  - 🇨🇦 ✨ AI 154ms | vmess (991)
+  - 🇨🇦 ✨ AI 154ms | vmess (992)
+  - 🇨🇦 ✨ AI 154ms | vmess (993)
+  - 🇨🇦 ✨ AI 154ms | vmess (994)
+  - 🇨🇦 ✨ AI 154ms | vmess (995)
+  - 🇨🇦 ✨ AI 154ms | vmess (996)
+  - 🇨🇦 ✨ AI 154ms | vmess (997)
+  - 🇨🇦 ✨ AI 154ms | vmess (998)
+  - 🇨🇦 ✨ AI 154ms | vmess (999)
 rules:
 - MATCH,🚀 Auto Select
