@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse, unquote, parse_qs
 import database_vpn as db
 
+
 # --- НАСТРОЙКИ ---
 TG_CHANNELS = [
     "shadowsockskeys", "oneclickvpnkeys", "VlessConfig", "PrivateVPNs", 
@@ -27,16 +28,27 @@ MAX_TOTAL_ALIVE = 1500
 MAX_PAGES_TG = 500 
 TIMEOUT = 2.5      
 
+
+
 def safe_decode(s):
     try: return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
     except: return ""
 
 def get_tier(url):
-    u_clean = url.split('#')[0].lower()
-    if "security=reality" in u_clean or "pbk=" in u_clean or "hy2" in u_clean or "hysteria2" in u_clean: return 1
-    if u_clean.startswith("trojan://") and ("security=tls" in u_clean or "tls=tls" in u_clean): return 1
-    if u_clean.startswith("vmess://"): return 2
-    if u_clean.startswith("ss://") and any(c in u_clean for c in ['gcm', 'poly1305', '2022']): return 2
+    """СТРОЖАЙШИЙ ФИЛЬТР: SS больше никогда не будет Золотым"""
+    u_base = url.split('#')[0].lower()
+    
+    # 1. Сначала отсекаем Shadowsocks - он никогда не Tier 1
+    if u_base.startswith("ss://"):
+        if any(c in u_base for c in ['2022', 'gcm', 'poly1305']): return 2
+        return 3
+    
+    # 2. Tier 1: Reality, Hysteria, Trojan+TLS
+    if "security=reality" in u_base or "pbk=" in u_base or "hy2" in u_base or "hysteria2" in u_base: return 1
+    if u_base.startswith("trojan://") and ("security=tls" in u_base or "tls=tls" in u_base): return 1
+    
+    # 3. Остальное
+    if u_base.startswith("vmess://"): return 2
     return 3
 
 def push_to_github(content):
@@ -50,44 +62,59 @@ def push_to_github(content):
         payload = {"message": f"Sync {time.strftime('%H:%M')}", "content": b64_content, "branch": "main"}
         if sha: payload["sha"] = sha
         requests.put(url, headers=headers, json=payload, timeout=15)
-        logging.info("🚀 YAML обновлен на GitHub")
     except: pass
 
 async def get_countries_batch(ips):
+    """Починил: теперь чекает всех пачками по 100"""
     res_map = {}
     if not ips: return res_map
-    try:
-        unique_ips = list(set(ips))[:100]
-        r = await asyncio.to_thread(requests.post, "http://ip-api.com/batch?fields=query,countryCode", json=[{"query": i} for i in unique_ips], timeout=15)
-        for item in r.json():
-            res_map[item['query']] = item.get('countryCode', 'UN')
-    except: pass
+    unique_ips = list(set(ips))
+    for i in range(0, len(unique_ips), 100):
+        batch = unique_ips[i:i+100]
+        try:
+            r = await asyncio.to_thread(requests.post, "http://ip-api.com/batch?fields=query,countryCode", 
+                                       json=[{"query": x} for x in batch], timeout=15)
+            for item in r.json():
+                res_map[item['query']] = item.get('countryCode', 'UN')
+        except: pass
     return res_map
 
 async def scraper_task():
     regex = re.compile(r'(?:vless|vmess|ss|ssr|trojan|hy2|hysteria|tuic)://[^\s<"\'\)]+')
     headers = {'User-Agent': 'Mozilla/5.0'}
     while True:
-        await pull_reserve()
+        # Тянем элиту с твоего ПК
+        try:
+            r = await asyncio.to_thread(requests.get, RESERVE_URL, timeout=15)
+            if r.status_code == 200:
+                data = r.json(); all_urls = []; t_map = {}
+                for t in ['tier1', 'tier2', 'tier3']:
+                    v = int(t[-1])
+                    for i in data.get(t, []):
+                        u = i['u'].replace("💻 ", ""); all_urls.append(u); t_map[u] = v
+                db.save_proxy_batch(all_urls, source='pc', tier_dict=t_map)
+        except: pass
+        
+        # Пылесосим ТГ и Гитхаб
         for url in EXTERNAL_SUBS:
             try:
-                r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=10)
-                t = r.text if "://" in r.text[:50] else safe_decode(r.text)
-                db.save_proxy_batch(regex.findall(t), source='auto')
+                r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=15)
+                text = r.text if "://" in r.text[:50] else safe_decode(r.text)
+                db.save_proxy_batch(regex.findall(text), source='auto')
             except: pass
         for ch in TG_CHANNELS:
-            url = f"https://t.me/s/{ch}"
+            base_url = f"https://t.me/s/{ch}"
             for _ in range(15):
                 try:
-                    r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=5)
-                    found = regex.findall(r.text)
-                    if found: db.save_proxy_batch([l.strip().split('<')[0] for l in found], source='auto')
+                    r = await asyncio.to_thread(requests.get, base_url, headers=headers, timeout=10)
+                    matches = regex.findall(r.text)
+                    if matches: db.save_proxy_batch([l.strip().split('<')[0] for l in matches], source='auto')
                     if 'tme_messages_more' not in r.text: break
                     match = re.search(r'href="(/s/.*?before=\d+)"', r.text)
-                    url = "https://t.me" + match.group(1) if match else None
-                    if not url: break
+                    base_url = "https://t.me" + match.group(1) if match else None
+                    if not base_url: break
                 except: break
-        await asyncio.sleep(1200)
+        await asyncio.sleep(1800)
 
 async def checker_task():
     sem = asyncio.Semaphore(100)
@@ -111,7 +138,6 @@ async def checker_task():
                     except: db.update_proxy_status(u, None, 3, "UN")
             
             await asyncio.gather(*(verify(u) for u in candidates))
-            
             if results:
                 geo_map = await get_countries_batch([r[2] for r in results])
                 for u, lat, host in results:
@@ -121,18 +147,6 @@ async def checker_task():
                 from keep_alive import generate_clash_yaml
                 push_to_github(generate_clash_yaml(db.get_best_proxies_for_sub()))
         await asyncio.sleep(10)
-
-async def pull_reserve():
-    try:
-        r = await asyncio.to_thread(requests.get, RESERVE_URL, timeout=15)
-        if r.status_code == 200:
-            data = r.json(); all_urls = []; t_map = {}
-            for t in ['tier1', 'tier2', 'tier3']:
-                v = int(t[-1])
-                for i in data.get(t, []):
-                    u = i['u'].replace("💻 ", ""); all_urls.append(u); t_map[u] = v
-            db.save_proxy_batch(all_urls, source='pc', tier_dict=t_map)
-    except: pass
 
 async def vacuum_job():
     asyncio.create_task(scraper_task())
