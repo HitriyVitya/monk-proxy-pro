@@ -1,4 +1,4 @@
-import asyncio, requests, re, json, base64, time, logging, yaml, os
+import asyncio, requests, re, json, base64, time, logging, yaml, os, random
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, unquote, parse_qs
 import database_vpn as db
@@ -23,29 +23,31 @@ EXTERNAL_SUBS = [
 GH_TOKEN = os.getenv("GH_TOKEN")
 GH_REPO = "HitriyVitya/iron-monk-bot"
 RESERVE_URL = f"https://raw.githubusercontent.com/HitriyVitya/iron-monk-bot/main/reserve.json"
-
+GH_FILE_PATH = "proxies.yaml"
 MAX_TOTAL_ALIVE = 1500 
 MAX_PAGES_TG = 500 # Листаем историю до корки
-TIMEOUT = 2.5      # Баланс для проверки порта
-
-
+TIMEOUT = 5      # Баланс для проверки порта
 
 def safe_decode(s):
-    try:
-        s = re.sub(r'[^a-zA-Z0-9+/=]', '', s)
-        return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
+    try: return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
     except: return ""
 
 def get_tier(url):
-    u = url.lower()
-    if "security=reality" in u or "pbk=" in u or "hy2" in u or "hysteria2" in u or u.startswith("trojan://"): return 1
-    if u.startswith("vmess://") or (u.startswith("ss://") and any(x in u for x in ['gcm', 'poly1305', '2022'])): return 2
+    """Строгая проверка ТИПА, а не названия"""
+    u_clean = url.split('#')[0].lower()
+    # 🥇 T1: Reality, Hysteria, Trojan+TLS
+    if "security=reality" in u_clean or "pbk=" in u_clean or "hy2" in u_clean or "hysteria2" in u_clean: return 1
+    if u_clean.startswith("trojan://") and ("security=tls" in u_clean or "tls=tls" in u_clean): return 1
+    # 🥈 T2: VMess, Modern SS
+    if u_clean.startswith("vmess://"): return 2
+    if u_clean.startswith("ss://") and any(c in u_clean for c in ['gcm', 'poly1305', '2022']): return 2
+    # 🥉 T3: Старье
     return 3
 
 def push_to_github(content):
     if not GH_TOKEN: return
     try:
-        url = f"https://api.github.com/repos/{GH_REPO}/contents/proxies.yaml"
+        url = f"https://api.github.com/repos/{GH_REPO}/contents/{GH_FILE_PATH}"
         headers = {"Authorization": f"token {GH_TOKEN}", "Accept": "application/vnd.github.v3+json"}
         r = requests.get(url, headers=headers)
         sha = r.json().get('sha') if r.status_code == 200 else None
@@ -74,56 +76,44 @@ async def scraper_task():
         await pull_reserve()
         for url in EXTERNAL_SUBS:
             try:
-                r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=15)
-                text = r.text if "://" in r.text[:50] else safe_decode(r.text)
-                found = regex.findall(text)
-                if found: db.save_proxy_batch([l.strip() for l in found], source='auto')
+                r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=10)
+                t = r.text if "://" in r.text[:50] else safe_decode(r.text)
+                db.save_proxy_batch(regex.findall(t), source='auto')
             except: pass
         for ch in TG_CHANNELS:
-            base_url = f"https://t.me/s/{ch}"
-            for _ in range(20): # Листаем по 20 стр для баланса
+            url = f"https://t.me/s/{ch}"
+            for _ in range(15):
                 try:
-                    r = await asyncio.to_thread(requests.get, base_url, headers=headers, timeout=10)
-                    matches = regex.findall(r.text)
-                    if matches: db.save_proxy_batch([l.strip().split('<')[0] for l in matches], source='auto')
+                    r = await asyncio.to_thread(requests.get, url, headers=headers, timeout=5)
+                    found = regex.findall(r.text)
+                    if found: db.save_proxy_batch([l.strip().split('<')[0] for l in found], source='auto')
                     if 'tme_messages_more' not in r.text: break
-                    match = re.search(r'href="(/s/.*?before=\d+)"', r.text)
-                    if match: base_url = "https://t.me" + match.group(1)
-                    else: break
+                    match = re.search(r'href="(/s/.*?before=\d+)"', r.text); url = "https://t.me" + match.group(1) if match else None
+                    if not url: break
                 except: break
-        await asyncio.sleep(2400)
+        await asyncio.sleep(1200)
 
 async def checker_task():
-    sem = asyncio.Semaphore(50)
+    sem = asyncio.Semaphore(100)
     while True:
-        candidates = db.get_proxies_to_check(100)
+        candidates = db.get_proxies_to_check(150)
         if candidates:
             results = []
-            async def verify(url):
+            async def verify(u):
                 async with sem:
                     try:
-                        if "vmess" in url:
-                            decoded = safe_decode(url[8:])
-                            if not decoded: return # Битая ссылка
-                            d = json.loads(decoded)
-                            h, p = d['add'], int(d['port'])
-                        else:
-                            pr = urlparse(url); h, p = pr.hostname, pr.port
-                        if not h or not p: return
-                        st = time.time()
-                        _, w = await asyncio.wait_for(asyncio.open_connection(h, p), timeout=TIMEOUT)
-                        lat = int((time.time() - st) * 1000)
-                        w.close(); await w.wait_closed()
-                        results.append((url, lat))
-                    except: db.update_proxy_status(url, None, 3, "UN") # ТУТ ТЕПЕРЬ 4 АРГУМЕНТА
-
+                        if "vmess" in u: d = json.loads(safe_decode(u[8:])); host, port = d['add'], int(d['port'])
+                        else: pr = urlparse(u); host, port = pr.hostname, pr.port
+                        if not host or not port: return
+                        st = time.time(); _, w = await asyncio.wait_for(asyncio.open_connection(host, port), timeout=2.0)
+                        lat = int((time.time() - st) * 1000); w.close(); await w.wait_closed()
+                        if lat > 10: results.append((u, lat))
+                    except: db.update_proxy_status(u, None, 3, "UN")
             await asyncio.gather(*(verify(u) for u in candidates))
-            for url, lat in results:
-                db.update_proxy_status(url, lat, get_tier(url), "UN") # ТУТ ТЕПЕРЬ 4 АРГУМЕНТА
-            
+            for u, lat in results: db.update_proxy_status(u, lat, get_tier(u), "UN")
             from keep_alive import generate_clash_yaml
-            push_to_github(generate_clash_yaml(db.get_vip_sub()))
-        await asyncio.sleep(5)
+            push_to_github(generate_clash_yaml(db.get_best_proxies_for_sub()))
+        await asyncio.sleep(10)
 
 async def vacuum_job():
     asyncio.create_task(scraper_task())
