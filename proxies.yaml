@@ -15937,18 +15937,19 @@ proxies:
   network: ws
   ws-opts:
     path: /8cda48b3
-- name: 🥈 🇺🇸💻 68ms | VMESS (#1455)
+- name: 🥈 🇮🇷 67ms | VMESS (#1455)
   type: vmess
-  server: 209.54.104.219
-  port: 43966
-  uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
+  server: 185.143.234.90
+  port: 443
+  uuid: 52f0a176-ce00-45ee-813b-46f3e5b0737c
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: tcp
-  ws-opts: null
+  network: ws
+  ws-opts:
+    path: ''
 - name: 🥈 🇺🇸💻 68ms | VMESS (#1456)
   type: vmess
   server: 209.54.104.219
@@ -15973,7 +15974,19 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🥈 🇨🇾 68ms | VMESS (#1458)
+- name: 🥈 🇺🇸💻 68ms | VMESS (#1458)
+  type: vmess
+  server: 209.54.104.219
+  port: 43966
+  uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  ws-opts: null
+- name: 🥈 🇨🇾 68ms | VMESS (#1459)
   type: vmess
   server: 203.24.108.8
   port: 443
@@ -15986,7 +15999,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🥈 🇨🇦 68ms | VMESS (#1459)
+- name: 🥈 🇨🇦 68ms | VMESS (#1460)
   type: vmess
   server: 172.67.201.14
   port: 443
@@ -15999,7 +16012,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🥈 🇨🇦 68ms | VMESS (#1460)
+- name: 🥈 🇨🇦 68ms | VMESS (#1461)
   type: vmess
   server: 172.67.207.209
   port: 2082
@@ -16012,7 +16025,7 @@ proxies:
   network: ws
   ws-opts:
     path: /bb
-- name: 🥈 🇨🇦 68ms | VMESS (#1461)
+- name: 🥈 🇨🇦 68ms | VMESS (#1462)
   type: vmess
   server: 23.227.38.26
   port: 443
@@ -16025,7 +16038,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🥈 🇧🇿 68ms | VMESS (#1462)
+- name: 🥈 🇧🇿 68ms | VMESS (#1463)
   type: vmess
   server: 203.30.188.121
   port: 443
@@ -16038,7 +16051,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🥈 🇧🇿 68ms | VMESS (#1463)
+- name: 🥈 🇧🇿 68ms | VMESS (#1464)
   type: vmess
   server: 203.30.191.2
   port: 443
@@ -16051,7 +16064,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🥈 🇨🇦 68ms | VMESS (#1464)
+- name: 🥈 🇨🇦 68ms | VMESS (#1465)
   type: vmess
   server: 23.227.38.38
   port: 443
@@ -16064,7 +16077,7 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🥈 🇨🇦 68ms | VMESS (#1465)
+- name: 🥈 🇨🇦 68ms | VMESS (#1466)
   type: vmess
   server: 172.67.178.127
   port: 443
@@ -16077,7 +16090,7 @@ proxies:
   network: ws
   ws-opts:
     path: /123
-- name: 🥈 🇺🇸 68ms | VMESS (#1466)
+- name: 🥈 🇺🇸 68ms | VMESS (#1467)
   type: vmess
   server: 141.193.213.21
   port: 443
@@ -16090,7 +16103,7 @@ proxies:
   network: ws
   ws-opts:
     path: /9JZFDTKE
-- name: 🥈 🇨🇦 68ms | VMESS (#1467)
+- name: 🥈 🇨🇦 68ms | VMESS (#1468)
   type: vmess
   server: 172.67.132.15
   port: 443
@@ -16103,7 +16116,7 @@ proxies:
   network: ws
   ws-opts:
     path: /ray
-- name: 🥈 🌐 68ms | VMESS (#1468)
+- name: 🥈 🌐 68ms | VMESS (#1469)
   type: vmess
   server: get.tech
   port: 80
@@ -16116,7 +16129,7 @@ proxies:
   network: ws
   ws-opts:
     path: /shared
-- name: 🥈 🇨🇦 68ms | VMESS (#1469)
+- name: 🥈 🇨🇦 68ms | VMESS (#1470)
   type: vmess
   server: 172.67.205.70
   port: 443
@@ -16129,7 +16142,7 @@ proxies:
   network: ws
   ws-opts:
     path: /shirker
-- name: 🥈 🇨🇦 68ms | VMESS (#1470)
+- name: 🥈 🇨🇦 68ms | VMESS (#1471)
   type: vmess
   server: 172.67.77.95
   port: 443
@@ -16142,7 +16155,7 @@ proxies:
   network: ws
   ws-opts:
     path: /fthe4gsefgtdu
-- name: 🥈 🇺🇸💻 69ms | VMESS (#1471)
+- name: 🥈 🇺🇸💻 69ms | VMESS (#1472)
   type: vmess
   server: 209.54.104.219
   port: 43966
@@ -16154,7 +16167,7 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🥈 🇧🇿 69ms | VMESS (#1472)
+- name: 🥈 🇧🇿 69ms | VMESS (#1473)
   type: vmess
   server: 203.30.188.189
   port: 443
@@ -16167,7 +16180,7 @@ proxies:
   network: ws
   ws-opts:
     path: /5QNROSRV
-- name: 🥈 🇨🇦 69ms | VMESS (#1473)
+- name: 🥈 🇨🇦 69ms | VMESS (#1474)
   type: vmess
   server: 172.66.44.197
   port: 443
@@ -16180,7 +16193,7 @@ proxies:
   network: ws
   ws-opts:
     path: /mR17oBKzZ7
-- name: 🥈 🇨🇦 69ms | VMESS (#1474)
+- name: 🥈 🇨🇦 69ms | VMESS (#1475)
   type: vmess
   server: 162.159.152.4
   port: 443
@@ -16193,7 +16206,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vmessws
-- name: 🥈 🇨🇦 69ms | VMESS (#1475)
+- name: 🥈 🇨🇦 69ms | VMESS (#1476)
   type: vmess
   server: 188.114.97.111
   port: 443
@@ -16206,7 +16219,7 @@ proxies:
   network: ws
   ws-opts:
     path: /chcara
-- name: 🥈 🇺🇸 69ms | VMESS (#1476)
+- name: 🥈 🇺🇸 69ms | VMESS (#1477)
   type: vmess
   server: 15.204.64.211
   port: 443
@@ -16219,7 +16232,7 @@ proxies:
   network: ws
   ws-opts:
     path: linkvws
-- name: 🥈 🇨🇦 69ms | VMESS (#1477)
+- name: 🥈 🇨🇦 69ms | VMESS (#1478)
   type: vmess
   server: 172.67.210.98
   port: 2095
@@ -16232,7 +16245,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🥈 🇨🇾 69ms | VMESS (#1478)
+- name: 🥈 🇨🇾 69ms | VMESS (#1479)
   type: vmess
   server: 154.92.9.132
   port: 443
@@ -16245,7 +16258,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🥈 🇨🇾 69ms | VMESS (#1479)
+- name: 🥈 🇨🇾 69ms | VMESS (#1480)
   type: vmess
   server: 154.92.9.121
   port: 80
@@ -16258,22 +16271,9 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🥈 🇨🇾 69ms | VMESS (#1480)
-  type: vmess
-  server: 154.92.9.119
-  port: 443
-  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /blue
 - name: 🥈 🇨🇾 69ms | VMESS (#1481)
   type: vmess
-  server: 154.92.9.115
+  server: 154.92.9.119
   port: 443
   uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
   alterId: 0
@@ -16287,6 +16287,19 @@ proxies:
 - name: 🥈 🇨🇾 69ms | VMESS (#1482)
   type: vmess
   server: 154.92.9.115
+  port: 443
+  uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /blue
+- name: 🥈 🇨🇾 69ms | VMESS (#1483)
+  type: vmess
+  server: 154.92.9.115
   port: 80
   uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
   alterId: 0
@@ -16297,7 +16310,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🥈 🇨🇾 69ms | VMESS (#1483)
+- name: 🥈 🇨🇾 69ms | VMESS (#1484)
   type: vmess
   server: 154.92.9.101
   port: 80
@@ -16310,7 +16323,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blue
-- name: 🥈 🇺🇸 69ms | VMESS (#1484)
+- name: 🥈 🇺🇸 69ms | VMESS (#1485)
   type: vmess
   server: 147.185.161.169
   port: 443
@@ -16323,7 +16336,7 @@ proxies:
   network: ws
   ws-opts:
     path: /wss13889
-- name: 🥈 🇨🇦 69ms | VMESS (#1485)
+- name: 🥈 🇨🇦 69ms | VMESS (#1486)
   type: vmess
   server: 104.31.16.65
   port: 443
@@ -16336,7 +16349,7 @@ proxies:
   network: ws
   ws-opts:
     path: /12796?ed=2048
-- name: 🥈 🇨🇦 69ms | VMESS (#1486)
+- name: 🥈 🇨🇦 69ms | VMESS (#1487)
   type: vmess
   server: 104.31.16.65
   port: 443
@@ -16349,7 +16362,7 @@ proxies:
   network: ws
   ws-opts:
     path: /root/
-- name: 🥈 🇨🇦 69ms | VMESS (#1487)
+- name: 🥈 🇨🇦 69ms | VMESS (#1488)
   type: vmess
   server: 104.31.16.65
   port: 80
@@ -16362,7 +16375,7 @@ proxies:
   network: ws
   ws-opts:
     path: /uthjq4el
-- name: 🥈 🌐 70ms | VMESS (#1488)
+- name: 🥈 🌐 70ms | VMESS (#1489)
   type: vmess
   server: www.wto.org
   port: 2086
@@ -16375,7 +16388,7 @@ proxies:
   network: ws
   ws-opts:
     path: /?ed=1024
-- name: 🥈 🇺🇸 70ms | VMESS (#1489)
+- name: 🥈 🇺🇸 70ms | VMESS (#1490)
   type: vmess
   server: 67.21.75.40
   port: 45555
@@ -16388,7 +16401,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🥈 🇺🇸 70ms | VMESS (#1490)
+- name: 🥈 🇺🇸 70ms | VMESS (#1491)
   type: vmess
   server: 172.247.148.93
   port: 443
@@ -16401,7 +16414,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🥈 🇨🇦 70ms | VMESS (#1491)
+- name: 🥈 🇨🇦 70ms | VMESS (#1492)
   type: vmess
   server: 172.67.204.73
   port: 2095
@@ -16414,7 +16427,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🥈 🇨🇦 70ms | VMESS (#1492)
+- name: 🥈 🇨🇦 70ms | VMESS (#1493)
   type: vmess
   server: 172.67.193.125
   port: 2095
@@ -16427,7 +16440,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🥈 🇨🇦 70ms | VMESS (#1493)
+- name: 🥈 🇨🇦 70ms | VMESS (#1494)
   type: vmess
   server: 172.67.151.115
   port: 2095
@@ -16440,7 +16453,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hgcefomn
-- name: 🥈 🇺🇸 71ms | VMESS (#1494)
+- name: 🥈 🇺🇸 71ms | VMESS (#1495)
   type: vmess
   server: 172.111.38.233
   port: 443
@@ -16453,7 +16466,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkvws
-- name: 🥈 🇨🇦 71ms | VMESS (#1495)
+- name: 🥈 🇨🇦 71ms | VMESS (#1496)
   type: vmess
   server: 23.162.200.94
   port: 443
@@ -16466,7 +16479,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkvws
-- name: 🥈 🇺🇸 71ms | VMESS (#1496)
+- name: 🥈 🇺🇸 71ms | VMESS (#1497)
   type: vmess
   server: 38.99.82.253
   port: 443
@@ -16479,7 +16492,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🥈 🇧🇬 71ms | VMESS (#1497)
+- name: 🥈 🇧🇬 71ms | VMESS (#1498)
   type: vmess
   server: 147.78.140.30
   port: 443
@@ -16492,7 +16505,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🥈 🇨🇦 71ms | VMESS (#1498)
+- name: 🥈 🇨🇦 71ms | VMESS (#1499)
   type: vmess
   server: 104.16.67.38
   port: 2052
@@ -16501,19 +16514,6 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 71ms | VMESS (#1499)
-  type: vmess
-  server: 172.67.193.108
-  port: 443
-  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
@@ -17980,50 +17980,50 @@ proxy-groups:
   - 🥈 🌐 67ms | VMESS (#1452)
   - 🥈 🇬🇧 67ms | VMESS (#1453)
   - 🥈 🇨🇦 67ms | VMESS (#1454)
-  - 🥈 🇺🇸💻 68ms | VMESS (#1455)
+  - 🥈 🇮🇷 67ms | VMESS (#1455)
   - 🥈 🇺🇸💻 68ms | VMESS (#1456)
   - 🥈 🇺🇸💻 68ms | VMESS (#1457)
-  - 🥈 🇨🇾 68ms | VMESS (#1458)
-  - 🥈 🇨🇦 68ms | VMESS (#1459)
+  - 🥈 🇺🇸💻 68ms | VMESS (#1458)
+  - 🥈 🇨🇾 68ms | VMESS (#1459)
   - 🥈 🇨🇦 68ms | VMESS (#1460)
   - 🥈 🇨🇦 68ms | VMESS (#1461)
-  - 🥈 🇧🇿 68ms | VMESS (#1462)
+  - 🥈 🇨🇦 68ms | VMESS (#1462)
   - 🥈 🇧🇿 68ms | VMESS (#1463)
-  - 🥈 🇨🇦 68ms | VMESS (#1464)
+  - 🥈 🇧🇿 68ms | VMESS (#1464)
   - 🥈 🇨🇦 68ms | VMESS (#1465)
-  - 🥈 🇺🇸 68ms | VMESS (#1466)
-  - 🥈 🇨🇦 68ms | VMESS (#1467)
-  - 🥈 🌐 68ms | VMESS (#1468)
-  - 🥈 🇨🇦 68ms | VMESS (#1469)
+  - 🥈 🇨🇦 68ms | VMESS (#1466)
+  - 🥈 🇺🇸 68ms | VMESS (#1467)
+  - 🥈 🇨🇦 68ms | VMESS (#1468)
+  - 🥈 🌐 68ms | VMESS (#1469)
   - 🥈 🇨🇦 68ms | VMESS (#1470)
-  - 🥈 🇺🇸💻 69ms | VMESS (#1471)
-  - 🥈 🇧🇿 69ms | VMESS (#1472)
-  - 🥈 🇨🇦 69ms | VMESS (#1473)
+  - 🥈 🇨🇦 68ms | VMESS (#1471)
+  - 🥈 🇺🇸💻 69ms | VMESS (#1472)
+  - 🥈 🇧🇿 69ms | VMESS (#1473)
   - 🥈 🇨🇦 69ms | VMESS (#1474)
   - 🥈 🇨🇦 69ms | VMESS (#1475)
-  - 🥈 🇺🇸 69ms | VMESS (#1476)
-  - 🥈 🇨🇦 69ms | VMESS (#1477)
-  - 🥈 🇨🇾 69ms | VMESS (#1478)
+  - 🥈 🇨🇦 69ms | VMESS (#1476)
+  - 🥈 🇺🇸 69ms | VMESS (#1477)
+  - 🥈 🇨🇦 69ms | VMESS (#1478)
   - 🥈 🇨🇾 69ms | VMESS (#1479)
   - 🥈 🇨🇾 69ms | VMESS (#1480)
   - 🥈 🇨🇾 69ms | VMESS (#1481)
   - 🥈 🇨🇾 69ms | VMESS (#1482)
   - 🥈 🇨🇾 69ms | VMESS (#1483)
-  - 🥈 🇺🇸 69ms | VMESS (#1484)
-  - 🥈 🇨🇦 69ms | VMESS (#1485)
+  - 🥈 🇨🇾 69ms | VMESS (#1484)
+  - 🥈 🇺🇸 69ms | VMESS (#1485)
   - 🥈 🇨🇦 69ms | VMESS (#1486)
   - 🥈 🇨🇦 69ms | VMESS (#1487)
-  - 🥈 🌐 70ms | VMESS (#1488)
-  - 🥈 🇺🇸 70ms | VMESS (#1489)
+  - 🥈 🇨🇦 69ms | VMESS (#1488)
+  - 🥈 🌐 70ms | VMESS (#1489)
   - 🥈 🇺🇸 70ms | VMESS (#1490)
-  - 🥈 🇨🇦 70ms | VMESS (#1491)
+  - 🥈 🇺🇸 70ms | VMESS (#1491)
   - 🥈 🇨🇦 70ms | VMESS (#1492)
   - 🥈 🇨🇦 70ms | VMESS (#1493)
-  - 🥈 🇺🇸 71ms | VMESS (#1494)
-  - 🥈 🇨🇦 71ms | VMESS (#1495)
-  - 🥈 🇺🇸 71ms | VMESS (#1496)
-  - 🥈 🇧🇬 71ms | VMESS (#1497)
-  - 🥈 🇨🇦 71ms | VMESS (#1498)
+  - 🥈 🇨🇦 70ms | VMESS (#1494)
+  - 🥈 🇺🇸 71ms | VMESS (#1495)
+  - 🥈 🇨🇦 71ms | VMESS (#1496)
+  - 🥈 🇺🇸 71ms | VMESS (#1497)
+  - 🥈 🇧🇬 71ms | VMESS (#1498)
   - 🥈 🇨🇦 71ms | VMESS (#1499)
 rules:
 - MATCH,🚀 Auto Select
