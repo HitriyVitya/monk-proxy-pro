@@ -580,58 +580,6 @@ proxies:
   network: tcp
 - name: 🥇 🇨🇦 78ms | TROJAN (#54)
   type: trojan
-  server: 104.21.79.246
-  port: 443
-  password: e35026da-e985-49ca-b43b-276062a535a6
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: ws
-  ws-opts:
-    path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
-    headers:
-      Host: ''
-- name: 🥇 🇨🇦 78ms | VMESS (#55)
-  type: vmess
-  server: 104.21.79.246
-  port: 443
-  uuid: e35026da-e985-49ca-b43b-276062a535a6
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pNV7izRFLO8rGCkIH66kMFPa
-- name: 🥇 🇨🇦 78ms | TROJAN (#56)
-  type: trojan
-  server: 104.21.12.87
-  port: 443
-  password: 0b65bb06-6b28-487a-8e3c-820dda51e977
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: ws
-  ws-opts:
-    path: /43xf5zgeApzDAfhOHq
-    headers:
-      Host: ''
-- name: 🥇 🇨🇦 78ms | VMESS (#57)
-  type: vmess
-  server: 104.21.12.87
-  port: 80
-  uuid: 0b65bb06-6b28-487a-8e3c-820dda51e977
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /dT9s3HqgZeD3eApzDAfhOHq
-- name: 🥇 🇨🇦 78ms | TROJAN (#58)
-  type: trojan
   server: 104.16.183.101
   port: 443
   password: a0514d9b-d109-47fd-b173-1e7f83268f21
@@ -643,7 +591,7 @@ proxies:
     path: /update
     headers:
       Host: ''
-- name: 🥇 🇧🇿 81ms | VMESS (#59)
+- name: 🥇 🇧🇿 81ms | VMESS (#55)
   type: vmess
   server: 203.30.191.19
   port: 443
@@ -656,7 +604,7 @@ proxies:
   network: ws
   ws-opts:
     path: /dongtaiwang.com
-- name: 🥇 🇬🇧 83ms | TROJAN (#60)
+- name: 🥇 🇬🇧 83ms | TROJAN (#56)
   type: trojan
   server: 51.38.65.155
   port: 443
@@ -665,7 +613,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇫🇷 84ms | VLESS (#61)
+- name: 🥇 🇫🇷 84ms | VLESS (#57)
   type: vless
   server: 195.154.200.13
   port: 17401
@@ -675,7 +623,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇫🇷 84ms | TROJAN (#62)
+- name: 🥇 🇫🇷 84ms | TROJAN (#58)
   type: trojan
   server: 13.39.0.222
   port: 22222
@@ -684,7 +632,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇫🇷 85ms | VLESS (#63)
+- name: 🥇 🇫🇷 85ms | VLESS (#59)
   type: vless
   server: 185.156.72.124
   port: 52042
@@ -694,7 +642,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇫🇷 85ms | TROJAN (#64)
+- name: 🥇 🇫🇷 85ms | TROJAN (#60)
   type: trojan
   server: 13.38.208.62
   port: 22222
@@ -703,7 +651,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇺🇸 87ms | TROJAN (#65)
+- name: 🥇 🇺🇸 87ms | TROJAN (#61)
   type: trojan
   server: 154.17.24.29
   port: 443
@@ -712,7 +660,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇫🇷 87ms | VLESS (#66)
+- name: 🥇 🇫🇷 87ms | VLESS (#62)
   type: vless
   server: 185.156.72.124
   port: 52042
@@ -722,7 +670,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇺🇸 88ms | VMESS (#67)
+- name: 🥇 🇺🇸 88ms | VMESS (#63)
   type: vmess
   server: 141.101.115.120
   port: 443
@@ -735,7 +683,7 @@ proxies:
   network: ws
   ws-opts:
     path: /dongtaiwang.com
-- name: 🥇 🇫🇷 90ms | TROJAN (#68)
+- name: 🥇 🇫🇷 90ms | TROJAN (#64)
   type: trojan
   server: 51.91.11.29
   port: 80
@@ -744,7 +692,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇫🇷 90ms | TROJAN (#69)
+- name: 🥇 🇫🇷 90ms | TROJAN (#65)
   type: trojan
   server: 51.91.11.29
   port: 80
@@ -753,7 +701,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇫🇷 90ms | TROJAN (#70)
+- name: 🥇 🇫🇷 90ms | TROJAN (#66)
   type: trojan
   server: 51.91.11.29
   port: 80
@@ -762,7 +710,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇩🇪 91ms | TROJAN (#71)
+- name: 🥇 🇩🇪 91ms | TROJAN (#67)
   type: trojan
   server: 108.61.171.167
   port: 443
@@ -771,7 +719,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: grpc
-- name: 🥇 🇬🇧 91ms | VLESS (#72)
+- name: 🥇 🇬🇧 91ms | VLESS (#68)
   type: vless
   server: 140.238.100.35
   port: 40721
@@ -781,7 +729,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇬🇧 92ms | TROJAN (#73)
+- name: 🥇 🇬🇧 92ms | TROJAN (#69)
   type: trojan
   server: 132.145.51.172
   port: 443
@@ -790,7 +738,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇩🇪 92ms | TROJAN (#74)
+- name: 🥇 🇩🇪 92ms | TROJAN (#70)
   type: trojan
   server: 139.162.158.172
   port: 443
@@ -799,7 +747,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇩🇪 92ms | VLESS (#75)
+- name: 🥇 🇩🇪 92ms | VLESS (#71)
   type: vless
   server: 192.76.160.216
   port: 2280
@@ -809,7 +757,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇳🇱 92ms | VLESS (#76)
+- name: 🥇 🇳🇱 92ms | VLESS (#72)
   type: vless
   server: 188.253.26.39
   port: 442
@@ -819,7 +767,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇨🇭 92ms | VLESS (#77)
+- name: 🥇 🇨🇭 92ms | VLESS (#73)
   type: vless
   server: 208.69.78.5
   port: 443
@@ -829,6 +777,58 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: grpc
+- name: 🥇 🇨🇦 93ms | TROJAN (#74)
+  type: trojan
+  server: 104.21.79.246
+  port: 443
+  password: e35026da-e985-49ca-b43b-276062a535a6
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /ilb9fuWfuqWDjlQrGCkIH66kMFPa
+    headers:
+      Host: ''
+- name: 🥇 🇨🇦 93ms | VMESS (#75)
+  type: vmess
+  server: 104.21.79.246
+  port: 443
+  uuid: e35026da-e985-49ca-b43b-276062a535a6
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pNV7izRFLO8rGCkIH66kMFPa
+- name: 🥇 🇨🇦 93ms | TROJAN (#76)
+  type: trojan
+  server: 104.21.12.87
+  port: 443
+  password: 0b65bb06-6b28-487a-8e3c-820dda51e977
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /43xf5zgeApzDAfhOHq
+    headers:
+      Host: ''
+- name: 🥇 🇨🇦 93ms | VMESS (#77)
+  type: vmess
+  server: 104.21.12.87
+  port: 80
+  uuid: 0b65bb06-6b28-487a-8e3c-820dda51e977
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /dT9s3HqgZeD3eApzDAfhOHq
 - name: 🥇 🇳🇱 93ms | VLESS (#78)
   type: vless
   server: 150.241.90.13
@@ -16235,29 +16235,29 @@ proxy-groups:
   - 🥇 🌐 77ms | VMESS (#52)
   - 🥇 🌐 78ms | TROJAN (#53)
   - 🥇 🇨🇦 78ms | TROJAN (#54)
-  - 🥇 🇨🇦 78ms | VMESS (#55)
-  - 🥇 🇨🇦 78ms | TROJAN (#56)
-  - 🥇 🇨🇦 78ms | VMESS (#57)
-  - 🥇 🇨🇦 78ms | TROJAN (#58)
-  - 🥇 🇧🇿 81ms | VMESS (#59)
-  - 🥇 🇬🇧 83ms | TROJAN (#60)
-  - 🥇 🇫🇷 84ms | VLESS (#61)
-  - 🥇 🇫🇷 84ms | TROJAN (#62)
-  - 🥇 🇫🇷 85ms | VLESS (#63)
-  - 🥇 🇫🇷 85ms | TROJAN (#64)
-  - 🥇 🇺🇸 87ms | TROJAN (#65)
-  - 🥇 🇫🇷 87ms | VLESS (#66)
-  - 🥇 🇺🇸 88ms | VMESS (#67)
-  - 🥇 🇫🇷 90ms | TROJAN (#68)
-  - 🥇 🇫🇷 90ms | TROJAN (#69)
-  - 🥇 🇫🇷 90ms | TROJAN (#70)
-  - 🥇 🇩🇪 91ms | TROJAN (#71)
-  - 🥇 🇬🇧 91ms | VLESS (#72)
-  - 🥇 🇬🇧 92ms | TROJAN (#73)
-  - 🥇 🇩🇪 92ms | TROJAN (#74)
-  - 🥇 🇩🇪 92ms | VLESS (#75)
-  - 🥇 🇳🇱 92ms | VLESS (#76)
-  - 🥇 🇨🇭 92ms | VLESS (#77)
+  - 🥇 🇧🇿 81ms | VMESS (#55)
+  - 🥇 🇬🇧 83ms | TROJAN (#56)
+  - 🥇 🇫🇷 84ms | VLESS (#57)
+  - 🥇 🇫🇷 84ms | TROJAN (#58)
+  - 🥇 🇫🇷 85ms | VLESS (#59)
+  - 🥇 🇫🇷 85ms | TROJAN (#60)
+  - 🥇 🇺🇸 87ms | TROJAN (#61)
+  - 🥇 🇫🇷 87ms | VLESS (#62)
+  - 🥇 🇺🇸 88ms | VMESS (#63)
+  - 🥇 🇫🇷 90ms | TROJAN (#64)
+  - 🥇 🇫🇷 90ms | TROJAN (#65)
+  - 🥇 🇫🇷 90ms | TROJAN (#66)
+  - 🥇 🇩🇪 91ms | TROJAN (#67)
+  - 🥇 🇬🇧 91ms | VLESS (#68)
+  - 🥇 🇬🇧 92ms | TROJAN (#69)
+  - 🥇 🇩🇪 92ms | TROJAN (#70)
+  - 🥇 🇩🇪 92ms | VLESS (#71)
+  - 🥇 🇳🇱 92ms | VLESS (#72)
+  - 🥇 🇨🇭 92ms | VLESS (#73)
+  - 🥇 🇨🇦 93ms | TROJAN (#74)
+  - 🥇 🇨🇦 93ms | VMESS (#75)
+  - 🥇 🇨🇦 93ms | TROJAN (#76)
+  - 🥇 🇨🇦 93ms | VMESS (#77)
   - 🥇 🇳🇱 93ms | VLESS (#78)
   - 🥇 🇩🇪 94ms | TROJAN (#79)
   - 🥇 🇩🇪 94ms | VLESS (#80)
