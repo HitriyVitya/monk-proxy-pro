@@ -18,30 +18,25 @@ EXTERNAL_SUBS = [
     "https://raw.githubusercontent.com/officialputuid/V2Ray-Config/main/Splitted-v2ray-config/all"
 ]
 
-
-# Гитхаб для пуша (Витрина) и пулла (Резерв с ПК)
 GH_TOKEN = os.getenv("GH_TOKEN")
 GH_REPO = "HitriyVitya/iron-monk-bot"
-RESERVE_URL = f"https://raw.githubusercontent.com/HitriyVitya/iron-monk-bot/main/reserve.json"
 GH_FILE_PATH = "proxies.yaml"
+RESERVE_URL = f"https://raw.githubusercontent.com/HitriyVitya/iron-monk-bot/main/reserve.json"
+
 MAX_TOTAL_ALIVE = 1500 
-MAX_PAGES_TG = 500 # Листаем историю до корки
-TIMEOUT = 5      # Баланс для проверки порта
+MAX_PAGES_TG = 500 
+TIMEOUT = 2.5      
 
 def safe_decode(s):
     try: return base64.b64decode(s + '=' * (-len(s) % 4)).decode('utf-8', errors='ignore')
     except: return ""
 
 def get_tier(url):
-    """Строгая проверка ТИПА, а не названия"""
     u_clean = url.split('#')[0].lower()
-    # 🥇 T1: Reality, Hysteria, Trojan+TLS
     if "security=reality" in u_clean or "pbk=" in u_clean or "hy2" in u_clean or "hysteria2" in u_clean: return 1
     if u_clean.startswith("trojan://") and ("security=tls" in u_clean or "tls=tls" in u_clean): return 1
-    # 🥈 T2: VMess, Modern SS
     if u_clean.startswith("vmess://"): return 2
     if u_clean.startswith("ss://") and any(c in u_clean for c in ['gcm', 'poly1305', '2022']): return 2
-    # 🥉 T3: Старье
     return 3
 
 def push_to_github(content):
@@ -55,19 +50,19 @@ def push_to_github(content):
         payload = {"message": f"Sync {time.strftime('%H:%M')}", "content": b64_content, "branch": "main"}
         if sha: payload["sha"] = sha
         requests.put(url, headers=headers, json=payload, timeout=15)
+        logging.info("🚀 YAML обновлен на GitHub")
     except: pass
 
-async def pull_reserve():
+async def get_countries_batch(ips):
+    res_map = {}
+    if not ips: return res_map
     try:
-        r = await asyncio.to_thread(requests.get, RESERVE_URL, timeout=15)
-        if r.status_code == 200:
-            data = r.json(); all_urls = []; t_map = {}
-            for t in ['tier1', 'tier2', 'tier3']:
-                v = int(t[-1])
-                for i in data.get(t, []):
-                    u = i['u'].replace("💻 ", ""); all_urls.append(u); t_map[u] = v
-            db.save_proxy_batch(all_urls, source='pc', tier_dict=t_map)
+        unique_ips = list(set(ips))[:100]
+        r = await asyncio.to_thread(requests.post, "http://ip-api.com/batch?fields=query,countryCode", json=[{"query": i} for i in unique_ips], timeout=15)
+        for item in r.json():
+            res_map[item['query']] = item.get('countryCode', 'UN')
     except: pass
+    return res_map
 
 async def scraper_task():
     regex = re.compile(r'(?:vless|vmess|ss|ssr|trojan|hy2|hysteria|tuic)://[^\s<"\'\)]+')
@@ -88,7 +83,8 @@ async def scraper_task():
                     found = regex.findall(r.text)
                     if found: db.save_proxy_batch([l.strip().split('<')[0] for l in found], source='auto')
                     if 'tme_messages_more' not in r.text: break
-                    match = re.search(r'href="(/s/.*?before=\d+)"', r.text); url = "https://t.me" + match.group(1) if match else None
+                    match = re.search(r'href="(/s/.*?before=\d+)"', r.text)
+                    url = "https://t.me" + match.group(1) if match else None
                     if not url: break
                 except: break
         await asyncio.sleep(1200)
@@ -102,18 +98,41 @@ async def checker_task():
             async def verify(u):
                 async with sem:
                     try:
-                        if "vmess" in u: d = json.loads(safe_decode(u[8:])); host, port = d['add'], int(d['port'])
-                        else: pr = urlparse(u); host, port = pr.hostname, pr.port
+                        if "vmess" in u:
+                            d_str = safe_decode(u[8:])
+                            if not d_str: return
+                            d = json.loads(d_str); host, port = d['add'], int(d['port'])
+                        else:
+                            pr = urlparse(u); host, port = pr.hostname, pr.port
                         if not host or not port: return
-                        st = time.time(); _, w = await asyncio.wait_for(asyncio.open_connection(host, port), timeout=2.0)
+                        st = time.time(); _, w = await asyncio.wait_for(asyncio.open_connection(host, port), timeout=TIMEOUT)
                         lat = int((time.time() - st) * 1000); w.close(); await w.wait_closed()
-                        if lat > 10: results.append((u, lat))
+                        if lat > 10: results.append((u, lat, host))
                     except: db.update_proxy_status(u, None, 3, "UN")
+            
             await asyncio.gather(*(verify(u) for u in candidates))
-            for u, lat in results: db.update_proxy_status(u, lat, get_tier(u), "UN")
-            from keep_alive import generate_clash_yaml
-            push_to_github(generate_clash_yaml(db.get_best_proxies_for_sub()))
+            
+            if results:
+                geo_map = await get_countries_batch([r[2] for r in results])
+                for u, lat, host in results:
+                    cc = geo_map.get(host, "UN")
+                    db.update_proxy_status(u, lat, get_tier(u), cc)
+                
+                from keep_alive import generate_clash_yaml
+                push_to_github(generate_clash_yaml(db.get_best_proxies_for_sub()))
         await asyncio.sleep(10)
+
+async def pull_reserve():
+    try:
+        r = await asyncio.to_thread(requests.get, RESERVE_URL, timeout=15)
+        if r.status_code == 200:
+            data = r.json(); all_urls = []; t_map = {}
+            for t in ['tier1', 'tier2', 'tier3']:
+                v = int(t[-1])
+                for i in data.get(t, []):
+                    u = i['u'].replace("💻 ", ""); all_urls.append(u); t_map[u] = v
+            db.save_proxy_batch(all_urls, source='pc', tier_dict=t_map)
+    except: pass
 
 async def vacuum_job():
     asyncio.create_task(scraper_task())
