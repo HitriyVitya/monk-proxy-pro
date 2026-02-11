@@ -6850,314 +6850,7 @@ proxies:
   network: ws
   ws-opts:
     path: /footers
-- name: 🥈 🇹🇼💻 202ms | VMESS (#566)
-  type: vmess
-  server: 165.154.195.38
-  port: 35034
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  ws-opts: null
-- name: 🥈 🇰🇷💻 202ms | VMESS (#567)
-  type: vmess
-  server: 146.56.112.110
-  port: 8888
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  ws-opts: null
-- name: 🥈 🇩🇪 202ms | VMESS (#568)
-  type: vmess
-  server: 57.129.24.125
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /linkvws
-- name: 🥈 🌐 202ms | VMESS (#569)
-  type: vmess
-  server: get.tech
-  port: 80
-  uuid: 8763e625-929a-43da-b7bf-7e7bc2e57615
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /shared
-- name: 🥈 🌐 202ms | VMESS (#570)
-  type: vmess
-  server: support.zoom.us
-  port: 8080
-  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /@Malinda6104
-- name: 🥈 🌐 202ms | VMESS (#571)
-  type: vmess
-  server: nju.bb4.indevs.in
-  port: 80
-  uuid: b020865b-7404-4894-ba65-a7414b10cda3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 202ms | VMESS (#572)
-  type: vmess
-  server: 103.21.244.113
-  port: 8443
-  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /8cda48b3
-- name: 🥈 🇨🇦 202ms | VMESS (#573)
-  type: vmess
-  server: 103.21.244.107
-  port: 8443
-  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /8cda48b3
-- name: 🥈 🇨🇦 202ms | VMESS (#574)
-  type: vmess
-  server: 172.67.164.123
-  port: 443
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /AUIKN8AU
-- name: 🥈 🇨🇦 202ms | VMESS (#575)
-  type: vmess
-  server: 103.21.244.91
-  port: 8443
-  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /8cda48b3
-- name: 🥈 🇰🇷💻 203ms | VMESS (#576)
-  type: vmess
-  server: 146.56.112.110
-  port: 8888
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  ws-opts: null
-- name: 🥈 🇫🇷 203ms | VMESS (#577)
-  type: vmess
-  server: 91.134.8.101
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /linkvws
-- name: 🥈 🇺🇸 203ms | VMESS (#578)
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vmessws
-- name: 🥈 🌐 203ms | VMESS (#579)
-  type: vmess
-  server: vde1.0bad.com
-  port: 443
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /chat
-- name: 🥈 🇱🇹 207ms | VMESS (#580)
-  type: vmess
-  server: 85.206.165.36
-  port: 443
-  uuid: ba49ab05-78f8-4b0b-9400-1826cc2d3f75
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇰🇷💻 210ms | VMESS (#581)
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  ws-opts: null
-- name: 🥈 🌐 215ms | VMESS (#582)
-  type: vmess
-  server: vin1.0bad.com
-  port: 443
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /chat
-- name: 🥈 🌐 216ms | VMESS (#583)
-  type: vmess
-  server: vuk1.0bad.com
-  port: 443
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /chat
-- name: 🥈 🇫🇮 217ms | VMESS (#584)
-  type: vmess
-  server: 65.21.240.108
-  port: 443
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: http
-  ws-opts: null
-- name: 🥈 🌐 219ms | VMESS (#585)
-  type: vmess
-  server: new3.hucloud-dns.xyz
-  port: 443
-  uuid: 2926bbcf-eef0-4d0d-d8a7-400e417608aa
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 219ms | VMESS (#586)
-  type: vmess
-  server: 104.19.7.84
-  port: 443
-  uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /y475
-- name: 🥈 🇨🇦 219ms | VMESS (#587)
-  type: vmess
-  server: 104.19.36.160
-  port: 443
-  uuid: ad806487-2d26-4636-98b6-ab85cc8521f7
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 219ms | VMESS (#588)
-  type: vmess
-  server: 104.19.110.34
-  port: 443
-  uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /y475
-- name: 🥈 🇺🇸 219ms | VMESS (#589)
-  type: vmess
-  server: 141.193.213.21
-  port: 443
-  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /9JZFDTKE
-- name: 🥈 🇨🇦 219ms | VMESS (#590)
+- name: 🥈 🇨🇦 201ms | VMESS (#566)
   type: vmess
   server: 104.16.89.44
   port: 443
@@ -7170,11 +6863,37 @@ proxies:
   network: ws
   ws-opts:
     path: /huhublog
-- name: 🥈 🇧🇿 219ms | VMESS (#591)
+- name: 🥈 🇺🇸 201ms | VMESS (#567)
   type: vmess
-  server: 203.30.189.190
+  server: 147.135.112.248
+  port: 80
+  uuid: 973c2639-c9c2-484d-ae9b-3d68b2f30d9e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 201ms | VMESS (#568)
+  type: vmess
+  server: 172.67.222.46
+  port: 80
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇾 201ms | VMESS (#569)
+  type: vmess
+  server: 203.24.108.8
   port: 443
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
   alterId: 0
   cipher: auto
   udp: true
@@ -7182,8 +6901,47 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /5QNROSRV
-- name: 🥈 🇺🇸 219ms | VMESS (#592)
+    path: /ECTCJ0DF
+- name: 🥈 🇨🇦 201ms | VMESS (#570)
+  type: vmess
+  server: 173.245.49.10
+  port: 8443
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 201ms | VMESS (#571)
+  type: vmess
+  server: 173.245.49.23
+  port: 8443
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇺🇸 201ms | VMESS (#572)
+  type: vmess
+  server: 141.101.114.32
+  port: 443
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /A2DJOPFT
+- name: 🥈 🇺🇸 201ms | VMESS (#573)
   type: vmess
   server: 141.193.213.20
   port: 443
@@ -7196,219 +6954,11 @@ proxies:
   network: ws
   ws-opts:
     path: /IYKLD53M
-- name: 🥈 🇨🇷 219ms | VMESS (#593)
+- name: 🥈 🇹🇼💻 202ms | VMESS (#574)
   type: vmess
-  server: 190.93.244.2
-  port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ECTCJ0DF
-- name: 🥈 🇨🇦 219ms | VMESS (#594)
-  type: vmess
-  server: 104.18.6.138
-  port: 443
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 219ms | VMESS (#595)
-  type: vmess
-  server: 104.21.48.161
-  port: 443
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 219ms | VMESS (#596)
-  type: vmess
-  server: 173.245.49.23
-  port: 8443
-  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 219ms | VMESS (#597)
-  type: vmess
-  server: 104.18.7.138
-  port: 443
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 219ms | VMESS (#598)
-  type: vmess
-  server: 172.67.169.131
-  port: 443
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /AUIKN8AU
-- name: 🥈 🇨🇦 219ms | VMESS (#599)
-  type: vmess
-  server: 173.245.49.23
-  port: 8443
-  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /8cda48b3
-- name: 🥈 🇬🇧 219ms | VMESS (#600)
-  type: vmess
-  server: 185.162.228.110
-  port: 443
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /AUIKN8AU
-- name: 🥈 🇨🇦 219ms | VMESS (#601)
-  type: vmess
-  server: 172.67.185.133
-  port: 443
-  uuid: 44ceb389-4cea-4ea1-eef9-11ce6f3effe6
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 219ms | VMESS (#602)
-  type: vmess
-  server: 172.67.178.127
-  port: 443
-  uuid: 26b5fbcf-d199-407e-e8bf-96d7489d247d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /123
-- name: 🥈 🇨🇦 219ms | VMESS (#603)
-  type: vmess
-  server: 103.21.244.122
-  port: 8443
-  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /8cda48b3
-- name: 🥈 🇨🇦 219ms | VMESS (#604)
-  type: vmess
-  server: 23.227.38.100
-  port: 443
-  uuid: 7b1b2fa3-e361-48cc-b73d-2c9636c76f4b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /UMW36262
-- name: 🥈 🇨🇦 220ms | VMESS (#605)
-  type: vmess
-  server: 172.67.207.209
-  port: 2082
-  uuid: 082122a2-8479-4089-82f0-f32ba5fc5426
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /bb
-- name: 🥈 🇨🇦 220ms | VMESS (#606)
-  type: vmess
-  server: 172.64.154.155
-  port: 443
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /dongtaiwang.com
-- name: 🥈 🌐 221ms | VMESS (#607)
-  type: vmess
-  server: vde2.0bad.com
-  port: 443
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /chat
-- name: 🥈 🌐 222ms | VMESS (#608)
-  type: vmess
-  server: sg-5.0rd.net
-  port: 443
-  uuid: b7200fb0-b107-11ed-b233-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /uvxrjhi0
-- name: 🥈 🇭🇰💻 226ms | VMESS (#609)
-  type: vmess
-  server: 8.217.13.74
-  port: 31769
-  uuid: cf1ad6c7-5987-4314-82bb-b4399040d047
+  server: 165.154.195.38
+  port: 35034
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
   alterId: 0
   cipher: auto
   udp: true
@@ -7416,11 +6966,62 @@ proxies:
   skip-cert-verify: true
   network: tcp
   ws-opts: null
-- name: 🥈 🇸🇬 226ms | VMESS (#610)
+- name: 🥈 🇰🇷💻 202ms | VMESS (#575)
   type: vmess
-  server: 139.99.61.53
+  server: 146.56.112.110
+  port: 8888
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  ws-opts: null
+- name: 🥈 🇩🇪 202ms | VMESS (#576)
+  type: vmess
+  server: 57.129.24.125
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /linkvws
+- name: 🥈 🌐 202ms | VMESS (#577)
+  type: vmess
+  server: get.tech
   port: 80
-  uuid: ce3868a4-e2ca-4a6f-8731-e7e88d098886
+  uuid: 8763e625-929a-43da-b7bf-7e7bc2e57615
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /shared
+- name: 🥈 🌐 202ms | VMESS (#578)
+  type: vmess
+  server: support.zoom.us
+  port: 8080
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /@Malinda6104
+- name: 🥈 🌐 202ms | VMESS (#579)
+  type: vmess
+  server: nju.bb4.indevs.in
+  port: 80
+  uuid: b020865b-7404-4894-ba65-a7414b10cda3
   alterId: 0
   cipher: auto
   udp: true
@@ -7429,11 +7030,11 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🥈 🌐💻 227ms | VMESS (#611)
+- name: 🥈 🇨🇦 202ms | VMESS (#580)
   type: vmess
-  server: lv4.789900.xyz
-  port: 2087
-  uuid: 7dd16ab1-2a36-4b32-86fd-eb49fb039752
+  server: 103.21.244.113
+  port: 8443
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
   alterId: 0
   cipher: auto
   udp: true
@@ -7441,10 +7042,87 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /7dd16ab1-2a36-4b32-86fd-eb49fb039752-vm
-- name: 🥈 🌐 232ms | VMESS (#612)
+    path: /8cda48b3
+- name: 🥈 🇨🇦 202ms | VMESS (#581)
   type: vmess
-  server: vus3.0bad.com
+  server: 103.21.244.107
+  port: 8443
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /8cda48b3
+- name: 🥈 🇨🇦 202ms | VMESS (#582)
+  type: vmess
+  server: 172.67.164.123
+  port: 443
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /AUIKN8AU
+- name: 🥈 🇨🇦 202ms | VMESS (#583)
+  type: vmess
+  server: 103.21.244.91
+  port: 8443
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /8cda48b3
+- name: 🥈 🇰🇷💻 203ms | VMESS (#584)
+  type: vmess
+  server: 146.56.112.110
+  port: 8888
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  ws-opts: null
+- name: 🥈 🇫🇷 203ms | VMESS (#585)
+  type: vmess
+  server: 91.134.8.101
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /linkvws
+- name: 🥈 🇺🇸 203ms | VMESS (#586)
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vmessws
+- name: 🥈 🌐 203ms | VMESS (#587)
+  type: vmess
+  server: vde1.0bad.com
   port: 443
   uuid: 927094d3-d678-4763-8591-e240d0bcae87
   alterId: 0
@@ -7455,24 +7133,11 @@ proxies:
   network: ws
   ws-opts:
     path: /chat
-- name: 🥈 🇭🇰💻 233ms | VMESS (#613)
+- name: 🥈 🇮🇷 205ms | VMESS (#588)
   type: vmess
-  server: 47.243.135.74
-  port: 55185
-  uuid: 1375985e-334a-4c25-8f64-52a182bc8037
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /Notif_Chat
-- name: 🥈 🇸🇬 235ms | VMESS (#614)
-  type: vmess
-  server: 157.230.36.235
+  server: 185.143.233.114
   port: 80
-  uuid: b484d576-b3e3-4ac5-b108-88a300dfe7e3
+  uuid: cf7f2d7c-d4f8-469a-bfd5-97484bb98d2c
   alterId: 0
   cipher: auto
   udp: true
@@ -7480,25 +7145,25 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /graphql
-- name: 🥈 🌐💻 239ms | VMESS (#615)
+    path: /
+- name: 🥈 🇳🇱 206ms | VMESS (#589)
   type: vmess
-  server: lv4.789900.xyz
-  port: 2087
-  uuid: 7dd16ab1-2a36-4b32-86fd-eb49fb039752
+  server: 195.54.174.18
+  port: 80
+  uuid: 6d6f413f-3dc2-4d02-8d35-8b45e39feb72
   alterId: 0
   cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /7dd16ab1-2a36-4b32-86fd-eb49fb039752-vm
-- name: 🥈 🌐💻 239ms | VMESS (#616)
+    path: /
+- name: 🥈 🇱🇹 207ms | VMESS (#590)
   type: vmess
-  server: seoul03.zgjok.com
+  server: 85.206.165.36
   port: 443
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  uuid: ba49ab05-78f8-4b0b-9400-1826cc2d3f75
   alterId: 0
   cipher: auto
   udp: true
@@ -7507,11 +7172,11 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🥈 🌐 240ms | VMESS (#617)
+- name: 🥈 🌐 207ms | VMESS (#591)
   type: vmess
-  server: speed.cloudflare.com
+  server: 422wkl.fans8.xyz
   port: 443
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
+  uuid: 7f4ff2e1-c08f-35bd-afe7-4a6a386907aa
   alterId: 0
   cipher: auto
   udp: true
@@ -7519,8 +7184,8 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vmess
-- name: 🥈 🌐 240ms | VMESS (#618)
+    path: /
+- name: 🥈 🌐 207ms | VMESS (#592)
   type: vmess
   server: powerservice.com
   port: 443
@@ -7533,217 +7198,11 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🥈 🌐 240ms | VMESS (#619)
-  type: vmess
-  server: www.digitalocean.com
-  port: 443
-  uuid: 3a3e263d-223f-49cc-bbdb-f7e07a55e6fe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /111111.online
-- name: 🥈 🇯🇵 246ms | VMESS (#620)
-  type: vmess
-  server: 161.129.34.102
-  port: 443
-  uuid: ec736482-173e-3eff-9114-b49df8056e7d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🌐💻 248ms | VMESS (#621)
-  type: vmess
-  server: dv4.789900.xyz
-  port: 2096
-  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
-- name: 🥈 🌐💻 249ms | VMESS (#622)
-  type: vmess
-  server: seoul03.zgjok.com
-  port: 443
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🌐💻 249ms | VMESS (#623)
-  type: vmess
-  server: dv4.789900.xyz
-  port: 2096
-  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
-- name: 🥈 🌐💻 249ms | VMESS (#624)
-  type: vmess
-  server: seoul03.zgjok.com
-  port: 443
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🌐💻 253ms | VMESS (#625)
-  type: vmess
-  server: dv4.789900.xyz
-  port: 2096
-  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
-- name: 🥈 🌐💻 253ms | VMESS (#626)
-  type: vmess
-  server: seoul03.zgjok.com
-  port: 443
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🌐💻 254ms | VMESS (#627)
-  type: vmess
-  server: seoul03.zgjok.com
-  port: 443
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🌐💻 256ms | VMESS (#628)
-  type: vmess
-  server: lv4.789900.xyz
-  port: 2087
-  uuid: 7dd16ab1-2a36-4b32-86fd-eb49fb039752
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /7dd16ab1-2a36-4b32-86fd-eb49fb039752-vm
-- name: 🥈 🌐💻 256ms | VMESS (#629)
-  type: vmess
-  server: seoul03.zgjok.com
-  port: 443
-  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🌐💻 258ms | VMESS (#630)
-  type: vmess
-  server: gold6.goldspeed.org
-  port: 40973
-  uuid: a7918501-9245-42f5-9393-f6e84bda9497
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  ws-opts: null
-- name: 🥈 🌐💻 258ms | VMESS (#631)
-  type: vmess
-  server: fast38.funfil.link
-  port: 31541
-  uuid: 41792324-68e1-413b-be71-f26a28213e21
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  ws-opts: null
-- name: 🥈 🌐💻 260ms | VMESS (#632)
-  type: vmess
-  server: dv4.789900.xyz
-  port: 2096
-  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
-- name: 🥈 🌐💻 267ms | VMESS (#633)
-  type: vmess
-  server: tr1-smart.adelping.com
-  port: 80
-  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-- name: 🥈 🌐💻 268ms | VMESS (#634)
-  type: vmess
-  server: tr1-smart.adelping.com
-  port: 80
-  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-- name: 🥈 🌐 279ms | VMESS (#635)
+- name: 🥈 🌐 207ms | VMESS (#593)
   type: vmess
   server: news.microsoft.com
   port: 443
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
   alterId: 0
   cipher: auto
   udp: true
@@ -7751,21 +7210,34 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /5QNROSRV
-- name: 🥈 🇫🇮 279ms | VMESS (#636)
+    path: /
+- name: 🥈 🌐 207ms | VMESS (#594)
   type: vmess
-  server: 65.109.184.152
+  server: speed.cloudflare.com
   port: 443
-  uuid: 5cf836c8-bb7d-4eac-f0ee-bc721fb7453b
+  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
-- name: 🥈 🌐 280ms | VMESS (#637)
+    path: /vmess
+- name: 🥈 🌐 207ms | VMESS (#595)
+  type: vmess
+  server: news.microsoft.com
+  port: 443
+  uuid: 615a1285-5848-42a1-9859-d4cb37b1fbd8
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /share
+- name: 🥈 🌐 207ms | VMESS (#596)
   type: vmess
   server: RACKNERD.COM
   port: 2086
@@ -7778,9 +7250,124 @@ proxies:
   network: ws
   ws-opts:
     path: /aries
-- name: 🥈 🌐 281ms | VMESS (#638)
+- name: 🥈 🇰🇷💻 210ms | VMESS (#597)
   type: vmess
-  server: hohm.microsoft.com
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  ws-opts: null
+- name: 🥈 🌐 215ms | VMESS (#598)
+  type: vmess
+  server: vin1.0bad.com
+  port: 443
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /chat
+- name: 🥈 🌐 216ms | VMESS (#599)
+  type: vmess
+  server: vuk1.0bad.com
+  port: 443
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /chat
+- name: 🥈 🇫🇮 217ms | VMESS (#600)
+  type: vmess
+  server: 65.21.240.108
+  port: 443
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: http
+  ws-opts: null
+- name: 🥈 🌐 217ms | VMESS (#601)
+  type: vmess
+  server: v2ray.online
+  port: 443
+  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /speedtest
+- name: 🥈 🌐 219ms | VMESS (#602)
+  type: vmess
+  server: new3.hucloud-dns.xyz
+  port: 443
+  uuid: 2926bbcf-eef0-4d0d-d8a7-400e417608aa
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 219ms | VMESS (#603)
+  type: vmess
+  server: 104.19.7.84
+  port: 443
+  uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /y475
+- name: 🥈 🇨🇦 219ms | VMESS (#604)
+  type: vmess
+  server: 104.19.36.160
+  port: 443
+  uuid: ad806487-2d26-4636-98b6-ab85cc8521f7
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 219ms | VMESS (#605)
+  type: vmess
+  server: 104.19.110.34
+  port: 443
+  uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /y475
+- name: 🥈 🇺🇸 219ms | VMESS (#606)
+  type: vmess
+  server: 141.193.213.21
   port: 443
   uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
   alterId: 0
@@ -7791,11 +7378,11 @@ proxies:
   network: ws
   ws-opts:
     path: /9JZFDTKE
-- name: 🥈 🌐 285ms | VMESS (#639)
+- name: 🥈 🇨🇦 219ms | VMESS (#607)
   type: vmess
-  server: frankfurt02.zgjok.com
+  server: 104.16.89.44
   port: 443
-  uuid: 90d50c62-13b4-4f9c-b5d8-0168d30b423a
+  uuid: 9a18cbb1-81d2-4720-9f09-46ea276b6ddb
   alterId: 0
   cipher: auto
   udp: true
@@ -7803,38 +7390,12 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
-- name: 🥈 🌐 286ms | VMESS (#640)
+    path: /huhublog
+- name: 🥈 🇧🇿 219ms | VMESS (#608)
   type: vmess
-  server: lv4.789900.xyz
-  port: 2087
-  uuid: 7dd16ab1-2a36-4b32-86fd-eb49fb039752
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🌐 286ms | VMESS (#641)
-  type: vmess
-  server: dv4.789900.xyz
-  port: 2096
-  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🥈 🇨🇦 286ms | VMESS (#642)
-  type: vmess
-  server: 172.67.169.131
+  server: 203.30.189.190
   port: 443
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
   alterId: 0
   cipher: auto
   udp: true
@@ -7842,12 +7403,12 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /AUIKN8AU
-- name: 🥈 🇬🇧 286ms | VMESS (#643)
+    path: /5QNROSRV
+- name: 🥈 🇺🇸 219ms | VMESS (#609)
   type: vmess
-  server: 185.162.228.228
+  server: 141.193.213.20
   port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+  uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a
   alterId: 0
   cipher: auto
   udp: true
@@ -7855,60 +7416,8 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /ECTCJ0DF
-- name: 🥈 🇧🇿 286ms | VMESS (#644)
-  type: vmess
-  server: 203.30.191.18
-  port: 443
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /dongtaiwang.com
-- name: 🥈 🇧🇿 286ms | VMESS (#645)
-  type: vmess
-  server: 203.30.190.190
-  port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ECTCJ0DF
-- name: 🥈 🇧🇿 286ms | VMESS (#646)
-  type: vmess
-  server: 203.30.188.188
-  port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ECTCJ0DF
-- name: 🥈 🇨🇷 286ms | VMESS (#647)
-  type: vmess
-  server: 190.93.246.2
-  port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ECTCJ0DF
-- name: 🥈 🇨🇷 286ms | VMESS (#648)
+    path: /IYKLD53M
+- name: 🥈 🇨🇷 219ms | VMESS (#610)
   type: vmess
   server: 190.93.244.2
   port: 443
@@ -7921,9 +7430,61 @@ proxies:
   network: ws
   ws-opts:
     path: /ECTCJ0DF
-- name: 🥈 🇨🇦 286ms | VMESS (#649)
+- name: 🥈 🇨🇦 219ms | VMESS (#611)
   type: vmess
-  server: 23.227.38.22
+  server: 104.18.6.138
+  port: 443
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 219ms | VMESS (#612)
+  type: vmess
+  server: 104.21.48.161
+  port: 443
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 219ms | VMESS (#613)
+  type: vmess
+  server: 173.245.49.23
+  port: 8443
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 219ms | VMESS (#614)
+  type: vmess
+  server: 104.18.7.138
+  port: 443
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 219ms | VMESS (#615)
+  type: vmess
+  server: 172.67.169.131
   port: 443
   uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
   alterId: 0
@@ -7934,9 +7495,9 @@ proxies:
   network: ws
   ws-opts:
     path: /AUIKN8AU
-- name: 🥈 🇨🇦 286ms | VMESS (#650)
+- name: 🥈 🇨🇦 219ms | VMESS (#616)
   type: vmess
-  server: 103.21.244.70
+  server: 173.245.49.23
   port: 8443
   uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
   alterId: 0
@@ -7947,11 +7508,11 @@ proxies:
   network: ws
   ws-opts:
     path: /8cda48b3
-- name: 🥈 🇨🇷 286ms | VMESS (#651)
+- name: 🥈 🇬🇧 219ms | VMESS (#617)
   type: vmess
-  server: 190.93.245.3
+  server: 185.162.228.110
   port: 443
-  uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
   alterId: 0
   cipher: auto
   udp: true
@@ -7959,7 +7520,446 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /5QNROSRV
+    path: /AUIKN8AU
+- name: 🥈 🇨🇦 219ms | VMESS (#618)
+  type: vmess
+  server: 172.67.185.133
+  port: 443
+  uuid: 44ceb389-4cea-4ea1-eef9-11ce6f3effe6
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🇨🇦 219ms | VMESS (#619)
+  type: vmess
+  server: 172.67.178.127
+  port: 443
+  uuid: 26b5fbcf-d199-407e-e8bf-96d7489d247d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /123
+- name: 🥈 🇨🇦 219ms | VMESS (#620)
+  type: vmess
+  server: 103.21.244.122
+  port: 8443
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /8cda48b3
+- name: 🥈 🇨🇦 219ms | VMESS (#621)
+  type: vmess
+  server: 23.227.38.100
+  port: 443
+  uuid: 7b1b2fa3-e361-48cc-b73d-2c9636c76f4b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /UMW36262
+- name: 🥈 🇨🇦 220ms | VMESS (#622)
+  type: vmess
+  server: 172.67.207.209
+  port: 2082
+  uuid: 082122a2-8479-4089-82f0-f32ba5fc5426
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /bb
+- name: 🥈 🇨🇦 220ms | VMESS (#623)
+  type: vmess
+  server: 172.64.154.155
+  port: 443
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /dongtaiwang.com
+- name: 🥈 🌐 221ms | VMESS (#624)
+  type: vmess
+  server: vde2.0bad.com
+  port: 443
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /chat
+- name: 🥈 🌐 222ms | VMESS (#625)
+  type: vmess
+  server: sg-5.0rd.net
+  port: 443
+  uuid: b7200fb0-b107-11ed-b233-205c6d5f5d78
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /uvxrjhi0
+- name: 🥈 🇭🇰💻 226ms | VMESS (#626)
+  type: vmess
+  server: 8.217.13.74
+  port: 31769
+  uuid: cf1ad6c7-5987-4314-82bb-b4399040d047
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  ws-opts: null
+- name: 🥈 🇸🇬 226ms | VMESS (#627)
+  type: vmess
+  server: 139.99.61.53
+  port: 80
+  uuid: ce3868a4-e2ca-4a6f-8731-e7e88d098886
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐💻 227ms | VMESS (#628)
+  type: vmess
+  server: lv4.789900.xyz
+  port: 2087
+  uuid: 7dd16ab1-2a36-4b32-86fd-eb49fb039752
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /7dd16ab1-2a36-4b32-86fd-eb49fb039752-vm
+- name: 🥈 🌐 232ms | VMESS (#629)
+  type: vmess
+  server: vus3.0bad.com
+  port: 443
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /chat
+- name: 🥈 🇭🇰💻 233ms | VMESS (#630)
+  type: vmess
+  server: 47.243.135.74
+  port: 55185
+  uuid: 1375985e-334a-4c25-8f64-52a182bc8037
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /Notif_Chat
+- name: 🥈 🇸🇬 235ms | VMESS (#631)
+  type: vmess
+  server: 157.230.36.235
+  port: 80
+  uuid: b484d576-b3e3-4ac5-b108-88a300dfe7e3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /graphql
+- name: 🥈 🌐💻 239ms | VMESS (#632)
+  type: vmess
+  server: lv4.789900.xyz
+  port: 2087
+  uuid: 7dd16ab1-2a36-4b32-86fd-eb49fb039752
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /7dd16ab1-2a36-4b32-86fd-eb49fb039752-vm
+- name: 🥈 🌐💻 239ms | VMESS (#633)
+  type: vmess
+  server: seoul03.zgjok.com
+  port: 443
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐 240ms | VMESS (#634)
+  type: vmess
+  server: speed.cloudflare.com
+  port: 443
+  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vmess
+- name: 🥈 🌐 240ms | VMESS (#635)
+  type: vmess
+  server: powerservice.com
+  port: 443
+  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐 240ms | VMESS (#636)
+  type: vmess
+  server: www.digitalocean.com
+  port: 443
+  uuid: 3a3e263d-223f-49cc-bbdb-f7e07a55e6fe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /111111.online
+- name: 🥈 🇯🇵 246ms | VMESS (#637)
+  type: vmess
+  server: 161.129.34.102
+  port: 443
+  uuid: ec736482-173e-3eff-9114-b49df8056e7d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐💻 248ms | VMESS (#638)
+  type: vmess
+  server: dv4.789900.xyz
+  port: 2096
+  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
+- name: 🥈 🌐💻 249ms | VMESS (#639)
+  type: vmess
+  server: seoul03.zgjok.com
+  port: 443
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐💻 249ms | VMESS (#640)
+  type: vmess
+  server: dv4.789900.xyz
+  port: 2096
+  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
+- name: 🥈 🌐💻 249ms | VMESS (#641)
+  type: vmess
+  server: seoul03.zgjok.com
+  port: 443
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐💻 253ms | VMESS (#642)
+  type: vmess
+  server: dv4.789900.xyz
+  port: 2096
+  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
+- name: 🥈 🌐💻 253ms | VMESS (#643)
+  type: vmess
+  server: seoul03.zgjok.com
+  port: 443
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐💻 254ms | VMESS (#644)
+  type: vmess
+  server: seoul03.zgjok.com
+  port: 443
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐💻 256ms | VMESS (#645)
+  type: vmess
+  server: lv4.789900.xyz
+  port: 2087
+  uuid: 7dd16ab1-2a36-4b32-86fd-eb49fb039752
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /7dd16ab1-2a36-4b32-86fd-eb49fb039752-vm
+- name: 🥈 🌐💻 256ms | VMESS (#646)
+  type: vmess
+  server: seoul03.zgjok.com
+  port: 443
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🥈 🌐💻 258ms | VMESS (#647)
+  type: vmess
+  server: gold6.goldspeed.org
+  port: 40973
+  uuid: a7918501-9245-42f5-9393-f6e84bda9497
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  ws-opts: null
+- name: 🥈 🌐💻 258ms | VMESS (#648)
+  type: vmess
+  server: fast38.funfil.link
+  port: 31541
+  uuid: 41792324-68e1-413b-be71-f26a28213e21
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  ws-opts: null
+- name: 🥈 🌐💻 260ms | VMESS (#649)
+  type: vmess
+  server: dv4.789900.xyz
+  port: 2096
+  uuid: 0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm
+- name: 🥈 🌐💻 267ms | VMESS (#650)
+  type: vmess
+  server: tr1-smart.adelping.com
+  port: 80
+  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+- name: 🥈 🌐💻 268ms | VMESS (#651)
+  type: vmess
+  server: tr1-smart.adelping.com
+  port: 80
+  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
 proxy-groups:
 - name: 🚀 Auto Select
   type: url-test
@@ -8533,91 +8533,91 @@ proxy-groups:
   - 🥈 🌐 201ms | VMESS (#563)
   - 🥈 🌐 201ms | VMESS (#564)
   - 🥈 🇺🇸 201ms | VMESS (#565)
-  - 🥈 🇹🇼💻 202ms | VMESS (#566)
-  - 🥈 🇰🇷💻 202ms | VMESS (#567)
-  - 🥈 🇩🇪 202ms | VMESS (#568)
-  - 🥈 🌐 202ms | VMESS (#569)
-  - 🥈 🌐 202ms | VMESS (#570)
-  - 🥈 🌐 202ms | VMESS (#571)
-  - 🥈 🇨🇦 202ms | VMESS (#572)
-  - 🥈 🇨🇦 202ms | VMESS (#573)
-  - 🥈 🇨🇦 202ms | VMESS (#574)
-  - 🥈 🇨🇦 202ms | VMESS (#575)
-  - 🥈 🇰🇷💻 203ms | VMESS (#576)
-  - 🥈 🇫🇷 203ms | VMESS (#577)
-  - 🥈 🇺🇸 203ms | VMESS (#578)
-  - 🥈 🌐 203ms | VMESS (#579)
-  - 🥈 🇱🇹 207ms | VMESS (#580)
-  - 🥈 🇰🇷💻 210ms | VMESS (#581)
-  - 🥈 🌐 215ms | VMESS (#582)
-  - 🥈 🌐 216ms | VMESS (#583)
-  - 🥈 🇫🇮 217ms | VMESS (#584)
-  - 🥈 🌐 219ms | VMESS (#585)
-  - 🥈 🇨🇦 219ms | VMESS (#586)
-  - 🥈 🇨🇦 219ms | VMESS (#587)
-  - 🥈 🇨🇦 219ms | VMESS (#588)
-  - 🥈 🇺🇸 219ms | VMESS (#589)
-  - 🥈 🇨🇦 219ms | VMESS (#590)
-  - 🥈 🇧🇿 219ms | VMESS (#591)
-  - 🥈 🇺🇸 219ms | VMESS (#592)
-  - 🥈 🇨🇷 219ms | VMESS (#593)
-  - 🥈 🇨🇦 219ms | VMESS (#594)
-  - 🥈 🇨🇦 219ms | VMESS (#595)
-  - 🥈 🇨🇦 219ms | VMESS (#596)
-  - 🥈 🇨🇦 219ms | VMESS (#597)
-  - 🥈 🇨🇦 219ms | VMESS (#598)
-  - 🥈 🇨🇦 219ms | VMESS (#599)
-  - 🥈 🇬🇧 219ms | VMESS (#600)
-  - 🥈 🇨🇦 219ms | VMESS (#601)
-  - 🥈 🇨🇦 219ms | VMESS (#602)
+  - 🥈 🇨🇦 201ms | VMESS (#566)
+  - 🥈 🇺🇸 201ms | VMESS (#567)
+  - 🥈 🇨🇦 201ms | VMESS (#568)
+  - 🥈 🇨🇾 201ms | VMESS (#569)
+  - 🥈 🇨🇦 201ms | VMESS (#570)
+  - 🥈 🇨🇦 201ms | VMESS (#571)
+  - 🥈 🇺🇸 201ms | VMESS (#572)
+  - 🥈 🇺🇸 201ms | VMESS (#573)
+  - 🥈 🇹🇼💻 202ms | VMESS (#574)
+  - 🥈 🇰🇷💻 202ms | VMESS (#575)
+  - 🥈 🇩🇪 202ms | VMESS (#576)
+  - 🥈 🌐 202ms | VMESS (#577)
+  - 🥈 🌐 202ms | VMESS (#578)
+  - 🥈 🌐 202ms | VMESS (#579)
+  - 🥈 🇨🇦 202ms | VMESS (#580)
+  - 🥈 🇨🇦 202ms | VMESS (#581)
+  - 🥈 🇨🇦 202ms | VMESS (#582)
+  - 🥈 🇨🇦 202ms | VMESS (#583)
+  - 🥈 🇰🇷💻 203ms | VMESS (#584)
+  - 🥈 🇫🇷 203ms | VMESS (#585)
+  - 🥈 🇺🇸 203ms | VMESS (#586)
+  - 🥈 🌐 203ms | VMESS (#587)
+  - 🥈 🇮🇷 205ms | VMESS (#588)
+  - 🥈 🇳🇱 206ms | VMESS (#589)
+  - 🥈 🇱🇹 207ms | VMESS (#590)
+  - 🥈 🌐 207ms | VMESS (#591)
+  - 🥈 🌐 207ms | VMESS (#592)
+  - 🥈 🌐 207ms | VMESS (#593)
+  - 🥈 🌐 207ms | VMESS (#594)
+  - 🥈 🌐 207ms | VMESS (#595)
+  - 🥈 🌐 207ms | VMESS (#596)
+  - 🥈 🇰🇷💻 210ms | VMESS (#597)
+  - 🥈 🌐 215ms | VMESS (#598)
+  - 🥈 🌐 216ms | VMESS (#599)
+  - 🥈 🇫🇮 217ms | VMESS (#600)
+  - 🥈 🌐 217ms | VMESS (#601)
+  - 🥈 🌐 219ms | VMESS (#602)
   - 🥈 🇨🇦 219ms | VMESS (#603)
   - 🥈 🇨🇦 219ms | VMESS (#604)
-  - 🥈 🇨🇦 220ms | VMESS (#605)
-  - 🥈 🇨🇦 220ms | VMESS (#606)
-  - 🥈 🌐 221ms | VMESS (#607)
-  - 🥈 🌐 222ms | VMESS (#608)
-  - 🥈 🇭🇰💻 226ms | VMESS (#609)
-  - 🥈 🇸🇬 226ms | VMESS (#610)
-  - 🥈 🌐💻 227ms | VMESS (#611)
-  - 🥈 🌐 232ms | VMESS (#612)
-  - 🥈 🇭🇰💻 233ms | VMESS (#613)
-  - 🥈 🇸🇬 235ms | VMESS (#614)
-  - 🥈 🌐💻 239ms | VMESS (#615)
-  - 🥈 🌐💻 239ms | VMESS (#616)
-  - 🥈 🌐 240ms | VMESS (#617)
-  - 🥈 🌐 240ms | VMESS (#618)
-  - 🥈 🌐 240ms | VMESS (#619)
-  - 🥈 🇯🇵 246ms | VMESS (#620)
-  - 🥈 🌐💻 248ms | VMESS (#621)
-  - 🥈 🌐💻 249ms | VMESS (#622)
-  - 🥈 🌐💻 249ms | VMESS (#623)
-  - 🥈 🌐💻 249ms | VMESS (#624)
-  - 🥈 🌐💻 253ms | VMESS (#625)
-  - 🥈 🌐💻 253ms | VMESS (#626)
-  - 🥈 🌐💻 254ms | VMESS (#627)
-  - 🥈 🌐💻 256ms | VMESS (#628)
-  - 🥈 🌐💻 256ms | VMESS (#629)
-  - 🥈 🌐💻 258ms | VMESS (#630)
-  - 🥈 🌐💻 258ms | VMESS (#631)
-  - 🥈 🌐💻 260ms | VMESS (#632)
-  - 🥈 🌐💻 267ms | VMESS (#633)
-  - 🥈 🌐💻 268ms | VMESS (#634)
-  - 🥈 🌐 279ms | VMESS (#635)
-  - 🥈 🇫🇮 279ms | VMESS (#636)
-  - 🥈 🌐 280ms | VMESS (#637)
-  - 🥈 🌐 281ms | VMESS (#638)
-  - 🥈 🌐 285ms | VMESS (#639)
-  - 🥈 🌐 286ms | VMESS (#640)
-  - 🥈 🌐 286ms | VMESS (#641)
-  - 🥈 🇨🇦 286ms | VMESS (#642)
-  - 🥈 🇬🇧 286ms | VMESS (#643)
-  - 🥈 🇧🇿 286ms | VMESS (#644)
-  - 🥈 🇧🇿 286ms | VMESS (#645)
-  - 🥈 🇧🇿 286ms | VMESS (#646)
-  - 🥈 🇨🇷 286ms | VMESS (#647)
-  - 🥈 🇨🇷 286ms | VMESS (#648)
-  - 🥈 🇨🇦 286ms | VMESS (#649)
-  - 🥈 🇨🇦 286ms | VMESS (#650)
-  - 🥈 🇨🇷 286ms | VMESS (#651)
+  - 🥈 🇨🇦 219ms | VMESS (#605)
+  - 🥈 🇺🇸 219ms | VMESS (#606)
+  - 🥈 🇨🇦 219ms | VMESS (#607)
+  - 🥈 🇧🇿 219ms | VMESS (#608)
+  - 🥈 🇺🇸 219ms | VMESS (#609)
+  - 🥈 🇨🇷 219ms | VMESS (#610)
+  - 🥈 🇨🇦 219ms | VMESS (#611)
+  - 🥈 🇨🇦 219ms | VMESS (#612)
+  - 🥈 🇨🇦 219ms | VMESS (#613)
+  - 🥈 🇨🇦 219ms | VMESS (#614)
+  - 🥈 🇨🇦 219ms | VMESS (#615)
+  - 🥈 🇨🇦 219ms | VMESS (#616)
+  - 🥈 🇬🇧 219ms | VMESS (#617)
+  - 🥈 🇨🇦 219ms | VMESS (#618)
+  - 🥈 🇨🇦 219ms | VMESS (#619)
+  - 🥈 🇨🇦 219ms | VMESS (#620)
+  - 🥈 🇨🇦 219ms | VMESS (#621)
+  - 🥈 🇨🇦 220ms | VMESS (#622)
+  - 🥈 🇨🇦 220ms | VMESS (#623)
+  - 🥈 🌐 221ms | VMESS (#624)
+  - 🥈 🌐 222ms | VMESS (#625)
+  - 🥈 🇭🇰💻 226ms | VMESS (#626)
+  - 🥈 🇸🇬 226ms | VMESS (#627)
+  - 🥈 🌐💻 227ms | VMESS (#628)
+  - 🥈 🌐 232ms | VMESS (#629)
+  - 🥈 🇭🇰💻 233ms | VMESS (#630)
+  - 🥈 🇸🇬 235ms | VMESS (#631)
+  - 🥈 🌐💻 239ms | VMESS (#632)
+  - 🥈 🌐💻 239ms | VMESS (#633)
+  - 🥈 🌐 240ms | VMESS (#634)
+  - 🥈 🌐 240ms | VMESS (#635)
+  - 🥈 🌐 240ms | VMESS (#636)
+  - 🥈 🇯🇵 246ms | VMESS (#637)
+  - 🥈 🌐💻 248ms | VMESS (#638)
+  - 🥈 🌐💻 249ms | VMESS (#639)
+  - 🥈 🌐💻 249ms | VMESS (#640)
+  - 🥈 🌐💻 249ms | VMESS (#641)
+  - 🥈 🌐💻 253ms | VMESS (#642)
+  - 🥈 🌐💻 253ms | VMESS (#643)
+  - 🥈 🌐💻 254ms | VMESS (#644)
+  - 🥈 🌐💻 256ms | VMESS (#645)
+  - 🥈 🌐💻 256ms | VMESS (#646)
+  - 🥈 🌐💻 258ms | VMESS (#647)
+  - 🥈 🌐💻 258ms | VMESS (#648)
+  - 🥈 🌐💻 260ms | VMESS (#649)
+  - 🥈 🌐💻 267ms | VMESS (#650)
+  - 🥈 🌐💻 268ms | VMESS (#651)
 rules:
 - MATCH,🚀 Auto Select
