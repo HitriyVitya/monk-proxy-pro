@@ -12687,7 +12687,22 @@ proxies:
     public-key: G39Eg-wogA8ErCPDN0SOwh-9QHJ-PrIIs_EKVvPeeAY
     short-id: ''
   client-fingerprint: chrome
-- name: 🥇 🌐 223ms | VLESS (#966)
+- name: 🥇 🇪🇪 223ms | VLESS (#966)
+  type: vless
+  server: 95.85.243.73
+  port: 8443
+  uuid: deaf028b-5c47-4b6b-ad7d-2534ba0782e5
+  password: deaf028b-5c47-4b6b-ad7d-2534ba0782e5
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  network: xhttp
+  servername: upload.lagzero.ru
+  reality-opts:
+    public-key: j29WHkAshI64hVGXrrSMjPD5rkrgjMYTvTGRfMEnzSw
+    short-id: ''
+  client-fingerprint: chrome
+- name: 🥇 🌐 223ms | VLESS (#967)
   type: vless
   server: fi3.nerpvpn.net
   port: 443
@@ -12702,7 +12717,7 @@ proxies:
     public-key: DrWq_ysFaGPGgRFcHevMPoruwYMRXryW6i_cwE7CuCM
     short-id: 3decb73e
   client-fingerprint: chrome
-- name: 🥇 🌐 223ms | VLESS (#967)
+- name: 🥇 🌐 223ms | VLESS (#968)
   type: vless
   server: fi0.nerpvpn.net
   port: 443
@@ -12717,7 +12732,7 @@ proxies:
     public-key: DrWq_ysFaGPGgRFcHevMPoruwYMRXryW6i_cwE7CuCM
     short-id: d7e1a2bb
   client-fingerprint: chrome
-- name: 🥇 🇩🇪 223ms | VLESS (#968)
+- name: 🥇 🇩🇪 223ms | VLESS (#969)
   type: vless
   server: 37.120.172.115
   port: 22955
@@ -12727,7 +12742,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: grpc
-- name: 🥇 🌐 224ms | VLESS (#969)
+- name: 🥇 🌐 224ms | VLESS (#970)
   type: vless
   server: tunnyl.ru
   port: 3443
@@ -12742,7 +12757,7 @@ proxies:
     public-key: VuGbF41ZZJnNSTXTnQiT59bug135kyLp6MNx0_rO2Bo
     short-id: f2b23eb38f49f2
   client-fingerprint: chrome
-- name: 🥇 🇬🇧 224ms | VLESS (#970)
+- name: 🥇 🇬🇧 224ms | VLESS (#971)
   type: vless
   server: 146.185.208.206
   port: 443
@@ -12757,7 +12772,7 @@ proxies:
     public-key: do22ES2nDjO0EggET4H9Gf8_tEY7PwZv76zVXPrDojQ
     short-id: 5f22
   client-fingerprint: chrome
-- name: 🥇 🌐 224ms | VLESS (#971)
+- name: 🥇 🌐 224ms | VLESS (#972)
   type: vless
   server: spb.jojack.ru
   port: 443
@@ -12772,7 +12787,7 @@ proxies:
     public-key: su3dq3BDLDkX-jIjq3GyVUXwqzD7CNVYzKtOcO4HQ24
     short-id: f9de6b567ee0f535
   client-fingerprint: chrome
-- name: 🥇 🇩🇪 224ms | VLESS (#972)
+- name: 🥇 🇩🇪 224ms | VLESS (#973)
   type: vless
   server: 37.120.164.120
   port: 22955
@@ -12787,7 +12802,7 @@ proxies:
     public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
     short-id: 6ba85179e30d4fc2
   client-fingerprint: chrome
-- name: 🥇 🌐 224ms | VLESS (#973)
+- name: 🥇 🌐 224ms | VLESS (#974)
   type: vless
   server: yul4r.stream-room.com
   port: 8443
@@ -12802,7 +12817,7 @@ proxies:
     public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
     short-id: '4326'
   client-fingerprint: chrome
-- name: 🥇 🇷🇺 224ms | VLESS (#974)
+- name: 🥇 🇷🇺 224ms | VLESS (#975)
   type: vless
   server: 109.120.190.203
   port: 1488
@@ -12812,7 +12827,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇩🇪 224ms | VLESS (#975)
+- name: 🥇 🇩🇪 224ms | VLESS (#976)
   type: vless
   server: 37.120.175.246
   port: 22955
@@ -12822,22 +12837,13 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: grpc
-- name: 🥇 🇷🇺💻 225ms | SS (#976)
+- name: 🥇 🇷🇺💻 225ms | SS (#977)
   type: ss
   server: 95.142.47.40
   port: 62238
   cipher: chacha20-ietf-poly1305
   password: 5y5cwrCR8Iun5nlMSFS8uJ
   udp: true
-- name: 🥇 🇭🇰💻 225ms | TROJAN (#977)
-  type: trojan
-  server: 58.152.53.45
-  port: 443
-  password: BxceQaOe
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: tcp
 - name: 🥇 🇭🇰💻 225ms | TROJAN (#978)
   type: trojan
   server: 58.152.53.45
@@ -12847,7 +12853,16 @@ proxies:
   skip-cert-verify: true
   tls: true
   network: tcp
-- name: 🥇 🇳🇱 225ms | VLESS (#979)
+- name: 🥇 🇭🇰💻 225ms | TROJAN (#979)
+  type: trojan
+  server: 58.152.53.45
+  port: 443
+  password: BxceQaOe
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  network: tcp
+- name: 🥇 🇳🇱 225ms | VLESS (#980)
   type: vless
   server: 193.233.126.135
   port: 443
@@ -12862,7 +12877,7 @@ proxies:
     public-key: 9ZhAP2-6t-V3tHO01gUDeo-T_ER-btnG4DkL4pQQemg
     short-id: ''
   client-fingerprint: chrome
-- name: 🥇 🌐 225ms | VLESS (#980)
+- name: 🥇 🌐 225ms | VLESS (#981)
   type: vless
   server: de-as.connect-iskra.cv
   port: 8443
@@ -12877,7 +12892,7 @@ proxies:
     public-key: eHgRhHYifD2njbtjzgMsNPGnvbpAK8SSXC5-wFuQnQ4
     short-id: 65b5280b52e0532c
   client-fingerprint: chrome
-- name: 🥇 🌐 225ms | VLESS (#981)
+- name: 🥇 🌐 225ms | VLESS (#982)
   type: vless
   server: rus.vles.space
   port: 18771
@@ -12892,7 +12907,7 @@ proxies:
     public-key: DPZKjPPf98W3z9BwfO5qVPHmhJkEUbA9OrqiKRBTZGQ
     short-id: ''
   client-fingerprint: chrome
-- name: 🥇 🇷🇺 225ms | VLESS (#982)
+- name: 🥇 🇷🇺 225ms | VLESS (#983)
   type: vless
   server: 45.139.26.152
   port: 7443
@@ -12902,7 +12917,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🌐 226ms | VLESS (#983)
+- name: 🥇 🌐 226ms | VLESS (#984)
   type: vless
   server: fi.prod.n7.homes
   port: 8443
@@ -12917,7 +12932,7 @@ proxies:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
   client-fingerprint: chrome
-- name: 🥇 🇵🇱 226ms | VLESS (#984)
+- name: 🥇 🇵🇱 226ms | VLESS (#985)
   type: vless
   server: 2.56.125.101
   port: 443
@@ -12932,7 +12947,7 @@ proxies:
     public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
     short-id: '31'
   client-fingerprint: chrome
-- name: 🥇 🇩🇪 226ms | VLESS (#985)
+- name: 🥇 🇩🇪 226ms | VLESS (#986)
   type: vless
   server: 213.21.237.192
   port: 8443
@@ -12947,7 +12962,7 @@ proxies:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
   client-fingerprint: chrome
-- name: 🥇 🇵🇱 226ms | VLESS (#986)
+- name: 🥇 🇵🇱 226ms | VLESS (#987)
   type: vless
   server: 138.124.72.227
   port: 8443
@@ -12962,7 +12977,7 @@ proxies:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
   client-fingerprint: chrome
-- name: 🥇 🇵🇱 226ms | VLESS (#987)
+- name: 🥇 🇵🇱 226ms | VLESS (#988)
   type: vless
   server: 138.124.72.7
   port: 8443
@@ -12977,7 +12992,7 @@ proxies:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
   client-fingerprint: chrome
-- name: 🥇 🇬🇧 226ms | VLESS (#988)
+- name: 🥇 🇬🇧 226ms | VLESS (#989)
   type: vless
   server: 37.221.125.34
   port: 443
@@ -12992,7 +13007,7 @@ proxies:
     public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
     short-id: 175d
   client-fingerprint: chrome
-- name: 🥇 🇵🇱 226ms | VLESS (#989)
+- name: 🥇 🇵🇱 226ms | VLESS (#990)
   type: vless
   server: 91.92.46.106
   port: 8443
@@ -13007,7 +13022,7 @@ proxies:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
   client-fingerprint: chrome
-- name: 🥇 🇵🇱 226ms | VLESS (#990)
+- name: 🥇 🇵🇱 226ms | VLESS (#991)
   type: vless
   server: 138.124.72.129
   port: 8443
@@ -13022,7 +13037,7 @@ proxies:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
   client-fingerprint: chrome
-- name: 🥇 🇵🇱 226ms | VLESS (#991)
+- name: 🥇 🇵🇱 226ms | VLESS (#992)
   type: vless
   server: 104.165.244.95
   port: 8443
@@ -13037,7 +13052,7 @@ proxies:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
   client-fingerprint: chrome
-- name: 🥇 🌐 226ms | VLESS (#992)
+- name: 🥇 🌐 226ms | VLESS (#993)
   type: vless
   server: kazakhstan.boot-lee.ru
   port: 8443
@@ -13052,7 +13067,7 @@ proxies:
     public-key: 3JGwSDrfkiCPdU3rvQP5m0z4Ag_UB_2w8Qq3VMXmo28
     short-id: abc323
   client-fingerprint: chrome
-- name: 🥇 🇷🇺 226ms | VLESS (#993)
+- name: 🥇 🇷🇺 226ms | VLESS (#994)
   type: vless
   server: 84.23.54.169
   port: 443
@@ -13062,7 +13077,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇬🇧 226ms | VLESS (#994)
+- name: 🥇 🇬🇧 226ms | VLESS (#995)
   type: vless
   server: 146.185.210.127
   port: 443
@@ -13072,7 +13087,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇦🇹 226ms | VLESS (#995)
+- name: 🥇 🇦🇹 226ms | VLESS (#996)
   type: vless
   server: 152.53.51.29
   port: 22955
@@ -13082,7 +13097,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇷🇺 226ms | VLESS (#996)
+- name: 🥇 🇷🇺 226ms | VLESS (#997)
   type: vless
   server: 176.109.109.58
   port: 51101
@@ -13092,7 +13107,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇫🇮 227ms | VLESS (#997)
+- name: 🥇 🇫🇮 227ms | VLESS (#998)
   type: vless
   server: 185.156.108.11
   port: 443
@@ -13107,26 +13122,21 @@ proxies:
     public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
     short-id: f79448a30d
   client-fingerprint: chrome
-- name: 🥇 🇳🇱 227ms | VLESS (#998)
+- name: 🥇 🇫🇮 227ms | VLESS (#999)
   type: vless
-  server: 185.70.186.134
+  server: 91.211.114.135
   port: 8443
-  uuid: 05dc09d5-5c56-454b-a34e-6ef743d91e1a
-  password: 05dc09d5-5c56-454b-a34e-6ef743d91e1a
+  uuid: f4fec1b0-a67e-4967-b9ea-0bd832b57a4d
+  password: f4fec1b0-a67e-4967-b9ea-0bd832b57a4d
   udp: true
   skip-cert-verify: true
-  tls: false
+  tls: true
   network: tcp
-- name: 🥇 🇷🇺 227ms | VLESS (#999)
-  type: vless
-  server: 84.252.136.245
-  port: 8443
-  uuid: 7e2b2894-3b5c-4b65-acc5-e1784f4047f2
-  password: 7e2b2894-3b5c-4b65-acc5-e1784f4047f2
-  udp: true
-  skip-cert-verify: true
-  tls: false
-  network: tcp
+  servername: sun6-21.userapi.com
+  reality-opts:
+    public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
+    short-id: 3ca620a7ed5f3196
+  client-fingerprint: chrome
 - name: 🥈 🇨🇦 11ms | VMESS (#1000)
   type: vmess
   server: 172.67.71.217
@@ -20599,40 +20609,40 @@ proxy-groups:
   - 🥇 🇹🇷 222ms | VLESS (#963)
   - 🥇 🌐 223ms | VLESS (#964)
   - 🥇 🌐 223ms | VLESS (#965)
-  - 🥇 🌐 223ms | VLESS (#966)
+  - 🥇 🇪🇪 223ms | VLESS (#966)
   - 🥇 🌐 223ms | VLESS (#967)
-  - 🥇 🇩🇪 223ms | VLESS (#968)
-  - 🥇 🌐 224ms | VLESS (#969)
-  - 🥇 🇬🇧 224ms | VLESS (#970)
-  - 🥇 🌐 224ms | VLESS (#971)
-  - 🥇 🇩🇪 224ms | VLESS (#972)
-  - 🥇 🌐 224ms | VLESS (#973)
-  - 🥇 🇷🇺 224ms | VLESS (#974)
-  - 🥇 🇩🇪 224ms | VLESS (#975)
-  - 🥇 🇷🇺💻 225ms | SS (#976)
-  - 🥇 🇭🇰💻 225ms | TROJAN (#977)
+  - 🥇 🌐 223ms | VLESS (#968)
+  - 🥇 🇩🇪 223ms | VLESS (#969)
+  - 🥇 🌐 224ms | VLESS (#970)
+  - 🥇 🇬🇧 224ms | VLESS (#971)
+  - 🥇 🌐 224ms | VLESS (#972)
+  - 🥇 🇩🇪 224ms | VLESS (#973)
+  - 🥇 🌐 224ms | VLESS (#974)
+  - 🥇 🇷🇺 224ms | VLESS (#975)
+  - 🥇 🇩🇪 224ms | VLESS (#976)
+  - 🥇 🇷🇺💻 225ms | SS (#977)
   - 🥇 🇭🇰💻 225ms | TROJAN (#978)
-  - 🥇 🇳🇱 225ms | VLESS (#979)
-  - 🥇 🌐 225ms | VLESS (#980)
+  - 🥇 🇭🇰💻 225ms | TROJAN (#979)
+  - 🥇 🇳🇱 225ms | VLESS (#980)
   - 🥇 🌐 225ms | VLESS (#981)
-  - 🥇 🇷🇺 225ms | VLESS (#982)
-  - 🥇 🌐 226ms | VLESS (#983)
-  - 🥇 🇵🇱 226ms | VLESS (#984)
-  - 🥇 🇩🇪 226ms | VLESS (#985)
-  - 🥇 🇵🇱 226ms | VLESS (#986)
+  - 🥇 🌐 225ms | VLESS (#982)
+  - 🥇 🇷🇺 225ms | VLESS (#983)
+  - 🥇 🌐 226ms | VLESS (#984)
+  - 🥇 🇵🇱 226ms | VLESS (#985)
+  - 🥇 🇩🇪 226ms | VLESS (#986)
   - 🥇 🇵🇱 226ms | VLESS (#987)
-  - 🥇 🇬🇧 226ms | VLESS (#988)
-  - 🥇 🇵🇱 226ms | VLESS (#989)
+  - 🥇 🇵🇱 226ms | VLESS (#988)
+  - 🥇 🇬🇧 226ms | VLESS (#989)
   - 🥇 🇵🇱 226ms | VLESS (#990)
   - 🥇 🇵🇱 226ms | VLESS (#991)
-  - 🥇 🌐 226ms | VLESS (#992)
-  - 🥇 🇷🇺 226ms | VLESS (#993)
-  - 🥇 🇬🇧 226ms | VLESS (#994)
-  - 🥇 🇦🇹 226ms | VLESS (#995)
-  - 🥇 🇷🇺 226ms | VLESS (#996)
-  - 🥇 🇫🇮 227ms | VLESS (#997)
-  - 🥇 🇳🇱 227ms | VLESS (#998)
-  - 🥇 🇷🇺 227ms | VLESS (#999)
+  - 🥇 🇵🇱 226ms | VLESS (#992)
+  - 🥇 🌐 226ms | VLESS (#993)
+  - 🥇 🇷🇺 226ms | VLESS (#994)
+  - 🥇 🇬🇧 226ms | VLESS (#995)
+  - 🥇 🇦🇹 226ms | VLESS (#996)
+  - 🥇 🇷🇺 226ms | VLESS (#997)
+  - 🥇 🇫🇮 227ms | VLESS (#998)
+  - 🥇 🇫🇮 227ms | VLESS (#999)
   - 🥈 🇨🇦 11ms | VMESS (#1000)
   - 🥈 🇨🇦 11ms | VMESS (#1001)
   - 🥈 🇨🇦 11ms | VMESS (#1002)
