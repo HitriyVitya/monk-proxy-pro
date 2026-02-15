@@ -298,26 +298,35 @@ async def deficit_day_process(message: types.Message, state: FSMContext):
         await message.answer(f"✅ Дефицит на день установлен.", reply_markup=get_main_keyboard())
         await state.set_state(None)
 
-# --- 📊 СТАТИСТИКА ---
+# --- 📊 СТАТИСТИКА (С ИНДИКАТОРАМИ) ---
 @dp.message(F.text == "📊 Статистика")
 async def stats_view(message: types.Message, state: FSMContext):
     date = await get_working_date(state)
     stats = db.get_stats(message.from_user.id, date)
     eff_def = db.get_effective_deficit(message.from_user.id, date)
+    
     bmr = 1950
     total_burn = bmr + stats['out']
     allowed = total_burn - eff_def
     rem = allowed - stats['in']
+    
+    # ЛОГИКА ЦВЕТА:
     emoji = "🟢" if rem >= 0 else "🔴"
+    
     label = f"{format_date_user(date)}"
     if date == get_today_str(): label += " (Сегодня)"
-    text = (f"📅 <b>ОТЧЕТ {label}:</b>\n\n"
-            f"🔥 Расход: {stats['out']} (+{bmr})\n"
-            f"🛡 Дефицит: -{eff_def}\n"
-            f"🍽 Лимит: <b>{allowed}</b>\n"
-            f"🍔 Съел: {stats['in']}\n"
-            f"👉 <b>Остаток: {rem} ккал</b>\n\n"
-            f"⚖️ Вес: {stats['weight']} кг")
+    
+    text = (
+        f"📅 <b>ОТЧЕТ {label}:</b>\n\n"
+        f"🔥 Расход: {stats['out']} (+{bmr} база)\n"
+        f"🛡 Дефицит: <b>-{eff_def}</b>\n"
+        f"---------------------------\n"
+        f"🍽 Лимит: <b>{allowed}</b>\n"
+        f"🍔 Съел: <b>{stats['in']}</b>\n"
+        f"---------------------------\n"
+        f"👉 <b>Остаток: {emoji} {rem} ккал</b>\n\n"
+        f"⚖️ Вес: <b>{stats['weight']}</b>"
+    )
     await message.answer(text, parse_mode="HTML", reply_markup=get_main_keyboard())
 
 # --- 📅 ДРУГАЯ ДАТА ---
@@ -368,4 +377,5 @@ async def main():
 if __name__ == "__main__":
     try: asyncio.run(main())
     except (KeyboardInterrupt, SystemExit): print("Офф.")
+
 
