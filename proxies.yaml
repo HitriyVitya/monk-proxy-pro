@@ -11834,7 +11834,27 @@ proxies:
     public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
     short-id: '4326'
   client-fingerprint: chrome
-- name: '🥇 🇬🇧 244ms | VLESS #992'
+- name: '🥇 🌐 244ms | TROJAN #992'
+  type: trojan
+  server: bestcdn2.868863.xyz
+  port: 2083
+  udp: true
+  skip-cert-verify: true
+  network: tcp
+  password: f0defe70-4c27-4d66-bada-0240e4f49880
+  tls: true
+  servername: 17710527845118.206352.xyz
+- name: '🥇 🌐 244ms | TROJAN #993'
+  type: trojan
+  server: bestcdn2.868863.xyz
+  port: 2096
+  udp: true
+  skip-cert-verify: true
+  network: tcp
+  password: f0defe70-4c27-4d66-bada-0240e4f49880
+  tls: true
+  servername: 17710527842165.206355.xyz
+- name: '🥇 🇬🇧 244ms | VLESS #994'
   type: vless
   server: 146.185.208.206
   port: 443
@@ -11848,7 +11868,7 @@ proxies:
     public-key: do22ES2nDjO0EggET4H9Gf8_tEY7PwZv76zVXPrDojQ
     short-id: 5f22
   client-fingerprint: chrome
-- name: '🥇 🇵🇱 244ms | VLESS #993'
+- name: '🥇 🇵🇱 244ms | VLESS #995'
   type: vless
   server: 144.31.0.58
   port: 443
@@ -11862,7 +11882,7 @@ proxies:
     public-key: HpsfKx7yMXjK6X2n5J8Z58MKBdq_od6trtPoWkcoZlc
     short-id: d1
   client-fingerprint: chrome
-- name: '🥇 🇷🇺 244ms | VLESS #994'
+- name: '🥇 🇷🇺 244ms | VLESS #996'
   type: vless
   server: 212.111.84.97
   port: 5443
@@ -11876,7 +11896,7 @@ proxies:
     public-key: vJz6ZXSwoP43DDUQxJksEsWA8AmlNo2KfJDY8QWzKw0
     short-id: 41bd4196ed1383f1
   client-fingerprint: chrome
-- name: '🥇 🇷🇺 244ms | VLESS #995'
+- name: '🥇 🇷🇺 244ms | VLESS #997'
   type: vless
   server: 212.111.84.97
   port: 5443
@@ -11890,7 +11910,7 @@ proxies:
     public-key: vJz6ZXSwoP43DDUQxJksEsWA8AmlNo2KfJDY8QWzKw0
     short-id: 41bd4196ed1383f1
   client-fingerprint: chrome
-- name: '🥇 🌐 244ms | VLESS #996'
+- name: '🥇 🌐 244ms | VLESS #998'
   type: vless
   server: fr.cdn.stun.su
   port: 443
@@ -11904,7 +11924,7 @@ proxies:
     public-key: 8LWgKu6h8cXgOAixKaKPdGponKkAeQaq-IszDEQ4ojM
     short-id: 2f5ce2df83a89d2f
   client-fingerprint: chrome
-- name: '🥇 🇱🇻 244ms | VLESS #997'
+- name: '🥇 🇱🇻 244ms | VLESS #999'
   type: vless
   server: 193.68.89.85
   port: 52253
@@ -11917,34 +11937,6 @@ proxies:
   reality-opts:
     public-key: PvX3pEDYN8SYLmMuNVpnuPTB_V5xHs3HKtz3DcHUKz4
     short-id: aabbccdd
-  client-fingerprint: chrome
-- name: '🥇 🇦🇹 244ms | VLESS #998'
-  type: vless
-  server: 152.53.49.144
-  port: 22955
-  udp: true
-  skip-cert-verify: true
-  network: grpc
-  uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
-  tls: true
-  servername: one-piece.com
-  reality-opts:
-    public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
-- name: '🥇 🌐 244ms | VLESS #999'
-  type: vless
-  server: srv30.outlinekeys.com
-  port: 443
-  udp: true
-  skip-cert-verify: true
-  network: tcp
-  uuid: 59edf6dc-b1f7-4017-8107-aae4f61a173c
-  tls: true
-  servername: srv30.outlinekeys.com
-  reality-opts:
-    public-key: WvNaAxI0W__qfUKbtysH4IwF155YENlv3PG6crCmPkA
-    short-id: ''
   client-fingerprint: chrome
 - name: '🥈 🇺🇸 11ms | VMESS #1000'
   type: vmess
@@ -19441,14 +19433,14 @@ proxy-groups:
   - '🥇 🇬🇧 243ms | VLESS #989'
   - '🥇 🌐 243ms | VLESS #990'
   - '🥇 🌐 243ms | VLESS #991'
-  - '🥇 🇬🇧 244ms | VLESS #992'
-  - '🥇 🇵🇱 244ms | VLESS #993'
-  - '🥇 🇷🇺 244ms | VLESS #994'
-  - '🥇 🇷🇺 244ms | VLESS #995'
-  - '🥇 🌐 244ms | VLESS #996'
-  - '🥇 🇱🇻 244ms | VLESS #997'
-  - '🥇 🇦🇹 244ms | VLESS #998'
-  - '🥇 🌐 244ms | VLESS #999'
+  - '🥇 🌐 244ms | TROJAN #992'
+  - '🥇 🌐 244ms | TROJAN #993'
+  - '🥇 🇬🇧 244ms | VLESS #994'
+  - '🥇 🇵🇱 244ms | VLESS #995'
+  - '🥇 🇷🇺 244ms | VLESS #996'
+  - '🥇 🇷🇺 244ms | VLESS #997'
+  - '🥇 🌐 244ms | VLESS #998'
+  - '🥇 🇱🇻 244ms | VLESS #999'
   - '🥈 🇺🇸 11ms | VMESS #1000'
   - '🥈 🇨🇾 11ms | VMESS #1001'
   - '🥈 🇻🇬 11ms | VMESS #1002'
@@ -20944,14 +20936,14 @@ proxy-groups:
   - '🥇 🇬🇧 243ms | VLESS #989'
   - '🥇 🌐 243ms | VLESS #990'
   - '🥇 🌐 243ms | VLESS #991'
-  - '🥇 🇬🇧 244ms | VLESS #992'
-  - '🥇 🇵🇱 244ms | VLESS #993'
-  - '🥇 🇷🇺 244ms | VLESS #994'
-  - '🥇 🇷🇺 244ms | VLESS #995'
-  - '🥇 🌐 244ms | VLESS #996'
-  - '🥇 🇱🇻 244ms | VLESS #997'
-  - '🥇 🇦🇹 244ms | VLESS #998'
-  - '🥇 🌐 244ms | VLESS #999'
+  - '🥇 🌐 244ms | TROJAN #992'
+  - '🥇 🌐 244ms | TROJAN #993'
+  - '🥇 🇬🇧 244ms | VLESS #994'
+  - '🥇 🇵🇱 244ms | VLESS #995'
+  - '🥇 🇷🇺 244ms | VLESS #996'
+  - '🥇 🇷🇺 244ms | VLESS #997'
+  - '🥇 🌐 244ms | VLESS #998'
+  - '🥇 🇱🇻 244ms | VLESS #999'
 - name: 🥈 Tier 2 - Workhorse
   type: select
   proxies:
