@@ -308,6 +308,7 @@ async def stats_view(message: types.Message, state: FSMContext):
     total_burn = bmr + stats['out']
     allowed = total_burn - eff_def
     rem = allowed - stats['in']
+    emoji = "🟢" if rem >= 0 else "🔴"
     label = f"{format_date_user(date)}"
     if date == get_today_str(): label += " (Сегодня)"
     text = (f"📅 <b>ОТЧЕТ {label}:</b>\n\n"
@@ -331,15 +332,20 @@ async def change_date_process(message: types.Message, state: FSMContext):
         t = message.text.strip()
         y = datetime.now().year
         d_sql = datetime.strptime(f"{t}.{y}" if len(t)==5 else t, "%d.%m.%Y").strftime("%Y-%m-%d")
+        
+        # ЗАПОМИНАЕМ ДАТУ (Пока не нажмешь назад или старт)
         await state.update_data(selected_date=d_sql)
-        await message.answer(f"✅ Режим работы с датой: {t}", reply_markup=get_main_keyboard())
+        
+        await message.answer(f"✅ Режим: <b>{t}</b>. Вводи данные.", parse_mode="HTML", reply_markup=get_main_keyboard())
         await state.set_state(None)
-    except: await message.answer("Формат: 15.01")
+    except: await message.answer("Неверный формат. Давай ДД.ММ")
 
 @dp.message(F.text == "🔙 Назад")
 async def back_handler(message: types.Message, state: FSMContext):
+    # СБРОС ДАТЫ НА СЕГОДНЯ
+    await state.update_data(selected_date=None)
     await state.set_state(None)
-    await message.answer("Главное меню", reply_markup=get_main_keyboard())
+    await message.answer("🏠 Главное меню (Сегодня).", reply_markup=get_main_keyboard())
 
 # -----------------------------------------------------------
 # ЗАПУСК ВСЕГО
@@ -362,3 +368,4 @@ async def main():
 if __name__ == "__main__":
     try: asyncio.run(main())
     except (KeyboardInterrupt, SystemExit): print("Офф.")
+
