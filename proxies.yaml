@@ -13309,7 +13309,57 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: ''
   client-fingerprint: chrome
-- name: 🥇 🇩🇪 268ms | VLESS (#993)
+- name: 🥇 🇳🇱 267ms | VLESS (#993)
+  type: vless
+  server: 185.184.121.57
+  port: 8443
+  uuid: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  password: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🥇 🇳🇱 267ms | VLESS (#994)
+  type: vless
+  server: 165.140.119.117
+  port: 8443
+  uuid: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  password: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🥇 🇳🇱 267ms | VLESS (#995)
+  type: vless
+  server: 45.135.180.20
+  port: 8443
+  uuid: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  password: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🥇 🇬🇧 267ms | VLESS (#996)
+  type: vless
+  server: 193.233.244.196
+  port: 8443
+  uuid: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  password: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🥇 🇬🇧 267ms | VLESS (#997)
+  type: vless
+  server: 193.142.59.231
+  port: 8443
+  uuid: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  password: 1b5bf807-da8b-4c30-a974-7c729a04d0df
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  network: tcp
+- name: 🥇 🇩🇪 267ms | VLESS (#998)
   type: vless
   server: 93.186.201.45
   port: 443
@@ -13317,103 +13367,18 @@ proxies:
   password: 4af37467-bf79-4630-98d5-73e7dad60e90
   udp: true
   skip-cert-verify: true
-  tls: true
+  tls: false
   network: tcp
-  servername: google.com
-  reality-opts:
-    public-key: l0saUZNgojrR6PjhL_fMHEBZlZ2TJypjRdQyy2mrFFI
-    short-id: '58'
-  client-fingerprint: chrome
-- name: 🥇 🇩🇪 268ms | VLESS (#994)
+- name: 🥇 🇦🇱 267ms | VLESS (#999)
   type: vless
-  server: 95.85.231.98
-  port: 52253
-  uuid: afa7cc47-243c-477b-a526-6262d5b75353
-  password: afa7cc47-243c-477b-a526-6262d5b75353
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: xhttp
-  servername: web.max.ru
-  reality-opts:
-    public-key: PvX3pEDYN8SYLmMuNVpnuPTB_V5xHs3HKtz3DcHUKz4
-    short-id: aabbccdd
-  client-fingerprint: chrome
-- name: 🥇 🇳🇱 268ms | VLESS (#995)
-  type: vless
-  server: 51.158.206.103
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  password: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: tcp
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  client-fingerprint: chrome
-- name: 🥇 🇫🇷 268ms | VLESS (#996)
-  type: vless
-  server: 185.120.59.126
-  port: 8443
-  uuid: f4fec1b0-a67e-4967-b9ea-0bd832b57a4d
-  password: f4fec1b0-a67e-4967-b9ea-0bd832b57a4d
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: tcp
-  servername: sun6-21.userapi.com
-  reality-opts:
-    public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
-    short-id: 3ca620a7ed5f3196
-  client-fingerprint: chrome
-- name: 🥇 🇩🇪 268ms | VLESS (#997)
-  type: vless
-  server: 193.23.219.163
+  server: 185.177.238.57
   port: 443
-  uuid: 911678d4-3ccf-4d87-8abe-89efb7cbd2f3
-  password: 911678d4-3ccf-4d87-8abe-89efb7cbd2f3
+  uuid: dd9c0ccd-1aeb-4f2d-9ab1-5f6996518c77
+  password: dd9c0ccd-1aeb-4f2d-9ab1-5f6996518c77
   udp: true
   skip-cert-verify: true
-  tls: true
+  tls: false
   network: tcp
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: cVF_4NlqDOmx4hBXNH58IIRxyP1boRxV-AZ34-9VmXc
-    short-id: a1b2c3d4
-  client-fingerprint: chrome
-- name: 🥇 🇩🇪 268ms | VLESS (#998)
-  type: vless
-  server: 81.19.141.144
-  port: 443
-  uuid: 40ecece1-edd9-4543-99c7-529ee594135d
-  password: 40ecece1-edd9-4543-99c7-529ee594135d
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: tcp
-  servername: cdnjs.cloudflare.com
-  reality-opts:
-    public-key: Wg_prcp8fAsUrveCKVqBsk_8mWuKurQb-0N3H1e35mk
-    short-id: 9676bdc4
-  client-fingerprint: chrome
-- name: 🥇 🇳🇱 269ms | VLESS (#999)
-  type: vless
-  server: 212.111.88.50
-  port: 443
-  uuid: a44e0875-210f-4941-9062-89b6361a14c6
-  password: a44e0875-210f-4941-9062-89b6361a14c6
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: tcp
-  servername: apple.com
-  reality-opts:
-    public-key: i5a8i2AWUSMZ-rYA6hGBRCBBoe7W5ah33SCdF5JkMk4
-    short-id: 8bcfe256cf216fd8
-  client-fingerprint: chrome
 - name: 🥈 🌐 13ms | VMESS (#1000)
   type: vmess
   server: hk80.sanfen001.pics
@@ -20881,13 +20846,13 @@ proxy-groups:
   - 🥇 🌐 267ms | VLESS (#990)
   - 🥇 🇩🇪 267ms | VLESS (#991)
   - 🥇 🌐 267ms | VLESS (#992)
-  - 🥇 🇩🇪 268ms | VLESS (#993)
-  - 🥇 🇩🇪 268ms | VLESS (#994)
-  - 🥇 🇳🇱 268ms | VLESS (#995)
-  - 🥇 🇫🇷 268ms | VLESS (#996)
-  - 🥇 🇩🇪 268ms | VLESS (#997)
-  - 🥇 🇩🇪 268ms | VLESS (#998)
-  - 🥇 🇳🇱 269ms | VLESS (#999)
+  - 🥇 🇳🇱 267ms | VLESS (#993)
+  - 🥇 🇳🇱 267ms | VLESS (#994)
+  - 🥇 🇳🇱 267ms | VLESS (#995)
+  - 🥇 🇬🇧 267ms | VLESS (#996)
+  - 🥇 🇬🇧 267ms | VLESS (#997)
+  - 🥇 🇩🇪 267ms | VLESS (#998)
+  - 🥇 🇦🇱 267ms | VLESS (#999)
   - 🥈 🌐 13ms | VMESS (#1000)
   - 🥈 🇺🇸 14ms | VMESS (#1001)
   - 🥈 🇨🇦 15ms | VMESS (#1002)
