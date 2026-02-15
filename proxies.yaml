@@ -18338,20 +18338,7 @@ proxies:
   network: ws
   ws-opts:
     path: /aries
-- name: '🥈 🇺🇸 95ms | VMESS #1495'
-  type: vmess
-  server: 141.193.213.10
-  port: 443
-  uuid: 615a1285-5848-42a1-9859-d4cb37b1fbd8
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /share
-- name: '🥈 🇨🇦 98ms | VMESS #1496'
+- name: '🥈 🇨🇦 98ms | VMESS #1495'
   type: vmess
   server: 51.79.102.253
   port: 80
@@ -18364,7 +18351,7 @@ proxies:
   network: ws
   ws-opts:
     path: /IOebhLMhl1CTbFHbL95myfRX2
-- name: '🥈 🌐 98ms | VMESS #1497'
+- name: '🥈 🌐 98ms | VMESS #1496'
   type: vmess
   server: singapore02.zgjok.com
   port: 443
@@ -18377,7 +18364,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: '🥈 🇬🇧 99ms | VMESS #1498'
+- name: '🥈 🇬🇧 99ms | VMESS #1497'
   type: vmess
   server: 57.128.189.240
   port: 443
@@ -18390,7 +18377,7 @@ proxies:
   network: ws
   ws-opts:
     path: /linkvws
-- name: '🥈 🇫🇷 99ms | VMESS #1499'
+- name: '🥈 🇫🇷 99ms | VMESS #1498'
   type: vmess
   server: 91.134.8.101
   port: 443
@@ -18403,6 +18390,18 @@ proxies:
   network: ws
   ws-opts:
     path: /linkvws
+- name: '🥈 🇨🇦 99ms | VMESS #1499'
+  type: vmess
+  server: 188.114.97.8
+  port: 2087
+  uuid: e3a464d7-ad51-42ee-8059-220154797b50
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: grpc
+  ws-opts: null
 proxy-groups:
 - name: 🚀 Auto Select
   type: url-test
@@ -19905,11 +19904,11 @@ proxy-groups:
   - '🥈 🇳🇱 92ms | VMESS #1492'
   - '🥈 🇳🇱 93ms | VMESS #1493'
   - '🥈 🌐 94ms | VMESS #1494'
-  - '🥈 🇺🇸 95ms | VMESS #1495'
-  - '🥈 🇨🇦 98ms | VMESS #1496'
-  - '🥈 🌐 98ms | VMESS #1497'
-  - '🥈 🇬🇧 99ms | VMESS #1498'
-  - '🥈 🇫🇷 99ms | VMESS #1499'
+  - '🥈 🇨🇦 98ms | VMESS #1495'
+  - '🥈 🌐 98ms | VMESS #1496'
+  - '🥈 🇬🇧 99ms | VMESS #1497'
+  - '🥈 🇫🇷 99ms | VMESS #1498'
+  - '🥈 🇨🇦 99ms | VMESS #1499'
 - name: 🥇 Tier 1 - Stealth
   type: select
   proxies:
@@ -21411,11 +21410,11 @@ proxy-groups:
   - '🥈 🇳🇱 92ms | VMESS #1492'
   - '🥈 🇳🇱 93ms | VMESS #1493'
   - '🥈 🌐 94ms | VMESS #1494'
-  - '🥈 🇺🇸 95ms | VMESS #1495'
-  - '🥈 🇨🇦 98ms | VMESS #1496'
-  - '🥈 🌐 98ms | VMESS #1497'
-  - '🥈 🇬🇧 99ms | VMESS #1498'
-  - '🥈 🇫🇷 99ms | VMESS #1499'
+  - '🥈 🇨🇦 98ms | VMESS #1495'
+  - '🥈 🌐 98ms | VMESS #1496'
+  - '🥈 🇬🇧 99ms | VMESS #1497'
+  - '🥈 🇫🇷 99ms | VMESS #1498'
+  - '🥈 🇨🇦 99ms | VMESS #1499'
 - name: 🌍 GLOBAL
   type: select
   proxies:
