@@ -12740,7 +12740,16 @@ proxies:
   skip-cert-verify: true
   tls: false
   network: tcp
-- name: 🥇 🇯🇵 250ms | VLESS (#996)
+- name: 🥇 🌐 250ms | TROJAN (#996)
+  type: trojan
+  server: jp.iamnotagoodman.com
+  port: 443
+  password: 8aab51da-6b67-4bd2-b6e6-5ab3008cf53e
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  network: tcp
+- name: 🥇 🇯🇵 250ms | VLESS (#997)
   type: vless
   server: 109.61.109.79
   port: 8443
@@ -12755,7 +12764,7 @@ proxies:
     public-key: 3JGwSDrfkiCPdU3rvQP5m0z4Ag_UB_2w8Qq3VMXmo28
     short-id: abc323
   client-fingerprint: chrome
-- name: 🥇 🌐 250ms | VLESS (#997)
+- name: 🥇 🌐 250ms | VLESS (#998)
   type: vless
   server: lva.cdn.stemstep.cloud
   port: 443
@@ -12770,7 +12779,7 @@ proxies:
     public-key: EzHYH8aBrlTnNT4hbLcjQQ1aJhDrF6BT98pjBpdLpEw
     short-id: f3edbe53b24664c7
   client-fingerprint: chrome
-- name: 🥇 🇩🇪 250ms | VLESS (#998)
+- name: 🥇 🇩🇪 250ms | VLESS (#999)
   type: vless
   server: 94.125.101.123
   port: 8443
@@ -12784,21 +12793,6 @@ proxies:
   reality-opts:
     public-key: upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo
     short-id: 3ca620a7ed5f3196
-  client-fingerprint: chrome
-- name: 🥇 🌐 250ms | VLESS (#999)
-  type: vless
-  server: lv.rexten.cc
-  port: 8443
-  uuid: d790f227-2c3f-454f-bcd2-ca3938cc4195
-  password: d790f227-2c3f-454f-bcd2-ca3938cc4195
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  network: xhttp
-  servername: lv.rexten.cc
-  reality-opts:
-    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-    short-id: ''
   client-fingerprint: chrome
 - name: 🥈 🇨🇦 12ms | VMESS (#1000)
   type: vmess
@@ -20296,10 +20290,10 @@ proxy-groups:
   - 🥇 🇷🇺 249ms | VLESS (#993)
   - 🥇 🇷🇺 249ms | VLESS (#994)
   - 🥇 🇷🇺 249ms | VLESS (#995)
-  - 🥇 🇯🇵 250ms | VLESS (#996)
-  - 🥇 🌐 250ms | VLESS (#997)
-  - 🥇 🇩🇪 250ms | VLESS (#998)
-  - 🥇 🌐 250ms | VLESS (#999)
+  - 🥇 🌐 250ms | TROJAN (#996)
+  - 🥇 🇯🇵 250ms | VLESS (#997)
+  - 🥇 🌐 250ms | VLESS (#998)
+  - 🥇 🇩🇪 250ms | VLESS (#999)
   - 🥈 🇨🇦 12ms | VMESS (#1000)
   - 🥈 🇨🇦 12ms | VMESS (#1001)
   - 🥈 🇨🇦 12ms | VMESS (#1002)
